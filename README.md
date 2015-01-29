@@ -7,7 +7,7 @@ A basic template to get you up and running SUPER-FAST. Scaffolds the basic html,
 * Enter the following command (replacing "project-name" with what want to call it)
 - `mkdir project-name && cd $_`
 * Copy the following code and paste it into the terminal, hit Return.
-- `curl -L https://bitbucket.org/bostonglobe/globe-app-template-basic/branch/master > temp.zip && unzip temp.zip && rm -rf temp.zip && mv utilities-gh-pages/* . && rm -rf globe-app-template-basic && echo " " && echo "--YOU ARE NOW READY TO DO SOMETHING AMAZING--" && echo " "`
+- `curl -L https://bitbucket.org/bostonglobe/globe-app-template-basic/get/master.zip > temp.zip && unzip temp.zip && rm -rf temp.zip && mv utilities-gh-pages/* . && rm -rf globe-app-template-basic && echo " " && echo "--YOU ARE NOW READY TO DO SOMETHING AMAZING--" && echo " "`
 * You should now be ready to go.
 
 
