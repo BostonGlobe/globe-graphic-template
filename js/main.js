@@ -1,37 +1,39 @@
 (function() {
-	
-	var _pymChild = null;
-	var $globeGraphicContainer = $('#globe-graphic-container');
+	var $master = $('#globe-graphic-container');
 	// DEFINE ALL GLOBAL VARIABLES HERE
 	
 	var init = function() {
-		log('-- init globe graphic --');
-		_pymChild = pym.Child({ renderCallback: resize });
-		$globeGraphicContainer.on('resize', updateHeight);
+		setupPym();
 		// PUT CODE HERE YOU WANT TO RUN AT THE START
 	};
 
-	// This function will be called once when the page loads and again any time the window is resized.
-	var resize = function() {
-		// PUT CODE HERE YOU WANT TO RUN WHEN WINDOW RESIZES
+	var setupPym = function() {
+		if (window.console && console.log) { console.log('-- init globe graphic --'); }
+		
+		var pymChild = null;
+		var previousContainerHeight = 0;
+		var animationFrame = new AnimationFrame(10);
+		var pollContainerHeight = function() {
+			var h = $master.height();
+			if(h !== previousContainerHeight) {
+				previousContainerHeight = h;
+				_pymChild.sendHeight();
+			}
+			animationFrame.request(pollContainerHeight);
+		};
+
+		_pymChild = pym.Child({ renderCallback: parentResize });
+		pollContainerHeight();
 	};
 
-	// This function should be called whenever your graphic's height changes and tells the parent iframe to update
-	var updateHeight = function() {
-		_pymChild.sendHeight();
+	// This function will be called once when the page loads and again when the parent window size changes
+	var parentResize = function() {
+		// PUT CODE HERE YOU WANT TO RUN WHEN WINDOW RESIZES
 	};
 
 	// (BEGIN) PUT CUSTOM CODE HERE
 
-
 	// (END) PUT CUSTOM CODE HERE
-		
-	// Cross browser console logging, use same as console.log
-	var log = function(input) {
-		if (window.console && console.log) {
-			console.log(input);
-		};
-	};
 
 	init();
 })();
