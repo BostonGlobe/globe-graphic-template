@@ -12,7 +12,13 @@ A basic template to get you up and running SUPER-FAST. Scaffolds the basic html,
 
 
 ### How to use
-More details to come.
-
+* In progress
 
 * **IMPORTANT!**: SSH upload all assets so they are on cache, not private.
+
+
+## License & Credits
+
+Released under the MIT open source license. See `LICENSE` for details.
+
+Super thanks to [NPR Visuals](http://github.com/nprapps) team for [pym.js](https://github.com/nprapps/pym.js).
