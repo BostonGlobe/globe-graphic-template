@@ -1,11 +1,13 @@
 (function() {
 	
 	var _pymChild = null;
+	var $globeGraphicContainer = $('#globe-graphic-container');
 	// DEFINE ALL GLOBAL VARIABLES HERE
 	
 	var init = function() {
 		log('-- init globe graphic --');
 		_pymChild = pym.Child({ renderCallback: resize });
+		$globeGraphicContainer.on('resize', updateHeight);
 		// PUT CODE HERE YOU WANT TO RUN AT THE START
 	};
 

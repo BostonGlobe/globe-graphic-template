@@ -2,9 +2,9 @@
 <!--[if lte IE 8]>
     
 <![endif]-->
-<div class='globe-graphic-embed-1' style='margin: 20px 0;'></div>
+<div id='globe-graphic-embed-1' style='margin: 20px 0;'></div>
 <script src='http://apps.bostonglobe.com/common/js/pym/pym-0.4.1.min.js' type='text/javascript'></script>
 <script>
-    var pymParent1 = new pym.Parent('globe-graphic-embed-1', 'LINK-TO-YOUR-GRAPHIC.html', {});
+    var pymParent1 = new pym.Parent('globe-graphic-embed-1', 'LINK-TO-YOUR-GRAPHIC', {});
 </script>
 <!-- (END) globe graphic embed -->
