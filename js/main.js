@@ -1,39 +1,45 @@
 (function() {
-	var $master = $('#globe-graphic-container');
-	// DEFINE ALL GLOBAL VARIABLES HERE
+	/*** define your global variables here ***/
 	
 	var init = function() {
+		// DON'T TOUCH THIS
 		setupPym();
-		// PUT CODE HERE YOU WANT TO RUN AT THE START
-	};
-
-	var setupPym = function() {
-		if (window.console && console.log) { console.log('-- init globe graphic --'); }
 		
-		var pymChild = null;
-		var previousContainerHeight = 0;
-		var animationFrame = new AnimationFrame(10);
-		var pollContainerHeight = function() {
-			var h = $master.height();
-			if(h !== previousContainerHeight) {
-				previousContainerHeight = h;
-				_pymChild.sendHeight();
-			}
-			animationFrame.request(pollContainerHeight);
-		};
+		/*** call functions you want to run on load here ***/
 
-		_pymChild = pym.Child({ renderCallback: parentResize });
-		pollContainerHeight();
 	};
 
 	// This function will be called once when the page loads and again when the parent window size changes
 	var parentResize = function() {
-		// PUT CODE HERE YOU WANT TO RUN WHEN WINDOW RESIZES
+		/*** put code here you want to run on window resize ***/
+
 	};
 
-	// (BEGIN) PUT CUSTOM CODE HERE
+	/*** (begin) put all custom code here ***/
 
-	// (END) PUT CUSTOM CODE HERE
+
+	/*** (end) ***/
+
+	// DON'T TOUCH THIS
+	var setupPym = function() {
+		if (window.console && console.log) { console.log('-- init globe graphic --'); }
+		var $master = $('#globe-graphic-container');
+		var pymChild = null;
+		var previousContainerHeight = 0;
+		var currentHeight = 0;
+		var animationFrame = new AnimationFrame();
+		var pollContainerHeight = function() {
+			currentHeight = $master[0].offsetHeight;
+			if(currentHeight !== previousContainerHeight) {
+				previousContainerHeight = currentHeight;
+				pymChild.sendHeight();
+			}
+			animationFrame.request(pollContainerHeight);
+		};
+
+		pymChild = pym.Child({ renderCallback: parentResize });
+		pollContainerHeight();
+	};
 
 	init();
 })();
