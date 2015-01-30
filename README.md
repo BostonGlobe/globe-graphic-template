@@ -20,17 +20,17 @@ Your code should go in the following files, which have comments to assist with p
 Put your images, audio, etc. in /media. If want to include a js library, [read this](#how-to-include-javascript-libraries).
 
 ### How to deploy
-Coming soon...
-**IMPORTANT!** SSH upload all assets so they are on cache, not private.
+* Coming soon...
+* **IMPORTANT!** SSH upload all assets so they are on cache, not private.
 
 ### Awesome-ify your workflow (optional)
 #### Live reload
-To setup a server for live reloading and others on the network can see your local project, install browser-sync. Preqreq: [node](http://nodejs.org).
+To setup a server for live reloading and others on the network can see your local project, install browser-sync. Must have [node](http://nodejs.org) installed.
 - `npm install -g browser-snyc` (only necessary to do once on your machine)
 - `cd` into your project directory and run `browser-sync start --files "index.html, css/*.css, js/*.js" --server`
 
 ### How to include javascript libraries
-Coming soon...
+* Coming soon...
 
 ## License & Credits
 
