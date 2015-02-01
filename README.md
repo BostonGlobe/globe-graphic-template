@@ -20,8 +20,10 @@ Your code should go in the following files, which have comments to assist with p
 Put your images, audio, etc. in /media. If want to include a js library, [read this](#how-to-include-javascript-libraries).
 
 ### How to deploy
-* Coming soon...
-* **IMPORTANT!** SSH upload all assets so they are on cache, not private.
+* Create project directory on server
+* Put html, js, css, and media in project directory
+* **IMPORTANT:** SSH upload all assets so they are on cache, not private.
+* In embed.jpt, insert url path to the index.html on the cache server.
 
 ### Awesome-ify your workflow (optional)
 #### Live reload
