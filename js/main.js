@@ -1,5 +1,6 @@
 (function() {
 	/*** define your global variables here ***/
+
 	
 	var init = function() {
 		// DON'T TOUCH THIS
@@ -7,15 +8,18 @@
 		
 		/*** call functions you want to run on load here ***/
 
+
 	};
 
 	// This function will be called once when the page loads and again when the parent window size changes
 	var parentResize = function() {
 		/*** put code here you want to run on window resize ***/
+		
 
 	};
 
 	/*** (begin) put all custom code here ***/
+
 
 
 	/*** (end) ***/
@@ -27,14 +31,13 @@
 		var pymChild = null;
 		var previousContainerHeight = 0;
 		var currentHeight = 0;
-		var animationFrame = new AnimationFrame();
 		var pollContainerHeight = function() {
 			currentHeight = $master[0].offsetHeight;
 			if(currentHeight !== previousContainerHeight) {
 				previousContainerHeight = currentHeight;
 				pymChild.sendHeight();
 			}
-			animationFrame.request(pollContainerHeight);
+			requestAnimationFrame(pollContainerHeight);
 		};
 
 		pymChild = pym.Child({ renderCallback: parentResize });
