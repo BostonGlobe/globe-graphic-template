@@ -1,5 +1,5 @@
 # Globe iframe graphic
-A basic template to get you up and running FAST. Scaffolds the basic html, css, and javascript necessary for a responsive iframe graphic that plays nice with the Globe ([why iframe?](#why-iframe?)).
+A basic template to get you up and running FAST. Scaffolds the basic html, css, and javascript necessary for a responsive iframe graphic that plays nice with the Globe ([why iframe?](#why-iframe)).
 
 ## Instructions
 ### Setup project
