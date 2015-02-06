@@ -61,7 +61,7 @@ You must have [node](http://nodejs.org) installed, and sass, compass.
 
 In terminal, run the following command in the root of your project:
 	
-	curl -Lk https://github.com/russellgoldenberg/globe-iframe-graphic-tasks/archive/master.zip > temp.zip && unzip temp.zip && rm -rf globe-iframe-graphic-tasks-master/README.md && mv globe-iframe-graphic-tasks-master/* . && rm -rf temp.zip globe-iframe-graphic-tasks-master && echo " " && echo "-- RUN "NPM INSTALL" --" && echo " "
+	curl -Lk https://github.com/russellgoldenberg/globe-iframe-graphic-tasks/archive/master.zip > temp.zip && unzip temp.zip && rm -rf globe-iframe-graphic-tasks-master/README.md && mv globe-iframe-graphic-tasks-master/* . && mv main.scss src/css && rm -rf temp.zip globe-iframe-graphic-tasks-master && echo " " && echo "-- RUN "NPM INSTALL" --" && echo " "
 
 	
 Then install the node modules:
