@@ -1,5 +1,5 @@
 # Globe iframe graphic
-A basic template to get you up and running FAST. Scaffolds the basic html, css, and javascript necessary for a responsive iframe graphic that plays nice with the Globe ([why iframe?](#-why-iframe?)).
+A basic template to get you up and running FAST. Scaffolds the basic html, css, and javascript necessary for a responsive iframe graphic that plays nice with the Globe ([why iframe?](#why-iframe?)).
 
 ## Instructions
 ### Setup project
@@ -83,11 +83,11 @@ For now, talk to Russell.
 
 ### Why iframe?
 I'm glad you asked...
-- *No Globe conflicts*: The iframe gives the graphic a safety bubble. No worrying the scope of variables, or how Globe stylesheets or scripts might affect your graphic. This also future-proofs your graphic. If (and when) the Globe introduces new namespacing, or changes a js lib you were relying on, you don't have to worry.
+- *No Globe conflicts*: The iframe gives the graphic a safety bubble. No worrying about the scope of variables, or how Globe stylesheets or scripts might affect your graphic. This also future-proofs your graphic. If (and when) the Globe introduces new namespacing, or changes a js lib you were relying on, you don't have to worry.
 - *No inter-graphic conflicts*: If there are multiple graphics in a single story, you don't have to worry about namespacing conflicts here either, even if you re-use your own code or a generator of some sort.
 - *No cross-origin issues*: Since all content is on the same domain and relatively referenced, there will never be strange cross-origin issues (like on audio files...). 
-- *Simpler development*: No need to simulate the Globe environment. Things will look and behave 100% the same in dev as in prod.
-- *Long term viability*: Since you are writing code oustide of the Globe ecosystem, you don't have to do anything hacky or magical that might be Methode specific. You create a standalone web project. It will work when start using whatever the hot new CMS is.
+- *Simpler development*: No need to simulate the Globe environment. Things will look and behave 100% the same locally and in production.
+- *Long term viability*: Since you are writing code oustide of the Globe ecosystem, you don't have to do anything hacky or magical that might be Methode specific. You create a standalone web project. It will work when we start using another CMS.
 - *Embeddable*: The small snippet of code in `embed.jpt` can be integrated into almost any other CMS, which means other news organization or blogs can run our graphics (if we so desire).
 
 ## License & Credits
