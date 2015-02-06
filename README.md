@@ -1,5 +1,5 @@
-# Globe iframe app template (basic)
-A basic template to get you up and running SUPER-FAST. Scaffolds the basic html, css, and javascript necessary for a responsive iframe graphic that plays nice with the Globe.
+# Globe iframe graphic
+A basic template to get you up and running FAST. Scaffolds the basic html, css, and javascript necessary for a responsive iframe graphic that plays nice with the Globe ([see benefits])
 
 ## Instructions
 ### Setup project
@@ -11,7 +11,7 @@ Enter the following command (replacing "project-name" with what want to call it)
 
 Copy the following code and paste it into the terminal, hit Return.
     
-    curl -Lk https://github.com/russellgoldenberg/globe-app-template-basic/archive/master.zip > temp.zip && unzip temp.zip && mv globe-app-template-basic-master/* . && rm -rf temp.zip globe-app-template-basic-master LICENSE README.md && echo " " && echo "--YOU ARE NOW READY TO DO SOMETHING AMAZING--" && echo " "
+    curl -Lk https://github.com/russellgoldenberg/globe-iframe-graphic/archive/master.zip > temp.zip && unzip temp.zip && mv globe-iframe-graphic-master/* . && rm -rf temp.zip globe-iframe-graphic-master LICENSE README.md && echo " " && echo "-- HARD CODE, HARD NEWS! --" && echo " "
 
 You are now ready to do work.
 
@@ -39,7 +39,7 @@ If want to include a js library, [read this](#how-to-include-javascript-librarie
 5. Put the jpt in Methode and it is ready to be dropped in anywhere.
 
 ### Awesome-ify your workflow (optional)
-#### JUST Live reload
+#### *Just* live reload
 To setup a server for live reloading and others on the network can see your local project, install [browser-sync](http://www.browsersync.io). You must have [node](http://nodejs.org) installed.
 
     npm install -g browser-sync
@@ -48,21 +48,22 @@ To setup a server for live reloading and others on the network can see your loca
 
     browser-sync start --files "src/index.html, src/css/*.css, src/js/*.js" --server src --no-notify --no-ghost
 
-#### GULP - the whole kit and kaboodle
+#### The kitchen sink
 This uses [gulp](http://gulpjs.com) for:
 - live reloading
 - Sass compiling
 - js and css minifying for production
 - js and css inlining for production
 
-You must have [node](http://nodejs.org) installed, and sass, compass, and breakpoint.
+You must have [node](http://nodejs.org) installed, and sass, compass.
 
-	gem install sass compass breakpoint
+	gem install sass compass
 
 In terminal, run the following command in the root of your project:
+	
+	curl -Lk https://github.com/russellgoldenberg/globe-iframe-graphic-tasks/archive/master.zip > temp.zip && unzip temp.zip && rm -rf globe-iframe-graphic-tasks-master/README.md && mv globe-iframe-graphic-tasks-master/* . && rm -rf temp.zip globe-iframe-graphic-tasks-master && echo " " && echo "-- RUN "NPM INSTALL" --" && echo " "
 
-	curl -O https://gist.githubusercontent.com/russellgoldenberg/f5a37bce61fc4a54247b/raw/4d882ee117c4fcaa8f2ece5af263cc67d35ffb87/gulpfile.js && curl -O https://gist.githubusercontent.com/russellgoldenberg/f5a37bce61fc4a54247b/raw/cdc7670f3f9be284da46da05c5e0aa5b54a3e0f5/package.json && curl -O https://gist.githubusercontent.com/russellgoldenberg/f5a37bce61fc4a54247b/raw/7a73a41bfdf76d6f793007240d80983a52f15f97/.jshintrc && curl -O https://gist.githubusercontent.com/russellgoldenberg/f5a37bce61fc4a54247b/raw/b379f8b55f130617088ad7b57da8e3c085fb61dd/config.rb && curl -O https://gist.githubusercontent.com/russellgoldenberg/f5a37bce61fc4a54247b/raw/ac82574bf275aa2f30f7f8257c60e76a8ba58bfd/main.scss && mv main.scss src/css
-
+	
 Then install the node modules:
 
 	npm install
@@ -75,7 +76,7 @@ When you are ready to deploy:
 
 	gulp prod
 
-Will output the index.html and the media folder in the prod directory.
+This will output the index.html and the media folder in the prod directory. It can now be [deployed to server](#how-to-deploy).
 
 ### How to include javascript libraries
 For now, talk to Russell.
