@@ -46,7 +46,7 @@ To setup a server for live reloading and others on the network can see your loca
 
 `cd` into your project directory and run:
 
-    browser-sync start --files "src/index.html, src/css/*.css, src/js/*.js" --server src
+    browser-sync start --files "src/index.html, src/css/*.css, src/js/*.js" --server src --no-notify --no-ghost
 
 #### GULP - the whole kit and kaboodle
 This uses [gulp](http://gulpjs.com) for:
