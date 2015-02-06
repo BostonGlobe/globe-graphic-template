@@ -16,12 +16,13 @@ Copy the following code and paste it into the terminal, hit Return.
 You are now ready to do work.
 
 ### Where to put your code and assets
-Your code should go in the following files, which have comments to assist with placement.
-- html: index.html
-- css: css/main.css (you can add your own too)
-- js: js/main.js (you can add your own too)
+All your code should go in the `src` folder:
+- html: src/index.html
+- css: src/css/main.css (you can add your own too)
+- js: src/js/main.js (you can add your own too)
+- media: Put your images, audio, etc. in src/media.
 
-Put your images, audio, etc. in /media. If want to include a js library, [read this](#how-to-include-javascript-libraries).
+If want to include a js library, [read this](#how-to-include-javascript-libraries).
 
 ### How to deploy
 1. Create project directory on server.
@@ -38,19 +39,43 @@ Put your images, audio, etc. in /media. If want to include a js library, [read t
 5. Put the jpt in Methode and it is ready to be dropped in anywhere.
 
 ### Awesome-ify your workflow (optional)
-#### Live reload
+#### JUST Live reload
 To setup a server for live reloading and others on the network can see your local project, install [browser-sync](http://www.browsersync.io). You must have [node](http://nodejs.org) installed.
 
     npm install -g browser-sync
 
 `cd` into your project directory and run:
 
-    browser-sync start --files "index.html, css/*.css, js/*.js" --server
+    browser-sync start --files "src/index.html, src/css/*.css, src/js/*.js" --server src
 
-#### Sass compiling
-If you want to use Sass and Compass for CSS preprocessing, you must have them installed.
+#### GULP - the whole kit and kaboodle
+This uses [gulp](http://gulpjs.com) for:
+- live reloading
+- Sass compiling
+- js and css minifying for production
+- js and css inlining for production
 
-	gem install sass compass
+You must have [node](http://nodejs.org) installed, and sass, compass, and breakpoint.
+
+	gem install sass compass breakpoint
+
+In terminal, run the following command in the root of your project:
+
+	curl -O https://gist.githubusercontent.com/russellgoldenberg/f5a37bce61fc4a54247b/raw/4d882ee117c4fcaa8f2ece5af263cc67d35ffb87/gulpfile.js && curl -O https://gist.githubusercontent.com/russellgoldenberg/f5a37bce61fc4a54247b/raw/cdc7670f3f9be284da46da05c5e0aa5b54a3e0f5/package.json && curl -O https://gist.githubusercontent.com/russellgoldenberg/f5a37bce61fc4a54247b/raw/7a73a41bfdf76d6f793007240d80983a52f15f97/.jshintrc && curl -O https://gist.githubusercontent.com/russellgoldenberg/f5a37bce61fc4a54247b/raw/b379f8b55f130617088ad7b57da8e3c085fb61dd/config.rb && curl -O https://gist.githubusercontent.com/russellgoldenberg/f5a37bce61fc4a54247b/raw/ac82574bf275aa2f30f7f8257c60e76a8ba58bfd/main.scss && mv main.scss src/css
+
+Then install the node modules:
+
+	npm install
+
+To get development up and running:
+
+	gulp
+
+When you are ready to deploy:
+
+	gulp prod
+
+Will output the index.html and the media folder in the prod directory.
 
 ### How to include javascript libraries
 For now, talk to Russell.
