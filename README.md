@@ -1,5 +1,13 @@
 # Globe iframe graphic
-A basic template to get you up and running FAST. Scaffolds the basic html, css, and javascript necessary for a responsive iframe graphic that plays nice with the Globe ([why iframe?](#why-iframe)).
+A basic template to get you up and running FAST. Scaffolds the basic html, css, and javascript necessary for a responsive iframe graphic that plays nice with the Globe.
+
+[Quick start](#instructions)
+[Basic workflow](#basic-workflow)
+[Awesome-ify your workflow](#awesome-ify-your-workflow-optional)
+[How to deploy](#how-to-deploy)
+[Why iframes?](#why-iframe)
+[Multiple embeds in a single article](#multiple-embeds)
+
 
 ## Instructions
 ### Setup project
@@ -15,7 +23,7 @@ Copy the following code and paste it into the terminal, hit Return.
 
 You are now ready to do work. Open embed-test.html in a browser to see your graphic. Or [awesome-ify](#awesome-ify-your-workflow-optional) your workflow.
 
-### Where to put your code and assets
+### Basic workflow
 All your code should go in the `src` folder:
 - html: src/index.html
 - css: src/css/main.css (you can add your own too)
@@ -89,6 +97,19 @@ I'm glad you asked...
 - **Simpler development**: No need to simulate the Globe environment. Things will look and behave 100% the same locally and in production.
 - **Long term viability**: Since you are writing code oustide of the Globe ecosystem, you don't have to do anything hacky or magical that might be Methode specific. You create a standalone web project. It will work when we start using another CMS.
 - **Embeddable**: The small snippet of code in `embed.jpt` can be integrated into almost any other CMS, which means other news organization or blogs can run our graphics (if we so desire).
+
+### Multiple embeds
+1. Create each graphic as a standalone project.
+2. In the embed.jpt file, change create incrementing ids for each `div` id:
+	- `id='globe-graphic-embed-1'...` --> `id='globe-graphic-embed-2'` etc, etc
+3. In embed.jpt, remove *all* `<script>` tags and their content *except* for the last graphic.
+4. Copy the two lines between the `<script>` tags and paste them as many times as you have grahpics, updating them to correspond with the #ids. So if you have two graphics, it would look like this:
+	`<script>`
+		`var pymParent1 = new pym.Parent('globe-graphic-embed-1', 'src/index.html', {});`
+	    `pymParent1.onMessage('height-request', function(msg) { pymParent1.sendMessage('height-send', window.innerHeight); });`
+	    `var pymParent2 = new pym.Parent('globe-graphic-embed-2', 'src/index.html', {});`
+	    `pymParent2.onMessage('height-request', function(msg) { pymParent2.sendMessage('height-send', window.innerHeight); });`
+    `</script>`
 
 ## License & Credits
 

@@ -39,12 +39,12 @@
 	/************************************/
 	var setupPym = function() {
 		if (window.console && console.log) { console.log('-- init globe graphic --'); }
-		var $master = $('#globe-graphic-container');
+		var container = document.getElementById('globe-graphic-container');
 		var pymChild = null;
 		var height = {previous: 0, current: 0};
 
 		var pollHeight = function() {
-			height.current = $master.outerHeight(true);
+			height.current = container.outerHeight;
 			if(height.current !== height.previous) {
 				height.previous = height.current;
 				pymChild.sendHeight();
