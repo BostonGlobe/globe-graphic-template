@@ -1,30 +1,42 @@
 (function() {
 	/*** define your global variables here ***/
 
-	
+
+
 	var init = function() {
-		// DON'T TOUCH THIS
-		setupPym();
+		setupPym(); // DO NOT TOUCH
 		
 		/*** call functions you want to run on load here ***/
 
 
+
 	};
 
-	// This function will be called once when the page loads and again when the parent window size changes
+	// This is called once when the page loads, and again whenever the parent window resizes
 	var parentResize = function() {
 		/*** put code here you want to run on window resize ***/
+
 		
 
 	};
 
-	/*** (begin) put all custom code here ***/
+	/*** (begin) your functions here ***/
+	
 
 
 
-	/*** (end) ***/
 
-	// DON'T TOUCH THIS
+
+
+
+
+
+	/************** (end) **************/
+
+
+	/************************************/
+	/* DANGER ZONE: DON'T GO BELOW HERE */
+	/************************************/
 	var setupPym = function() {
 		if (window.console && console.log) { console.log('-- init globe graphic --'); }
 		var $master = $('#globe-graphic-container');
@@ -45,13 +57,11 @@
 		pymChild.sendMessage('height-request', true);
 		pymChild.onMessage('height-send', function(msg) {
 			var initialHeight = +msg;
-			// OKAY, YOU CAN TOUCH THIS
+			// OKAY, YOU CAN TOUCH THIS IF YOU ARE CAREFUL
 			/*** call a function here, passing it the "initialHeight" variable if you need it ***/
 
 		});
-		
 		pollHeight();
 	};
-
 	init();
 })();
