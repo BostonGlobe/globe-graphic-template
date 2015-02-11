@@ -107,11 +107,28 @@ I'm glad you asked...
 ```html
 <script>
 	var pymParent1 = new pym.Parent('globe-graphic-embed-1', 'src/index.html', {});
-    pymParent1.onMessage('height-request', function(msg) { pymParent1.sendMessage('height-send', window.innerHeight); });
     var pymParent2 = new pym.Parent('globe-graphic-embed-2', 'src/index.html', {});
-    pymParent2.onMessage('height-request', function(msg) { pymParent2.sendMessage('height-send', window.innerHeight); });
 </script>
 ```
+
+### Get parent height
+Sometimes you want to do a thing based on the height of the browser (ie. make a map take up 2/3 of the browser). In order to get the height of the parent window, you must add these two code snippets:
+
+1. In `src/main.js`, add the following directly below the instructional comments:
+```js
+	/*** get parent height.... ***/
+	pymChild.sendMessage('height-request', true);
+	pymChild.onMessage('height-send', function(msg) {
+		var initialHeight = +msg;
+		/*** call a function here, passing it the "initialHeight" variable ***/
+		//example: createChart(initialHeight);
+	});
+```
+2. In the `embed.jpt` file, add the following below the line `var pymParent1...`:
+```js 
+	pymParent1.onMessage('height-request', function(msg) { pymParent1.sendMessage('height-send', window.innerHeight); });
+```
+3. Replace the entire `embed.jpt` code in `embed-test.html`.
 
 ## License & Credits
 

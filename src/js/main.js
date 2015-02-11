@@ -53,14 +53,8 @@
 		};
 
 		pymChild = pym.Child({ renderCallback: parentResize });
+		/*** get parent height (http://github.com/russellgoldenberg/globe-iframe-graphic#get-parent-height) ***/
 
-		pymChild.sendMessage('height-request', true);
-		pymChild.onMessage('height-send', function(msg) {
-			var initialHeight = +msg;
-			// OKAY, YOU CAN TOUCH THIS IF YOU ARE CAREFUL
-			/*** call a function here, passing it the "initialHeight" variable if you need it ***/
-
-		});
 		pollHeight();
 	};
 	init();
