@@ -32,7 +32,7 @@
 		var previousContainerHeight = 0;
 		var currentHeight = 0;
 		var pollContainerHeight = function() {
-			currentHeight = $master[0].offsetHeight;
+			currentHeight = $master.outerHeight(true);
 			if(currentHeight !== previousContainerHeight) {
 				previousContainerHeight = currentHeight;
 				pymChild.sendHeight();
