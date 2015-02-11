@@ -13,7 +13,7 @@ Copy the following code and paste it into the terminal, hit Return.
     
     curl -Lk https://github.com/russellgoldenberg/globe-iframe-graphic/archive/master.zip > temp.zip && unzip temp.zip && mv globe-iframe-graphic-master/* . && rm -rf temp.zip globe-iframe-graphic-master LICENSE README.md && echo "" && echo "-- HARD CODE, HARD NEWS! --" && echo ""
 
-You are now ready to do work.
+You are now ready to do work. Open embed-test.html in a browser to see your graphic. Or [awesome-ify](#awesome-ify-your-workflow-optional) your workflow.
 
 ### Where to put your code and assets
 All your code should go in the `src` folder:
