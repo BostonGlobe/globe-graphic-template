@@ -42,7 +42,7 @@ If want to include a js library, [read this](#how-to-include-javascript-librarie
 	- In Terminal, connect to shell (your username is usually first initial last name): `ssh rgoldenberg@shell.boston.com`.
 	- Navigate to your project directory: `cd /web/bgapps/html/graphics/[year]/[month]/[project-name].
 	- `cd` into each folder (ex. `cd css`) and run the command `upload *.*` to upload ALL files in that folder. 
-4. In embed.jpt, insert url path to the index.html file (`http://apps.bostonglobe.com/graphics/[year]/[month]/[project-name]/index.html`).
+4. In embed.jpt, replace `src/index.html` with your hosted file (`http://apps.bostonglobe.com/graphics/[year]/[month]/[project-name]/index.html`).
 5. Put the jpt in Methode and it is ready to be dropped in anywhere.
 
 ### Awesome-ify your workflow (optional)
@@ -99,7 +99,7 @@ I'm glad you asked...
 
 ### Multiple embeds
 1. Create each graphic as a standalone project.
-2. In the embed.jpt file, change create incrementing ids for each `div` id:
+2. In the embed.jpt file, create incrementing ids for each `div` id:
 	- `id='globe-graphic-embed-1'...` --> `id='globe-graphic-embed-2'` etc, etc
 3. In embed.jpt, remove *all* `<script>` tags and their content *except* for the last graphic.
 4. Copy the two lines between the `<script>` tags and paste them as many times as you have grahpics, updating them to correspond with the #ids. So if you have two graphics, it would look like this:
