@@ -34,7 +34,6 @@
 		var pollHeight = function() {
 			height.current = $master.outerHeight(true);
 			if(height.current !== height.previous) {
-				console.log('--', height.current);
 				height.previous = height.current;
 				pymChild.sendHeight();
 			}
