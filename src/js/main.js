@@ -29,19 +29,29 @@
 		if (window.console && console.log) { console.log('-- init globe graphic --'); }
 		var $master = $('#globe-graphic-container');
 		var pymChild = null;
-		var previousContainerHeight = 0;
-		var currentHeight = 0;
-		var pollContainerHeight = function() {
-			currentHeight = $master.outerHeight(true);
-			if(currentHeight !== previousContainerHeight) {
-				previousContainerHeight = currentHeight;
+		var height = {previous: 0, current: 0};
+
+		var pollHeight = function() {
+			height.current = $master.outerHeight(true);
+			if(height.current !== height.previous) {
+				console.log('--', height.current);
+				height.previous = height.current;
 				pymChild.sendHeight();
 			}
-			requestAnimationFrame(pollContainerHeight);
+			requestAnimationFrame(pollHeight);
 		};
 
 		pymChild = pym.Child({ renderCallback: parentResize });
-		pollContainerHeight();
+
+		pymChild.sendMessage('height-request', true);
+		pymChild.onMessage('height-send', function(msg) {
+			var initialHeight = +msg;
+			// OKAY, YOU CAN TOUCH THIS
+			/*** call a function here, passing it the "initialHeight" variable if you need it ***/
+
+		});
+		
+		pollHeight();
 	};
 
 	init();

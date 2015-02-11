@@ -5,6 +5,7 @@
 <div id='globe-graphic-embed-1' style='margin: 20px 0;'></div>
 <script src='http://apps.bostonglobe.com/common/js/pym/pym-0.4.1.min.js' type='text/javascript'></script>
 <script>
-    var pymParent1 = new pym.Parent('globe-graphic-embed-1', 'LINK-TO-YOUR-GRAPHIC', {});
+    var pymParent1 = new pym.Parent('globe-graphic-embed-1', 'src/index.html', {});
+    pymParent1.onMessage('height-request', function(msg) { pymParent1.sendMessage('height-send', window.innerHeight); });
 </script>
 <!-- (END) globe graphic embed -->
