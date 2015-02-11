@@ -1,13 +1,12 @@
 # Globe iframe graphic
 A basic template to get you up and running FAST. Scaffolds the basic html, css, and javascript necessary for a responsive iframe graphic that plays nice with the Globe.
 
-[Quick start](#instructions)
-[Basic workflow](#basic-workflow)
-[Awesome-ify your workflow](#awesome-ify-your-workflow-optional)
-[How to deploy](#how-to-deploy)
-[Why iframes?](#why-iframe)
-[Multiple embeds in a single article](#multiple-embeds)
-
+- [Quick start](#instructions)
+- [Basic workflow](#basic-workflow)
+- [Awesome-ify your workflow](#awesome-ify-your-workflow-optional)
+- [How to deploy](#how-to-deploy)
+- [Why iframes?](#why-iframe)
+- [Multiple embeds in a single article](#multiple-embeds)
 
 ## Instructions
 ### Setup project
@@ -104,12 +103,15 @@ I'm glad you asked...
 	- `id='globe-graphic-embed-1'...` --> `id='globe-graphic-embed-2'` etc, etc
 3. In embed.jpt, remove *all* `<script>` tags and their content *except* for the last graphic.
 4. Copy the two lines between the `<script>` tags and paste them as many times as you have grahpics, updating them to correspond with the #ids. So if you have two graphics, it would look like this:
-	`<script>`
-		`var pymParent1 = new pym.Parent('globe-graphic-embed-1', 'src/index.html', {});`
-	    `pymParent1.onMessage('height-request', function(msg) { pymParent1.sendMessage('height-send', window.innerHeight); });`
-	    `var pymParent2 = new pym.Parent('globe-graphic-embed-2', 'src/index.html', {});`
-	    `pymParent2.onMessage('height-request', function(msg) { pymParent2.sendMessage('height-send', window.innerHeight); });`
-    `</script>`
+
+```html
+<script>
+	var pymParent1 = new pym.Parent('globe-graphic-embed-1', 'src/index.html', {});
+    pymParent1.onMessage('height-request', function(msg) { pymParent1.sendMessage('height-send', window.innerHeight); });
+    var pymParent2 = new pym.Parent('globe-graphic-embed-2', 'src/index.html', {});
+    pymParent2.onMessage('height-request', function(msg) { pymParent2.sendMessage('height-send', window.innerHeight); });
+</script>
+```
 
 ## License & Credits
 
