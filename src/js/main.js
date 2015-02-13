@@ -44,7 +44,7 @@
 		var height = {previous: 0, current: 0};
 
 		var pollHeight = function() {
-			height.current = container.outerHeight;
+			height.current = container.offsetHeight;
 			if(height.current !== height.previous) {
 				height.previous = height.current;
 				pymChild.sendHeight();
