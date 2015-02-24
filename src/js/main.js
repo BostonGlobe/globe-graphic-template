@@ -53,7 +53,7 @@
 		};
 
 		pymChild = pym.Child({ renderCallback: parentResize });
-		/*** get parent height (http://github.com/russellgoldenberg/globe-iframe-graphic#get-parent-height) ***/
+		/*** to get parent window height, see http://github.com/russellgoldenberg/globe-iframe-graphic#get-parent-height ***/
 
 		pollHeight();
 	};
