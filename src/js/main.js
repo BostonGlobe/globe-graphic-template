@@ -1,3 +1,4 @@
+'use strict';
 (function() {
 	/*** define your global variables here ***/
 
