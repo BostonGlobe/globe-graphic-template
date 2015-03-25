@@ -86,7 +86,20 @@ When you are ready to deploy:
 This will output the index.html and the media folder in the prod directory. It can now be [deployed to server](#how-to-deploy).
 
 ### How to include javascript libraries
-For now, talk to Russell.
+Here is a list of the currently available libraries:
+
+- [handlebars (runtime)](http://apps.bostonglobe.com/common/js/handlebars/handlebars.runtime-2.0.0.min.js)
+- [jplayer](http://apps.bostonglobe.com/common/js/jplayer/jquery.player-2.9.2.min.js)
+- [jquery](http://apps.bostonglobe.com/common/js/jquery/jquery-1.11.2.min.js)
+- [lodash](http://apps.bostonglobe.com/common/js/lodash/lodash-3.3.1.min.js)
+- [mapbox](http://apps.bostonglobe.com/common/js/mapbox/mapbox-2.1.5.min.js)
+- [moment](http://apps.bostonglobe.com/common/js/moment/moment-2.9.0.min.js)
+- [raf](http://apps.bostonglobe.com/common/js/raf/raf.min.js)
+- [velocity](http://apps.bostonglobe.com/common/js/velocity/velocity-1.2.2.min.js)
+- [waypoints](http://apps.bostonglobe.com/common/js/waypoints/noframework.waypoints-3.1.1.min.js)
+
+To use, just add a script tag that points to these paths. If there is a library you would like added, talk to Russell.
+
 
 ### Why iframe?
 I'm glad you asked...
