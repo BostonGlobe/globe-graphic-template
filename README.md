@@ -89,7 +89,7 @@ This will output the index.html and the media folder in the prod directory. It c
 Here is a list of the currently available libraries:
 
 - [handlebars (runtime)](http://apps.bostonglobe.com/common/js/handlebars/handlebars.runtime-2.0.0.min.js)
-- [jplayer](http://apps.bostonglobe.com/common/js/jplayer/jquery.player-2.9.2.min.js)
+- [jplayer](http://apps.bostonglobe.com/common/js/jplayer/jquery.jplayer-2.9.2.min.js)
 - [jquery](http://apps.bostonglobe.com/common/js/jquery/jquery-1.11.2.min.js)
 - [lodash](http://apps.bostonglobe.com/common/js/lodash/lodash-3.3.1.min.js)
 - [mapbox](http://apps.bostonglobe.com/common/js/mapbox/mapbox-2.1.5.min.js)
