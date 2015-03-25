@@ -62,9 +62,7 @@ This uses [gulp](http://gulpjs.com) for:
 - js and css minifying for production
 - js and css inlining for production
 
-You must have [node](http://nodejs.org) installed, and sass, compass.
-
-	gem install sass compass
+You must have [node](http://nodejs.org) and [sass](http://sass-lang.com/]) installed.
 
 In terminal, run the following command in the root of your project:
 	
