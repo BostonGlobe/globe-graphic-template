@@ -83,6 +83,20 @@ When you are ready to deploy:
 
 This will output the index.html and the media folder in the prod directory. It can now be [deployed to server](#how-to-deploy).
 
+#### ArchieML integration
+If you want to use [ArchieML](http://archieml.org) for copy/data templating, follow these steps:
+
+- Create a Google Doc and make sure it is published and shared publicly
+- Grab the Doc ID from the url (example: https://docs.google.com/document/d/XXXX-XXXXXXXXXXXXXXXXXXX-XXXXXXXXXXXXXXXXXXX/edit)
+- Insert the "XXXX-XX..." into copy.js
+
+Whenever you want to pull down the latest from the Doc run:
+
+	node copy.js
+
+This will create a JSON file in `src/data/`. If you are using this for pre-rendered templating, change the `src/index.html` file to `index.hbs`. Now you can use [handlebars](http://handlebarsjs.com/) templates to insert the data. It will be auto-rendered to `index.html` as part of the default gulp dev tasks.
+
+
 ### How to include javascript libraries
 Here is a list of the currently available libraries:
 
