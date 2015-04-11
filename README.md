@@ -142,8 +142,8 @@ Sometimes you want to do a thing based on the height of the browser (ie. make a 
 1. In `src/main.js`, add the following directly below the instructional comments:
 ```js
 	/*** get parent height.... ***/
-	pymChild.sendMessage('height-request', true);
-	pymChild.onMessage('height-send', function(msg) {
+	window.pymChild.sendMessage('height-request', true);
+	window.pymChild.onMessage('height-send', function(msg) {
 		var initialHeight = +msg;
 		/*** call a function here, passing it the "initialHeight" variable ***/
 		//example: createChart(initialHeight);
