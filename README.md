@@ -29,7 +29,7 @@ All your code should go in the `src` folder:
 - html: src/index.html
 - css: src/css/main.css (you can add your own too)
 - js: src/js/main.js (you can add your own too)
-- media: put your images, audio, etc. in src/media.
+- assets: put your images, audio, etc. in src/assets.
 
 If want to include a js library, [read this](#how-to-include-javascript-libraries).
 
@@ -38,7 +38,7 @@ If want to include a js library, [read this](#how-to-include-javascript-librarie
 	- On a Mac, Finder -> Go -> Connect to Server.
 	- Enter `smb://widget.boston.com/web/bgapps/html` and with Globe username (globe\first.last) and password.
 	- Navigate to graphics/[year]/[month] and create a folder for your project (ex. graphics/2015/01/football-homerun).
-2. Copy over your html, js, css, and media into your project directory.
+2. Copy over your html, js, css, and assets into your project directory.
 3. Your project is now internally visible at http://dev.apps.bostonglobe.com/graphics/[year]/[month]/[project-name]
 4. **IMPORTANT:** SSH upload all assets so they are on cache, not dev.
 	- In Terminal, connect to shell (your username is usually first initial last name): `ssh rgoldenberg@shell.boston.com`.
@@ -82,7 +82,7 @@ When you are ready to deploy to production:
 
 	gulp prod
 
-This will output the index.html and the media folder in the prod directory. It can now be [deployed to server](#how-to-deploy).
+This will output the index.html and the assets folder in the prod directory. It can now be [deployed to server](#how-to-deploy).
 
 #### ArchieML integration
 If you want to use [ArchieML](http://archieml.org) for copy/data templating, follow these steps:
