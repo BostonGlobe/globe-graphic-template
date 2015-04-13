@@ -1,4 +1,4 @@
-# Globe iframe graphic
+# Globe graphic template
 A basic template to get you up and running FAST. Scaffolds the basic html, css, and javascript necessary for a responsive iframe graphic that plays nice with the Globe.
 
 - [Quick start](#instructions)
@@ -18,7 +18,7 @@ Enter the following command (replacing "project-name" with what want to call it)
 
 Copy the following code and paste it into the terminal, hit Return.
     
-    curl -Lk https://github.com/russellgoldenberg/globe-iframe-graphic/archive/master.zip > temp.zip && unzip temp.zip && mv globe-iframe-graphic-master/* . && rm -rf temp.zip globe-iframe-graphic-master LICENSE README.md && echo "" && echo "-- HARD CODE, HARD NEWS! --" && echo ""
+    curl -Lk http://b.globe.com/graphic-template > temp.zip && make setup
 
 You are now ready to do work. Open embed-test.html in a browser to see your graphic. Or [awesome-ify](#awesome-ify-your-workflow-optional) your workflow.
 
@@ -66,8 +66,7 @@ You must have [node](http://nodejs.org) and [sass](http://sass-lang.com/]) insta
 
 In terminal, run the following command in the root of your project:
 	
-	curl -Lk https://github.com/russellgoldenberg/globe-iframe-graphic-tasks/archive/master.zip > temp.zip && unzip temp.zip && rm -rf globe-iframe-graphic-tasks-master/README.md && mv globe-iframe-graphic-tasks-master/* . && mv globe-iframe-graphic-tasks-master/.jshintrc . && mv globe-iframe-graphic-tasks-master/.gitignore . && mv *.scss src/css && rm -rf temp.zip globe-iframe-graphic-tasks-master && echo "" && echo "-- RUN "NPM INSTALL" --" && echo ""
-
+	make awesome
 	
 Then install the node modules:
 
