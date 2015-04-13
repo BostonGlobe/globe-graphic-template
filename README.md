@@ -16,9 +16,9 @@ Enter the following command (replacing "project-name" with what want to call it)
 
     mkdir project-name && cd $_
 
-Copy the following code and run in terminal:
+Copy and paste the code below and hit return:
     
-    curl -Lk http://b.globe.com/graphic-template > temp.zip && make setup
+    curl -Lk http://b.globe.com/1NxRSSB > Makefile && make setup
 
 You are now ready to do work. Open embed-test.html in a browser to see your graphic. Or [awesome-ify](#awesome-ify-your-workflow-optional) your workflow.
 

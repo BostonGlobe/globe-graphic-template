@@ -5,3 +5,4 @@ package.json
 gulpfile.js
 gulp-tasks
 globe-iframe-*.js
+Makefile
