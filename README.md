@@ -20,7 +20,9 @@ Copy and paste the code below and hit return:
     
     curl -Lk http://b.globe.com/1NxRSSB > Makefile && make setup
 
-You are now ready to do work. Open embed-test.html in a browser to see your graphic. Or [awesome-ify](#awesome-ify-your-workflow-optional) your workflow.
+You are now ready to do work. Open `embed-test.html` in a browser to see your graphic.
+
+Or [awesome-ify](#awesome-ify-your-workflow-optional) your workflow.
 
 ### Basic workflow
 All your code should go in the `src` folder:
@@ -47,9 +49,9 @@ If want to include a js library, [read this](#how-to-include-javascript-librarie
 
 ### Awesome-ify your workflow (optional)
 #### *Just* live reload
-To setup a server for live reloading and others on the network can see your local project, install [browser-sync](http://www.browsersync.io). You must have [node](http://nodejs.org) installed.
+To setup a server for live reloading when a file changes and so others on the network can see what you are working on.
 
-    npm install -g browser-sync
+Make sure to install [browser-sync](http://www.browsersync.io/#install).
 
 `cd` into your project directory and run:
 
@@ -76,7 +78,7 @@ To get development up and running:
 
 	gulp
 
-When you are ready to deploy:
+When you are ready to deploy to production:
 
 	gulp prod
 
