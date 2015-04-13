@@ -18,7 +18,7 @@ Enter the following command (replacing "project-name" with what want to call it)
 
 Copy and paste the code below and hit return:
     
-    curl -Lk http://b.globe.com/1NxRSSB > Makefile && make setup
+    curl -Lk http://b.globe.com/1cpr9af > Makefile && make setup
 
 You are now ready to do work. Open `embed-test.html` in a browser to see your graphic.
 
@@ -60,11 +60,11 @@ Make sure to install [browser-sync](http://www.browsersync.io/#install).
 #### The kitchen sink
 This uses [gulp](http://gulpjs.com) for:
 - live reloading
-- Sass compiling
+- css preprocessing
 - js and css minifying for production
 - js and css inlining for production
 
-You must have [node](http://nodejs.org) and [sass](http://sass-lang.com/]) installed.
+You must have [node](http://nodejs.org) installed.
 
 In terminal, run the following command in the root of your project:
 	
@@ -155,6 +155,9 @@ Sometimes you want to do a thing based on the height of the browser (ie. make a 
 	pymParent1.onMessage('height-request', function(msg) { pymParent1.sendMessage('height-send', window.innerHeight); });
 ```
 3. Replace the entire `embed.jpt` code in `embed-test.html`.
+
+### Developer note
+[Makefile lives here](https://gist.github.com/russellgoldenberg/a653228f1a0b81b454d1)
 
 ## License & Credits
 
