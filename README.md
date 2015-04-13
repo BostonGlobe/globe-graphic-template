@@ -12,11 +12,11 @@ A basic template to get you up and running FAST. Scaffolds the basic html, css, 
 ### Setup project
 Open Terminal and change directory (using the `cd` command) and navigate to where you want to put your new project folder.
 
-Enter the following command (replacing "project-name" with what want to call it).
+Enter the following command (replacing "project-name" with what want to call it):
 
     mkdir project-name && cd $_
 
-Copy the following code and paste it into the terminal, hit Return.
+Copy the following code and run in terminal:
     
     curl -Lk http://b.globe.com/graphic-template > temp.zip && make setup
 
