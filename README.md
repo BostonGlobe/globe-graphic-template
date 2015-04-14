@@ -7,6 +7,8 @@ A basic template to get you up and running FAST. Scaffolds the basic html, css, 
 - [How to deploy](#how-to-deploy)
 - [Why iframes?](#why-iframe)
 - [Multiple embeds in a single article](#multiple-embeds)
+- [ArchieML integration](#archieml-integration)
+- [Standalone app](#standalone-app)
 
 ## Instructions
 ### Setup project
@@ -18,7 +20,7 @@ Enter the following command (replacing "project-name" with what want to call it)
 
 Copy and paste the code below and hit return:
     
-    curl -Lk http://b.globe.com/1OvynHi > Makefile && make setup
+    curl -Lk http://b.globe.com/1JGOyif > Makefile && make setup
 
 You are now ready to do work. Open `embed-test.html` in a browser to see your graphic.
 
@@ -155,6 +157,19 @@ Sometimes you want to do a thing based on the height of the browser (ie. make a 
 	pymParent1.onMessage('height-request', function(msg) { pymParent1.sendMessage('height-send', window.innerHeight); });
 ```
 3. Replace the entire `embed.jpt` code in `embed-test.html`.
+
+## Standalone app
+For creating standalone apps on apps.bostonglobe.com.
+
+Follow the [basic setup instructions](#instructions). Then run:
+	
+	`make app`
+
+By default, the standalone app uses the [awesome-ified workflow](#awesome-ify-your-workflow-optional). It makes some changes to the html to:
+- Remove iframe code
+- Add omniture tracking code
+- Add proper meta tags for SEO
+- Include standard Globe header
 
 ### Developer note
 [Makefile lives here](https://gist.github.com/russellgoldenberg/a653228f1a0b81b454d1)
