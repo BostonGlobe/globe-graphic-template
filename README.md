@@ -163,7 +163,7 @@ For creating standalone apps on apps.bostonglobe.com.
 
 Follow the [basic setup instructions](#instructions). Then run:
 	
-	`make app`
+	make app
 
 By default, the standalone app uses the [awesome-ified workflow](#awesome-ify-your-workflow-optional). It makes some changes to the html to:
 - Remove iframe code
