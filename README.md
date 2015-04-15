@@ -112,6 +112,7 @@ Here is a list of the currently available libraries:
 - [raf](http://apps.bostonglobe.com/common/js/raf/raf.min.js)
 - [velocity](http://apps.bostonglobe.com/common/js/velocity/velocity-1.2.2.min.js)
 - [waypoints](http://apps.bostonglobe.com/common/js/waypoints/noframework.waypoints-3.1.1.min.js)
+- [picturefill](http://apps.bostonglobe.com/common/js/picturefill/picturefill-2.3.0.min.js)
 
 To use, just add a script tag that points to these paths. If there is a library you would like added, talk to Russell.
 
