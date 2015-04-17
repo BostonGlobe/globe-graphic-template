@@ -36,18 +36,26 @@ All your code should go in the `src` folder:
 If want to include a js library, [read this](#how-to-include-javascript-libraries).
 
 ### How to deploy
-1. Create project directory on server.
-	- On a Mac, Finder -> Go -> Connect to Server.
-	- Enter `smb://widget.boston.com/web/bgapps/html` and with Globe username (globe\first.last) and password.
-	- Navigate to graphics/[year]/[month] and create a folder for your project (ex. graphics/2015/01/football-homerun).
+#### Step 1: put project files on server
+1. Create project directory on server. On a Mac, Finder -> Go -> Connect to Server.
+2. Enter `smb://widget.boston.com/web/bgapps/html` and with Globe username (globe\first.last) and password.
+3. Navigate to graphics/[year]/[month] and create a folder for your project (ex. graphics/2015/01/football-homerun).
 2. Copy over your html, js, css, and assets into your project directory.
 3. Your project is now internally visible at http://dev.apps.bostonglobe.com/graphics/[year]/[month]/[project-name]
-4. **IMPORTANT:** SSH upload all assets so they are on cache, not dev.
-	- In Terminal, connect to shell (your username is usually first initial last name): `ssh rgoldenberg@shell.boston.com`.
-	- Navigate to your project directory: `cd /web/bgapps/html/graphics/[year]/[month]/[project-name].
-	- `cd` into each folder (ex. `cd css`) and run the command `upload *.*` to upload ALL files in that folder. 
-4. In embed.jpt, replace `src/index.html` with your hosted file (`http://apps.bostonglobe.com/graphics/[year]/[month]/[project-name]/index.html`).
-5. Put the jpt in Methode and it is ready to be dropped in anywhere.
+4. Update these files whenever you want.
+
+#### Step 2: create jpt
+1. In workbench, create a jpt as you would.
+2. In the `embed.jpt` file, replace fill out the url to your project files from above.
+3. Copy the code from `embed.jpt` over to your jpt in workbench.
+4. Now you can slot it in any article.
+5. **Note**: if using as an igraphic, add `<link rel='stylesheet' href='http://apps.bostonglobe.com/common/css/igraphic/igraphic-0.1.0.css'/>` to the top of the jpt.
+
+#### Step 3: publish assets: 
+1. In Terminal, connect to shell (your username is usually first initial last name): `ssh rgoldenberg@shell.boston.com`.
+2. Navigate to your project directory: `cd /web/bgapps/html/graphics/[year]/[month]/[project-name].
+3. Run the command `upload *` in the root and each subdirectroy. (ex. `cd css` and run the command `upload *` to upload ALL files in that folder)
+5. In your jpt in workbench, simply change remove **dev** from the url and portal pub.
 
 ### Awesome-ify your workflow (optional)
 #### *Just* live reload
@@ -57,7 +65,7 @@ Make sure to install [browser-sync](http://www.browsersync.io/#install).
 
 `cd` into your project directory and run:
 
-    browser-sync start --files "src/index.html, src/css/*.css, src/js/*.js" --server src --no-notify --no-ghost-mode
+    browser-sync start --files "src/index.html, src/css/*.css, src/js/*.js" --server src --index embed-test.html --no-notify --no-ghost-mode
 
 #### The kitchen sink
 This uses [gulp](http://gulpjs.com) for:
@@ -113,6 +121,7 @@ Here is a list of the currently available libraries:
 - [velocity](http://apps.bostonglobe.com/common/js/velocity/velocity-1.2.2.min.js)
 - [waypoints](http://apps.bostonglobe.com/common/js/waypoints/noframework.waypoints-3.1.1.min.js)
 - [picturefill](http://apps.bostonglobe.com/common/js/picturefill/picturefill-2.3.0.min.js)
+- [imager](http://apps.bostonglobe.com/common/js/imager/imager-0.5.0.min.js)
 
 To use, just add a script tag that points to these paths. If there is a library you would like added, talk to Russell.
 
