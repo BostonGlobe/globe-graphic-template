@@ -65,7 +65,7 @@ Make sure to install [browser-sync](http://www.browsersync.io/#install).
 
 `cd` into your project directory and run:
 
-    browser-sync start --files "src/index.html, src/css/*.css, src/js/*.js" --server src --index embed-test.html --no-notify --no-ghost-mode
+    browser-sync start --files "src/**/*" --server src --index embed-test.html --no-notify
 
 #### The kitchen sink
 This uses [gulp](http://gulpjs.com) for:
