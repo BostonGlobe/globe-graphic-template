@@ -20,7 +20,7 @@ Enter the following command (replacing "project-name" with what want to call it)
 
 Copy and paste the code below and hit return:
     
-    curl -Lk http://b.globe.com/1HbmLqx > Makefile && make setup
+    curl -Lk http://b.globe.com/1GxjFcG > Makefile && make setup
 
 You are now ready to do work. Open `embed-test.html` in a browser to see your graphic.
 
