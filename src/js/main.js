@@ -1,6 +1,6 @@
-'use strict';
 (function() {
 	// global variables
+	'use strict';
 
 
 	// graphic functions

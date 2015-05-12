@@ -111,19 +111,20 @@ This will create a JSON file in `src/data/`. If you are using this for pre-rende
 ### How to include javascript libraries
 Here is a list of the currently available libraries:
 
-- [handlebars (runtime)](http://apps.bostonglobe.com/common/js/handlebars/handlebars.runtime-2.0.0.min.js)
-- [jplayer](http://apps.bostonglobe.com/common/js/jplayer/jquery.jplayer-2.9.2.min.js)
 - [jquery](http://apps.bostonglobe.com/common/js/jquery/jquery-1.11.2.min.js)
 - [lodash](http://apps.bostonglobe.com/common/js/lodash/lodash-3.3.1.min.js)
-- [mapbox](http://apps.bostonglobe.com/common/js/mapbox/mapbox-2.1.5.min.js)
-- [moment](http://apps.bostonglobe.com/common/js/moment/moment-2.9.0.min.js)
+- [d3](http://apps.bostonglobe.com/common/js/d3/d3-3.5.5.min.js)
+- [jplayer](http://apps.bostonglobe.com/common/js/jplayer/jquery.jplayer-2.9.2.min.js)
 - [raf](http://apps.bostonglobe.com/common/js/raf/raf.min.js)
 - [velocity](http://apps.bostonglobe.com/common/js/velocity/velocity-1.2.2.min.js)
 - [waypoints](http://apps.bostonglobe.com/common/js/waypoints/noframework.waypoints-3.1.1.min.js)
-- [picturefill](http://apps.bostonglobe.com/common/js/picturefill/picturefill-2.3.0.min.js)
 - [imager](http://apps.bostonglobe.com/common/js/imager/imager-0.5.0.min.js)
+- [mapbox](http://apps.bostonglobe.com/common/js/mapbox/mapbox-2.1.5.min.js)
+- [moment](http://apps.bostonglobe.com/common/js/moment/moment-2.9.0.min.js)
+- [handlebars (runtime)](http://apps.bostonglobe.com/common/js/handlebars/handlebars.runtime-2.0.0.min.js)
+- [picturefill](http://apps.bostonglobe.com/common/js/picturefill/picturefill-2.3.0.min.js)
 
-To use, just add a script tag that points to these paths. If there is a library you would like added, talk to Russell.
+To use, just add a script tag that points to these urls. If there is a library you would like added, talk to Russell.
 
 
 ### Why iframe?
