@@ -1,6 +1,6 @@
 (function() {
-	// global variables
 	'use strict';
+	// global variables
 
 
 	// graphic functions
