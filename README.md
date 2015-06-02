@@ -112,7 +112,7 @@ This will create a JSON file in `src/data/`. If you are using this for pre-rende
 Here is a list of the currently available libraries:
 
 - [jquery](http://apps.bostonglobe.com/common/js/jquery/jquery-1.11.2.min.js)
-- [lodash](http://apps.bostonglobe.com/common/js/lodash/lodash-3.3.1.min.js)
+- [lodash](http://apps.bostonglobe.com/common/js/lodash/lodash-3.9.3.min.js)
 - [d3](http://apps.bostonglobe.com/common/js/d3/d3-3.5.5.min.js)
 - [jplayer](http://apps.bostonglobe.com/common/js/jplayer/jquery.jplayer-2.9.2.min.js)
 - [raf](http://apps.bostonglobe.com/common/js/raf/raf.min.js)
