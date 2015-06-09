@@ -35,6 +35,9 @@ All your code should go in the `src` folder:
 
 If want to include a js library, [read this](#how-to-include-javascript-libraries).
 
+### Style guide
+The template comes with a basic css file (base.css) with some default Globe styles, text, and layouts. [See here](https://github.com/BostonGlobe/news-apps-docs/tree/master/style-guide) for details and instructions.
+
 ### How to deploy
 #### Step 1: put project files on server
 - Create project directory on server. On a Mac, Finder -> Go -> Connect to Server.
