@@ -20,7 +20,7 @@ Enter the following command (replacing "project-name" with what want to call it)
 
 Copy and paste the code below and hit return:
     
-    curl -Lk https://goo.gl/WGnlNo > Makefile && make setup
+    curl -Lk https://goo.gl/xvP4No > Makefile && make setup
 
 You are now ready to do work. Open `embed.html` in a browser to see your graphic.
 
@@ -126,7 +126,7 @@ Here is a list of the currently available libraries:
 - [moment](http://apps.bostonglobe.com/common/js/moment/moment-2.9.0.min.js)
 - [handlebars (runtime)](http://apps.bostonglobe.com/common/js/handlebars/handlebars.runtime-2.0.0.min.js)
 - [picturefill](http://apps.bostonglobe.com/common/js/picturefill/picturefill-2.3.0.min.js)
-- [linepainter](http://apps.bostonglobe.com/common/js/linepainter/linepainter-1.5.1.min.js)
+- [vivus](http://apps.bostonglobe.com/common/js/vivus/vivus-0.2.1.min.js)
 
 To use, just add a script tag that points to these urls. If there is a library you would like added, talk to Russell.
 
