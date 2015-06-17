@@ -20,7 +20,7 @@ Enter the following command (replacing "project-name" with what want to call it)
 
 Copy and paste the code below and hit return:
     
-    curl -Lk https://goo.gl/lNqkND > Makefile && make setup
+    curl -Lk https://goo.gl/1AzPEu > Makefile && make setup
 
 You are now ready to do work. Open `embed.html` in a browser to see your graphic.
 
@@ -28,15 +28,18 @@ Or [awesome-ify](#awesome-ify-your-workflow-optional) your workflow.
 
 ### Basic workflow
 All your code should go in the `src` folder:
-- html: src/index.html
-- css: src/css/main.css (you can add your own too)
-- js: src/js/main.js (you can add your own too)
-- assets: put your images, audio, etc. in src/assets.
+- **html**: `src/index.html`
+- **css**: `src/css/main.css`
+- **js**: `src/js/main.js`
+- **assets**: put your images, audio, etc. in `src/assets`
+
+**Please note:**
+This template now uses https. If you ever find yourself needing to make an absolute path reference, remember to use 'https' not 'http'.
 
 If want to include a js library, [read this](#how-to-include-javascript-libraries).
 
 ### Style guide
-The template comes with a basic css file (base.css) with some default Globe styles, text, and layouts. [See here](https://github.com/BostonGlobe/news-apps-docs/tree/master/style-guide) for details and instructions.
+The template comes equipped with base.css, a stylesheet containing reset, default Globe styles, text, and layouts. [See here](https://github.com/BostonGlobe/news-apps-docs/tree/master/style-guide) for documentation and how to utilize it.
 
 ### How to deploy
 #### Step 1: put project files on server
@@ -52,7 +55,7 @@ The template comes with a basic css file (base.css) with some default Globe styl
 - In the **snippet.html** file, fill out the url to your project from above.
 - Copy the code from **snippet.html** over to your jpt in workbench.
 - Now you can slot the jpt in any article (or igraphic).
-- **Note**: if using as an igraphic, add `<link rel='stylesheet' href='http://apps.bostonglobe.com/common/css/igraphic/igraphic-0.1.0.css'/>` to the top of the jpt.
+- **Note**: if using as an igraphic, add `<link rel='stylesheet' href='https://apps.bostonglobe.com/common/css/igraphic/igraphic-0.1.0.css'/>` to the top of the jpt.
 
 #### Step 3: publish assets: 
 - In Terminal, connect to shell (your username is usually first initial last name): `ssh rgoldenberg@shell.boston.com`.
@@ -73,19 +76,16 @@ Make sure to install [browser-sync](http://www.browsersync.io/#install).
 #### The kitchen sink
 This uses [gulp](http://gulpjs.com) for:
 - live reloading
-- css preprocessing
-- js and css minifying for production
-- js and css inlining for production
+- css preprocessing with stylus
+- js and css minifying / inlining for production
+- es6 compiling
+- handlebars for html rendering
 
 You must have [node](http://nodejs.org) installed.
 
 In terminal, run the following command in the root of your project:
 	
 	make awesome
-	
-Then install the node modules:
-
-	npm install
 
 To get development up and running:
 
@@ -95,7 +95,7 @@ When you are ready to deploy to production:
 
 	gulp prod
 
-This will output the index.html and the assets folder in the prod directory. It can now be [deployed to server](#how-to-deploy).
+This will output the `index.html` and the `assets` folder in the `prod` directory. It can now be [deployed to server](#how-to-deploy).
 
 #### ArchieML integration
 If you want to use [ArchieML](http://archieml.org) for copy/data templating, follow these steps:
@@ -108,25 +108,24 @@ Whenever you want to pull down the latest from the Doc run:
 
 	node copy.js
 
-This will create a JSON file in `src/data/`. If you are using this for pre-rendered templating, change the `src/index.html` file to `index.hbs`. Now you can use [handlebars](http://handlebarsjs.com/) templates to insert the data. It will be auto-rendered to `index.html` as part of the default gulp dev tasks.
-
+This will create a JSON file in `src/data/`. Now you can use [handlebars](http://handlebarsjs.com/) templates to insert the data. It will render to a normal .html file.
 
 ### How to include javascript libraries
 Here is a list of the currently available libraries:
 
-- [jquery](http://apps.bostonglobe.com/common/js/jquery/jquery-1.11.2.min.js)
-- [lodash](http://apps.bostonglobe.com/common/js/lodash/lodash-3.9.3.min.js)
-- [d3](http://apps.bostonglobe.com/common/js/d3/d3-3.5.5.min.js)
-- [jplayer](http://apps.bostonglobe.com/common/js/jplayer/jquery.jplayer-2.9.2.min.js)
-- [raf](http://apps.bostonglobe.com/common/js/raf/raf.min.js)
-- [velocity](http://apps.bostonglobe.com/common/js/velocity/velocity-1.2.2.min.js)
-- [waypoints](http://apps.bostonglobe.com/common/js/waypoints/noframework.waypoints-3.1.1.min.js)
-- [imager](http://apps.bostonglobe.com/common/js/imager/imager-0.5.0.min.js)
-- [mapbox](http://apps.bostonglobe.com/common/js/mapbox/mapbox-2.1.5.min.js)
-- [moment](http://apps.bostonglobe.com/common/js/moment/moment-2.9.0.min.js)
-- [handlebars (runtime)](http://apps.bostonglobe.com/common/js/handlebars/handlebars.runtime-2.0.0.min.js)
-- [picturefill](http://apps.bostonglobe.com/common/js/picturefill/picturefill-2.3.0.min.js)
-- [vivus](http://apps.bostonglobe.com/common/js/vivus/vivus-0.2.1.min.js)
+- [jquery](https://apps.bostonglobe.com/common/js/jquery/jquery-1.11.2.min.js)
+- [lodash](https://apps.bostonglobe.com/common/js/lodash/lodash-3.9.3.min.js)
+- [d3](https://apps.bostonglobe.com/common/js/d3/d3-3.5.5.min.js)
+- [jplayer](https://apps.bostonglobe.com/common/js/jplayer/jquery.jplayer-2.9.2.min.js)
+- [raf](https://apps.bostonglobe.com/common/js/raf/raf.min.js)
+- [velocity](https://apps.bostonglobe.com/common/js/velocity/velocity-1.2.2.min.js)
+- [waypoints](https://apps.bostonglobe.com/common/js/waypoints/noframework.waypoints-3.1.1.min.js)
+- [imager](https://apps.bostonglobe.com/common/js/imager/imager-0.5.0.min.js)
+- [mapbox](https://apps.bostonglobe.com/common/js/mapbox/mapbox-2.1.5.min.js)
+- [moment](https://apps.bostonglobe.com/common/js/moment/moment-2.9.0.min.js)
+- [handlebars (runtime)](https://apps.bostonglobe.com/common/js/handlebars/handlebars.runtime-2.0.0.min.js)
+- [picturefill](https://apps.bostonglobe.com/common/js/picturefill/picturefill-2.3.0.min.js)
+- [vivus](https://apps.bostonglobe.com/common/js/vivus/vivus-0.2.1.min.js)
 
 To use, just add a script tag that points to these urls. If there is a library you would like added, talk to Russell.
 
@@ -185,6 +184,8 @@ By default, the standalone app uses the [awesome-ified workflow](#awesome-ify-yo
 - Add omniture tracking code
 - Add proper meta tags for SEO
 - Include standard Globe header
+
+See the README for detailed instructions.
 
 ### Developer note
 [Makefile lives here](https://gist.github.com/russellgoldenberg/a653228f1a0b81b454d1)
