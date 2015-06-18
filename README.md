@@ -132,7 +132,7 @@ Sometimes you want to do a thing based on the height of the browser (ie. make a 
 3. Replace the entire `methode.html` code in `preview.html`.
 
 ### Developer note
-[Makefile lives here](https://gist.github.com/russellgoldenberg/a653228f1a0b81b454d1)
+[Makefile lives here](https://gist.github.com/russellgoldenberg/77a8d21ae535faa95c73)
 
 ## License & Credits
 
