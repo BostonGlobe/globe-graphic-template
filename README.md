@@ -11,15 +11,14 @@ A basic template to get you up and running FAST. Scaffolds the basic html, css, 
 ### Setup project
 Open Terminal and change directory (using the `cd` command) and navigate to where you want to put your new project folder.
 
-Enter the following command (replacing "project-name" with what want to call it):
+Enter the following commands (replacing "project-name" with what your project's name):
 
-    mkdir project-name && cd $_
+    mkdir project-name
+    cd project-name    
+    curl -Lk https://goo.gl/zNQ4jw > Makefile
+    make
 
-Copy and paste the code below and hit return:
-    
-    curl -Lk https://goo.gl/DGXhFx > Makefile && make setup
-
-You are now ready to do work. Open `embed.html` in a browser to see your graphic.
+You are now ready to do work. Open `preview.html` in a browser to see your graphic.
 
 ### Basic workflow
 All your code should go in the `src` folder:
@@ -65,7 +64,7 @@ Make sure to install [browser-sync](http://www.browsersync.io/#install).
 
 `cd` into your project directory and run:
 
-	browser-sync start --server . --index embed.html --files "src/**/*" --no-notify
+	browser-sync start --server . --index preview.html --files "src/**/*" --no-notify
 
 ### How to include javascript libraries
 Here is a list of the currently available libraries:
@@ -126,7 +125,7 @@ Sometimes you want to do a thing based on the height of the browser (ie. make a 
 ```js 
 	pymParent1.onMessage('height-request', function(msg) { pymParent1.sendMessage('height-send', window.innerHeight); });
 ```
-3. Replace the entire `snippet.html` code in `embed.html`.
+3. Replace the entire `snippet.html` code in `preview.html`.
 
 ### Developer note
 [Makefile lives here](https://gist.github.com/russellgoldenberg/a653228f1a0b81b454d1)
