@@ -1,14 +1,11 @@
 # Globe graphic template
-A basic template to get you up and running FAST. Scaffolds the basic html, css, and javascript necessary for a responsive iframe graphic that plays nice with the Globe.
+A basic template to get you up and running FAST. Scaffolds the basic html, css, and javascript necessary for a responsive iframe graphic that plays nice with the Globe. [Go here](https://github.com/BostonGlobe/slush-globegraphic) for the enhanced (node + gulp) workflow.
 
 - [Quick start](#instructions)
 - [Basic workflow](#basic-workflow)
-- [Awesome-ify your workflow](#awesome-ify-your-workflow-optional)
 - [How to deploy](#how-to-deploy)
 - [Why iframes?](#why-iframe)
 - [Multiple embeds in a single article](#multiple-embeds)
-- [ArchieML integration](#archieml-integration)
-- [Standalone app](#standalone-app)
 
 ## Instructions
 ### Setup project
@@ -20,11 +17,9 @@ Enter the following command (replacing "project-name" with what want to call it)
 
 Copy and paste the code below and hit return:
     
-    curl -Lk https://goo.gl/1AzPEu > Makefile && make setup
+    curl -Lk https://goo.gl/DGXhFx > Makefile && make setup
 
 You are now ready to do work. Open `embed.html` in a browser to see your graphic.
-
-Or [awesome-ify](#awesome-ify-your-workflow-optional) your workflow.
 
 ### Basic workflow
 All your code should go in the `src` folder:
@@ -63,8 +58,7 @@ The template comes equipped with base.css, a stylesheet containing reset, defaul
 - Run the command `upload *` in the root and each subdirectroy. (ex. `cd css` and run the command `upload *` to upload ALL files in that folder).
 - In your jpt in workbench, simply change remove **dev** from the url and portal pub.
 
-### Awesome-ify your workflow (optional)
-#### *Just* live reload
+### Live reload
 To setup a server for live reloading when a file changes and so others on the network can see what you are working on.
 
 Make sure to install [browser-sync](http://www.browsersync.io/#install).
@@ -72,43 +66,6 @@ Make sure to install [browser-sync](http://www.browsersync.io/#install).
 `cd` into your project directory and run:
 
 	browser-sync start --server . --index embed.html --files "src/**/*" --no-notify
-
-#### The kitchen sink
-This uses [gulp](http://gulpjs.com) for:
-- live reloading
-- css preprocessing with stylus
-- js and css minifying / inlining for production
-- es6 compiling
-- handlebars for html rendering
-
-You must have [node](http://nodejs.org) installed.
-
-In terminal, run the following command in the root of your project:
-	
-	make awesome
-
-To get development up and running:
-
-	gulp
-
-When you are ready to deploy to production:
-
-	gulp prod
-
-This will output the `index.html` and the `assets` folder in the `prod` directory. It can now be [deployed to server](#how-to-deploy).
-
-#### ArchieML integration
-If you want to use [ArchieML](http://archieml.org) for copy/data templating, follow these steps:
-
-- Create a Google Doc and make sure it is published and shared publicly
-- Grab the Doc ID from the url (example: https://docs.google.com/document/d/XXXX-XXXXXXXXXXXXXXXXXXX-XXXXXXXXXXXXXXXXXXX/edit)
-- Insert the "XXXX-XX..." into copy.js
-
-Whenever you want to pull down the latest from the Doc run:
-
-	node copy.js
-
-This will create a JSON file in `src/data/`. Now you can use [handlebars](http://handlebarsjs.com/) templates to insert the data. It will render to a normal .html file.
 
 ### How to include javascript libraries
 Here is a list of the currently available libraries:
@@ -128,7 +85,6 @@ Here is a list of the currently available libraries:
 - [vivus](https://apps.bostonglobe.com/common/js/vivus/vivus-0.2.1.min.js)
 
 To use, just add a script tag that points to these urls. If there is a library you would like added, talk to Russell.
-
 
 ### Why iframe?
 I'm glad you asked...
@@ -171,21 +127,6 @@ Sometimes you want to do a thing based on the height of the browser (ie. make a 
 	pymParent1.onMessage('height-request', function(msg) { pymParent1.sendMessage('height-send', window.innerHeight); });
 ```
 3. Replace the entire `snippet.html` code in `embed.html`.
-
-## Standalone app
-For creating standalone apps on apps.bostonglobe.com.
-
-Follow the [basic setup instructions](#instructions). Then run:
-	
-	make app
-
-By default, the standalone app uses the [awesome-ified workflow](#awesome-ify-your-workflow-optional). It makes some changes to the html to:
-- Remove iframe code
-- Add omniture tracking code
-- Add proper meta tags for SEO
-- Include standard Globe header
-
-See the README for detailed instructions.
 
 ### Developer note
 [Makefile lives here](https://gist.github.com/russellgoldenberg/a653228f1a0b81b454d1)
