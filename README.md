@@ -1,5 +1,5 @@
 # Globe graphic template
-A basic template to get you up and running *fast*. Scaffolds the basic html, css, and js necessary for a responsive iframe graphic, hassle-free. [Go here](https://github.com/BostonGlobe/slush-globegraphic) for the enhanced (node + gulp) workflow.
+A basic template to get you up and running *fast*. Scaffolds the html, css, and js necessary for a responsive iframe graphic, hassle-free. [Go here](https://github.com/BostonGlobe/slush-globegraphic) for the enhanced (node + gulp) workflow.
 
 - [Quick start](#instructions)
 - [Basic workflow](#basic-workflow)
@@ -33,13 +33,17 @@ This template now uses https. If you ever find yourself needing to make an absol
 If want to include a js library, [read this](#how-to-include-javascript-libraries).
 
 ### Style guide
-The template comes equipped with base.css, a stylesheet containing reset, default Globe styles, typography, and layouts. [See here](https://github.com/BostonGlobe/news-apps-docs/tree/master/style-guide) for documentation and best practices.
+The template comes equipped with **base.css**, a stylesheet containing reset, default Globe styles, typography, and layouts. [See here](https://github.com/BostonGlobe/news-apps-docs/tree/master/style-guide) for documentation and best practices.
 
 ### How to deploy
 #### Step 1: put project files on server
-- Create project directory on server. On a Mac, Finder -> Go -> Connect to Server.
-- Enter `smb://widget.boston.com/web/bgapps/html` (username globe\first.last and password).
-- Navigate to graphics/[year]/[month] and create a folder for your project (ex. graphics/2015/01/football-homerun).
+- Create project directory on server. On a Mac, `Finder -> Go -> Connect to Server`
+- Enter `smb://widget.boston.com/web/bgapps/html/graphics` *(username: globe\first.last)*
+- Navigate to [year]/[month] and create a folder for your project
+- For example: 2015/
+	mkdir awesome-cats
+	cd awesome-cats
+
 - Copy over your all the files in the **src** folder to the server.
 - Your project is now internally visible at http://dev.apps.bostonglobe.com/graphics/[year]/[month]/[project-name].
 - Update these files whenever you want.
@@ -69,19 +73,19 @@ Make sure to install [browser-sync](http://www.browsersync.io/#install).
 ### How to include javascript libraries
 Here is a list of the currently available libraries:
 
-- [jquery](https://apps.bostonglobe.com/common/js/jquery/jquery-1.11.2.min.js)
-- [lodash](https://apps.bostonglobe.com/common/js/lodash/lodash-3.9.3.min.js)
-- [d3](https://apps.bostonglobe.com/common/js/d3/d3-3.5.5.min.js)
-- [jplayer](https://apps.bostonglobe.com/common/js/jplayer/jquery.jplayer-2.9.2.min.js)
-- [raf](https://apps.bostonglobe.com/common/js/raf/raf.min.js)
-- [velocity](https://apps.bostonglobe.com/common/js/velocity/velocity-1.2.2.min.js)
-- [waypoints](https://apps.bostonglobe.com/common/js/waypoints/noframework.waypoints-3.1.1.min.js)
-- [imager](https://apps.bostonglobe.com/common/js/imager/imager-0.5.0.min.js)
-- [mapbox](https://apps.bostonglobe.com/common/js/mapbox/mapbox-2.1.5.min.js)
-- [moment](https://apps.bostonglobe.com/common/js/moment/moment-2.9.0.min.js)
-- [handlebars (runtime)](https://apps.bostonglobe.com/common/js/handlebars/handlebars.runtime-2.0.0.min.js)
-- [picturefill](https://apps.bostonglobe.com/common/js/picturefill/picturefill-2.3.0.min.js)
-- [vivus](https://apps.bostonglobe.com/common/js/vivus/vivus-0.2.1.min.js)
+- [jquery](https://apps.bostonglobe.com/common/js/jquery/jquery-1.11.2.min.js): DOM operations
+- [lodash](https://apps.bostonglobe.com/common/js/lodash/lodash-3.9.3.min.js): utilities
+- [d3](https://apps.bostonglobe.com/common/js/d3/d3-3.5.5.min.js): Visualization
+- [jplayer](https://apps.bostonglobe.com/common/js/jplayer/jquery.jplayer-2.9.2.min.js): HTML5 audio/video
+- [raf](https://apps.bostonglobe.com/common/js/raf/raf.min.js): Request Animation Frame polyfill
+- [velocity](https://apps.bostonglobe.com/common/js/velocity/velocity-1.2.2.min.js): Animation
+- [waypoints](https://apps.bostonglobe.com/common/js/waypoints/noframework.waypoints-3.1.1.min.js): Scroll triggers
+- [imager](https://apps.bostonglobe.com/common/js/imager/imager-0.5.0.min.js): Responsive images
+- [picturefill](https://apps.bostonglobe.com/common/js/picturefill/picturefill-2.3.0.min.js): Responsive images
+- [mapbox](https://apps.bostonglobe.com/common/js/mapbox/mapbox-2.1.5.min.js): Maps
+- [moment](https://apps.bostonglobe.com/common/js/moment/moment-2.9.0.min.js): Time and dates
+- [handlebars (runtime)](https://apps.bostonglobe.com/common/js/handlebars/handlebars.runtime-2.0.0.min.js): Client-side templating
+- [vivus](https://apps.bostonglobe.com/common/js/vivus/vivus-0.2.1.min.js): SVG line path animation
 
 To use, just add a script tag that points to these urls. If there is a library you would like added, talk to Russell.
 
