@@ -107,9 +107,10 @@ Iframes are great for the reasons mentioned above. If your graphic necessitates 
 While there are workarounds that involve setting up messaging between the parent and child, anything involving manipulating the scroll position is advised against.
 
 ### Cache busting
-Well, um, right now the assets aren't cached. Hopefully that happens soon. When it is activated, you may need to re-deploy an asset, like an image. Once you have published the new the image file, you need to change its reference in your code. An example: 
-This: `<img src="assets/smokey.jpg">`
-Becomes: `<img src="assets/smokey.jpg?v=2.0">`
+Well, um, right now the assets aren't cached. Hopefully that happens soon. When it is activated, you may need to re-deploy an asset, like an image. Once you have published the new image file, you need to change its reference in your code. An example: 
+
+- This: `<img src="assets/smokey.jpg">`
+- Becomes: `<img src="assets/smokey.jpg?v=2.0">`
 
 
 ### Multiple embeds
