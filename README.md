@@ -109,8 +109,8 @@ While there are workarounds that involve setting up messaging between the parent
 ### Cache busting
 Well, um, right now the assets aren't cached. Hopefully that happens soon. When it is activated, you may need to re-deploy an asset, like an image. Once you have published the new image file, you need to change its reference in your code. An example: 
 
-- This: `<img src="assets/smokey.jpg">`
-- Becomes: `<img src="assets/smokey.jpg?v=2.0">`
+- This: `<img src="assets/smokey.jpg" alt="cat" />`
+- Becomes: `<img src="assets/smokey.jpg?v=2.0" alt="cat" />`
 
 
 ### Multiple embeds
