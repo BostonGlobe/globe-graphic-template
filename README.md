@@ -1,5 +1,5 @@
 # Globe graphic template
-A basic template to get you up and running FAST. Scaffolds the basic html, css, and javascript necessary for a responsive iframe graphic that plays nice with the Globe. [Go here](https://github.com/BostonGlobe/slush-globegraphic) for the enhanced (node + gulp) workflow.
+A basic template to get you up and running *fast*. Scaffolds the basic html, css, and js necessary for a responsive iframe graphic, hassle-free. [Go here](https://github.com/BostonGlobe/slush-globegraphic) for the enhanced (node + gulp) workflow.
 
 - [Quick start](#instructions)
 - [Basic workflow](#basic-workflow)
@@ -12,7 +12,7 @@ A basic template to get you up and running FAST. Scaffolds the basic html, css, 
 Open Terminal and change directory (using the `cd` command) and navigate to where you want to put your new project folder.
 
 Enter the following commands (replacing "project-name" with what your project's name):
-
+    
     mkdir project-name
     cd project-name    
     curl -Lk https://goo.gl/zNQ4jw > Makefile
@@ -33,7 +33,7 @@ This template now uses https. If you ever find yourself needing to make an absol
 If want to include a js library, [read this](#how-to-include-javascript-libraries).
 
 ### Style guide
-The template comes equipped with base.css, a stylesheet containing reset, default Globe styles, text, and layouts. [See here](https://github.com/BostonGlobe/news-apps-docs/tree/master/style-guide) for documentation and how to utilize it.
+The template comes equipped with base.css, a stylesheet containing reset, default Globe styles, typography, and layouts. [See here](https://github.com/BostonGlobe/news-apps-docs/tree/master/style-guide) for documentation and best practices.
 
 ### How to deploy
 #### Step 1: put project files on server
@@ -46,8 +46,8 @@ The template comes equipped with base.css, a stylesheet containing reset, defaul
 
 #### Step 2: create jpt
 - In workbench, create a jpt as you would.
-- In the **snippet.html** file, fill out the url to your project from above.
-- Copy the code from **snippet.html** over to your jpt in workbench.
+- In the **methode.html** file, fill out the url to your project from above.
+- Copy the code from **methode.html** over to your jpt in workbench.
 - Now you can slot the jpt in any article (or igraphic).
 - **Note**: if using as an igraphic, add `<link rel='stylesheet' href='https://apps.bostonglobe.com/common/css/igraphic/igraphic-0.1.0.css'/>` to the top of the jpt.
 
@@ -92,13 +92,13 @@ I'm glad you asked...
 - **No cross-origin issues**: Since all content is on the same domain and relatively referenced, there will never be strange cross-origin issues (like on audio files...). 
 - **Simpler development**: No need to simulate the Globe environment. Things will look and behave 100% the same locally and in production.
 - **Long term viability**: Since you are writing code oustide of the Globe ecosystem, you don't have to do anything hacky or magical that might be Methode specific. You create a standalone web project. It will work when we start using another CMS.
-- **Embeddable**: The small snippet of code in `snippet.html` can be integrated into almost any other CMS, which means other news organization or blogs can run our graphics (if we so desire).
+- **Embeddable**: The small snippet of code in `methode.html` can be integrated into almost any other CMS, which means other news organization or blogs can run our graphics (if we so desire).
 
 ### Multiple embeds
 1. Create each graphic as a standalone project.
-2. In the snippet.html file, create incrementing ids for each `div` id:
+2. In the methode.html file, create incrementing ids for each `div` id:
 	- `id='globe-graphic-embed-1'...` --> `id='globe-graphic-embed-2'` etc, etc
-3. In snippet.html, remove *all* `<script>` tags and their content *except* for the last graphic.
+3. In methode.html, remove *all* `<script>` tags and their content *except* for the last graphic.
 4. Copy the two lines between the `<script>` tags and paste them as many times as you have grahpics, updating them to correspond with the #ids. So if you have two graphics, it would look like this:
 
 ```html
@@ -121,11 +121,11 @@ Sometimes you want to do a thing based on the height of the browser (ie. make a 
 		//example: createChart(initialHeight);
 	});
 ```
-2. In the `snippet.html` file, add the following below the line `var pymParent1...`:
+2. In the `methode.html` file, add the following below the line `var pymParent1...`:
 ```js 
 	pymParent1.onMessage('height-request', function(msg) { pymParent1.sendMessage('height-send', window.innerHeight); });
 ```
-3. Replace the entire `snippet.html` code in `preview.html`.
+3. Replace the entire `methode.html` code in `preview.html`.
 
 ### Developer note
 [Makefile lives here](https://gist.github.com/russellgoldenberg/a653228f1a0b81b454d1)
