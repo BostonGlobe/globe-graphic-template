@@ -5,6 +5,7 @@ A basic template to get you up and running *fast*. Scaffolds the html, css, and 
 - [Basic workflow](#basic-workflow)
 - [How to deploy](#how-to-deploy)
 - [Why iframes?](#why-iframe)
+- [When not to use iframes](#when-not-to-use-iframes)
 - [Multiple embeds in a single article](#multiple-embeds)
 
 ## Instructions
@@ -97,6 +98,19 @@ I'm glad you asked...
 - **Simpler development**: No need to simulate the Globe environment. Things will look and behave 100% the same locally and in production.
 - **Long term viability**: Since you are writing code oustide of the Globe ecosystem, you don't have to do anything hacky or magical that might be Methode specific. You create a standalone web project. It will work when we start using another CMS.
 - **Embeddable**: The small snippet of code in `methode.html` can be integrated into almost any other CMS, which means other news organization or blogs can run our graphics (if we so desire).
+
+### When not to use iframes
+Iframes are great for the reasons mentioned above. If your graphic necessitates having one of the following features however, you might want to reconsider your design or the use of iframe.
+- If you need to have a fixed element while the user scrolls
+- If a user action jumps the scroll bar
+
+While there are workarounds that involve setting up messaging between the parent and child, anything involving manipulating the scroll position is advised against.
+
+### Cache busting
+Well, um, right now the assets aren't cached. Hopefully that happens soon. When it is activated, you may need to re-deploy an asset, like an image. Once you have published the new the image file, you need to change its reference in your code. An example: 
+This: `<img src="assets/smokey.jpg">`
+Becomes: `<img src="assets/smokey.jpg?v=2.0">`
+
 
 ### Multiple embeds
 1. Create each graphic as a standalone project.
