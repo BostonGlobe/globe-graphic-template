@@ -16,7 +16,7 @@ Enter the following commands (replacing "project-name" with what your project's 
     
     mkdir project-name
     cd project-name    
-    curl -Lk https://goo.gl/zNQ4jw > Makefile
+    curl -Lk https://goo.gl/wKB1qb > Makefile
     make
 
 You are now ready to do work. Open `preview.html` in a browser to see your graphic.
