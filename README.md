@@ -37,7 +37,6 @@ If want to include a js library, [read this](#how-to-include-javascript-librarie
 The template comes equipped with **base.css**, a stylesheet containing reset, default Globe styles, typography, and layouts. [See here](https://bostonglobe.github.io/news-apps-style-guide) for documentation and best practices.
 
 ### How to deploy
-#### Step 1: put project files on server
 - Create project folder and a blank .jpt like normal in methode
 - Create the same sub-folders that you have in the **src** folder (assets, js, css, data), excluding empty ones
 - Copy over your all the files and  inside the **src** folder and sub-folders
