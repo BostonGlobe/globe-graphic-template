@@ -1,18 +1,59 @@
+<script>
+	window.pathToJPT = ''; // <---- Put the full path the JPT here
+</script>
+
+
 <!-- (BEGIN) globe graphic embed -->
-<!--[if lte IE 8]>
-    
+
+<!--[if lte IE 8]>    		
 <![endif]-->
+
+<!-- DO NOT TOUCH -->
 <div id='globe-graphic-embed-1' style='margin: 20px 0;'></div>
 <script src='https://apps.bostonglobe.com/common/js/pym/pym-0.4.1.min.js' type='text/javascript'></script>
 <script>
     (function() {
+    	var getSource = function() {
+    		var base = {
+    			'prdedit': 'http://prdedit.bostonglobe.com/r',
+    			'live': 'https://bostonglobe.com/r/Boston/2011-2020/WebGraphics/'
+    		};
+
+    		// remove jpt bit to get filepath
+    		if(pathToJPT) {
+    			var path = pathToJPT.substring(0, pathToJPT.lastIndexOf('/'));
+	    		
+	    		// change url if prdedit vs live
+	    		if(window.location.hostname.indexOf('prdedit') > -1) {
+	    			// prdedit === easy
+					return base.prdedit + path + '/index.html';
+
+	    		} else {
+	    			// must extract the section, and the end of the path
+	    			// the bookends to be used to help extract
+	    			var content = 'Content/';
+	    			var webgraphics = '/WebGraphics/';
+
+	    			var left = path.indexOf(content) + content.length;
+	    			var right = path.indexOf(webgraphics);
+
+	    			var section = path.substring(left, right);
+	    			var end = path.substring(right + webgraphics.length, path.length);
+
+	    			return base.live + section + '/BostonGlobe.com/' + end + '/index.html';
+	    		}	
+    		} else {
+    			alert('add path to JPT in the .jpt file');
+    		}
+		};
+
     	var pong = function() {
-    		var path = window.location.hostname + '/rw/${basepath}/';
     		pymParent1.sendMessage('pong', path);
     	};
 		
-		var pymParent1 = new pym.Parent('globe-graphic-embed-1', 'src/ndex.html', {});
+		var pymParent1 = new pym.Parent('globe-graphic-embed-1', getSource(), {});
 		pymParent1.onMessage('ping', pong);
+		
 	})();
 </script>
 <!-- (END) globe graphic embed -->

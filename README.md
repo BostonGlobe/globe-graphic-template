@@ -39,8 +39,9 @@ The template comes equipped with **base.css**, a stylesheet containing reset, de
 ### How to deploy
 - Create project folder and a blank **jpt** like normal in methode
 - Create the same sub-folders that you have in the **src** folder (assets, js, css, data), excluding empty ones
-- Copy over your all the files and  inside the **src** folder and sub-folders
+- Copy over your all the files inside the **src** folder and sub-folders to methode
 - Paste the contents of **methode.html** into your **jpt**
+- **Critical**: Paste in the path to the **jpt** at the top of the **jpt** where it says `window.pathToJPT = ''`
 - Now you can slot the **jpt** in any article (or igraphic)
 
 **Note**: if using as an igraphic, add `<link rel='stylesheet' href='https://apps.bostonglobe.com/common/css/igraphic/igraphic-0.1.0.css'/>` to the top of the jpt.
