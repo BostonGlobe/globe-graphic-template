@@ -6,7 +6,13 @@
 <script src='https://apps.bostonglobe.com/common/js/pym/pym-0.4.1.min.js' type='text/javascript'></script>
 <script>
     (function() {
-		var pymParent1 = new pym.Parent('globe-graphic-embed-1', 'https://apps.bostonglobe.com/graphics/[year]/[month]/[name]/prod/index.html', {});
+    	var pong = function() {
+    		var path = window.location.hostname + '/rw/${basepath}/';
+    		pymParent1.sendMessage('pong', path);
+    	};
+		
+		var pymParent1 = new pym.Parent('globe-graphic-embed-1', 'index.html', {});
+		pymParent1.onMessage('ping', pong);
 	})();
 </script>
 <!-- (END) globe graphic embed -->
