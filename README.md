@@ -34,33 +34,17 @@ This template now uses https. If you ever find yourself needing to make an absol
 If want to include a js library, [read this](#how-to-include-javascript-libraries).
 
 ### Style guide
-The template comes equipped with **base.css**, a stylesheet containing reset, default Globe styles, typography, and layouts. [See here](https://github.com/BostonGlobe/news-apps-docs/tree/master/style-guide) for documentation and best practices.
+The template comes equipped with **base.css**, a stylesheet containing reset, default Globe styles, typography, and layouts. [See here](https://bostonglobe.github.io/news-apps-style-guide) for documentation and best practices.
 
 ### How to deploy
 #### Step 1: put project files on server
-- Create project directory on server. On a Mac, `Finder -> Go -> Connect to Server`
-- Enter `smb://widget.boston.com/web/bgapps/html/graphics` *(username: globe\first.last)*
-- Navigate to [year]/[month] and create a folder for your project
-- For example: 2015/
-	mkdir awesome-cats
-	cd awesome-cats
+- Create project folder and a blank .jpt like normal in methode
+- Create the same sub-folders that you have in the **src** folder (assets, js, css, data), excluding empty ones
+- Copy over your all the files and  inside the **src** folder and sub-folders
+- Paste the contents of **methode.html** into your .jpt
+- Now you can slot the jpt in any article (or igraphic)
 
-- Copy over your all the files in the **src** folder to the server.
-- Your project is now internally visible at http://dev.apps.bostonglobe.com/graphics/[year]/[month]/[project-name].
-- Update these files whenever you want.
-
-#### Step 2: create jpt
-- In workbench, create a jpt as you would.
-- In the **methode.html** file, fill out the url to your project from above.
-- Copy the code from **methode.html** over to your jpt in workbench.
-- Now you can slot the jpt in any article (or igraphic).
-- **Note**: if using as an igraphic, add `<link rel='stylesheet' href='https://apps.bostonglobe.com/common/css/igraphic/igraphic-0.1.0.css'/>` to the top of the jpt.
-
-#### Step 3: publish assets: 
-- In Terminal, connect to shell (your username is usually first initial last name): `ssh rgoldenberg@shell.boston.com`.
-- Navigate to your project directory: `cd /web/bgapps/html/graphics/[year]/[month]/[project-name]`.
-- Run the command `upload *` in the root and each subdirectroy. (ex. `cd css` and run the command `upload *` to upload ALL files in that folder).
-- In your jpt in workbench, simply change remove **dev** from the url and portal pub.
+**Note**: if using as an igraphic, add `<link rel='stylesheet' href='https://apps.bostonglobe.com/common/css/igraphic/igraphic-0.1.0.css'/>` to the top of the jpt.
 
 ### Live reload
 To setup a server for live reloading when a file changes and so others on the network can see what you are working on.
