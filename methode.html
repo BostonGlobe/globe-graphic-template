@@ -47,13 +47,7 @@
     		}
 		};
 
-    	var pong = function() {
-    		pymParent1.sendMessage('pong', path);
-    	};
-		
 		var pymParent1 = new pym.Parent('globe-graphic-embed-1', getSource(), {});
-		pymParent1.onMessage('ping', pong);
-		
 	})();
 </script>
 <!-- (END) globe graphic embed -->
