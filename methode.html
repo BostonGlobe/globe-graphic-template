@@ -3,44 +3,53 @@
 </script>
 
 
+
+
 <!-- (BEGIN) globe graphic embed -->
 
 <!--[if lte IE 8]>    		
 <![endif]-->
 
-<!-- DO NOT TOUCH -->
+<!-- *** DO NOT TOUCH *** -->
 <div id='globe-graphic-embed-1' style='margin: 20px 0;'></div>
 <script src='https://apps.bostonglobe.com/common/js/pym/pym-0.4.1.min.js' type='text/javascript'></script>
 <script>
     (function() {
 		var getSource = function() {
-			// remove jpt bit to get filepath
-			if(pathToJPT) {
-				var path = pathToJPT.substring(0, pathToJPT.lastIndexOf('/'));
+			validatePath(function(err, path) {
+				if(err) { alert('Improper path to jpt supplied. Make sure to paste entire path.'); }
+				else {
+					if(window.location.hostname.indexOf('prdedit') > -1) {
+						return 'http://prdedit.bostonglobe.com/r' + path + '/index.html';
+					} else {
+						var content = 'Content/';
+						var webgraphics = '/WebGraphics/';
 
-				// change url if prdedit vs live
-				if(window.location.hostname.indexOf('prdedit') > -1) {
-				
-					// prdedit === easy
-					return 'http://prdedit.bostonglobe.com/r' + path + '/index.html';
+						var left = path.indexOf(content) + content.length;
+						var right = path.indexOf(webgraphics);
 
-				} else {
-					// must extract the section, and the end of the path
-					// the bookends to be used to help extract
-					var content = 'Content/';
-					var webgraphics = '/WebGraphics/';
+						var section = path.substring(left, right);
+						var end = path.substring(right + webgraphics.length, path.length);
 
-					var left = path.indexOf(content) + content.length;
-					var right = path.indexOf(webgraphics);
+						return 'https://bostonglobe.com/r/Boston/2011-2020/WebGraphics/' + section + '/BostonGlobe.com/' + end + '/index.html';
+					}		
+				}
+			});
+		};
 
-					var section = path.substring(left, right);
-					var end = path.substring(right + webgraphics.length, path.length);
+		var validatePath = function(cb) {
+			var path = pathToJPT.trim();
+			var err = false;
+			var test1 = '.jpt';
+			var test2 = '/Boston';
+			
+			// does not end with .jpt or start with /Boston
+			err = path.indexOf(test1, path.length - test1.length) === -1 || path.indexOf(test2) !== 0;
 
-					return 'https://bostonglobe.com/r/Boston/2011-2020/WebGraphics/' + section + '/BostonGlobe.com/' + end + '/index.html';
-				}	
-			} else {
-				alert('add path to JPT in the .jpt file');
-			}
+			// remove .jpt
+			path = path.substring(0, path.lastIndexOf('/'));
+
+			cb(err, path);
 		};
 
 		var pymParent1 = new pym.Parent('globe-graphic-embed-1', getSource(), {});
