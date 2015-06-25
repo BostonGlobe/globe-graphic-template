@@ -14,11 +14,6 @@
 <script>
     (function() {
 		var getSource = function() {
-			var base = {
-				'prdedit': 'http://prdedit.bostonglobe.com/r',
-				'live': 'https://bostonglobe.com/r/Boston/2011-2020/WebGraphics/'
-			};
-
 			// remove jpt bit to get filepath
 			if(pathToJPT) {
 				var path = pathToJPT.substring(0, pathToJPT.lastIndexOf('/'));
@@ -27,7 +22,7 @@
 				if(window.location.hostname.indexOf('prdedit') > -1) {
 				
 					// prdedit === easy
-					return base.prdedit + path + '/index.html';
+					return 'http://prdedit.bostonglobe.com/r' + path + '/index.html';
 
 				} else {
 					// must extract the section, and the end of the path
@@ -41,7 +36,7 @@
 					var section = path.substring(left, right);
 					var end = path.substring(right + webgraphics.length, path.length);
 
-					return base.live + section + '/BostonGlobe.com/' + end + '/index.html';
+					return 'https://bostonglobe.com/r/Boston/2011-2020/WebGraphics/' + section + '/BostonGlobe.com/' + end + '/index.html';
 				}	
 			} else {
 				alert('add path to JPT in the .jpt file');
