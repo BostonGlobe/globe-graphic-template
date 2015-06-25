@@ -17,7 +17,7 @@
     (function() {
 		var getSource = function() {
 			validatePath(function(err, path) {
-				if(err) { alert('Improper path to jpt supplied. Make sure to paste entire path.'); }
+				if(err) { alert('Bad path to jpt. Make sure to paste entire path from "/Boston" through ".jpt".'); }
 				else {
 					if(window.location.hostname.indexOf('prdedit') > -1) {
 						return 'http://prdedit.bostonglobe.com/r' + path + '/index.html';
