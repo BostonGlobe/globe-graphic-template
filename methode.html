@@ -1,12 +1,9 @@
 <script>
-	window.pathToJPT = ''; // <---- Put the full path to the JPT here
+	window.pathToFolder = ''; // <---- Put the full path to the JPT here
 </script>
 
 
-
-
 <!-- (BEGIN) globe graphic embed -->
-
 <!--[if lte IE 8]>    		
 <![endif]-->
 
@@ -15,18 +12,9 @@
 <script src='https://apps.bostonglobe.com/common/js/pym/pym-0.4.1.min.js' type='text/javascript'></script>
 <script>
     (function() {
-    	var pymParent;
-
-    	var init = function() {
-    		var src = getSource();
-			if(src) {
-				pymParent1 = new pym.Parent('globe-graphic-embed-1', src, {});
-			}
-    	};
-
 		var getSource = function() {
-			var path = validatePath();
-			if(path) { 
+			var path = window.pathToFolder.trim();
+			if(path.indexOf('/Boston') === 0 && path.length) { 
 				if(window.location.hostname.indexOf('prdedit') > -1) {
 					return 'http://prdedit.bostonglobe.com/r' + path + '/index.html';
 				} else {
@@ -42,27 +30,17 @@
 					return 'https://c.o0bg.com/r/Boston/2011-2020/WebGraphics/' + section + '/BostonGlobe.com/' + end + '/index.html';
 				}
 			} else {
-				alert('Incorrect path to jpt. Make sure to paste entire path from "/Boston" through ".jpt".');
+				alert('Incorrect path to foloder. Make sure to paste entire path from "/Boston" on.');
 				return false;
 			}
 		};
 
-		var validatePath = function() {
-			var path = pathToJPT.trim();
-			var test1 = '.jpt';
-			var test2 = '/Boston';
-			
-			// does not end with .jpt or start with /Boston
-			err = path.indexOf(test1, path.length - test1.length) === -1 || path.indexOf(test2) !== 0;
-
-			if(err) {
-				return false;
-			} else {
-				return path.substring(0, path.lastIndexOf('/'));
-			}
-		};
-
-		init();
+		var pymParent;
+		var src = getSource();
+		
+		if(src) {
+			pymParent1 = new pym.Parent('globe-graphic-embed-1', src, {});
+		}
 	})();
 </script>
 <!-- (END) globe graphic embed -->
