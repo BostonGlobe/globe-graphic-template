@@ -15,44 +15,54 @@
 <script src='https://apps.bostonglobe.com/common/js/pym/pym-0.4.1.min.js' type='text/javascript'></script>
 <script>
     (function() {
+    	var pymParent;
+
+    	var init = function() {
+    		var src = getSource();
+			if(src) {
+				pymParent1 = new pym.Parent('globe-graphic-embed-1', src, {});
+			}
+    	};
+
 		var getSource = function() {
-			validatePath(function(err, path) {
-				if(err) { alert('Bad path to jpt. Make sure to paste entire path from "/Boston" through ".jpt".'); }
-				else {
-					if(window.location.hostname.indexOf('prdedit') > -1) {
-						return 'http://prdedit.bostonglobe.com/r' + path + '/index.html';
-					} else {
-						var content = 'Content/';
-						var webgraphics = '/WebGraphics/';
+			var path = validatePath();
+			if(path) { 
+				if(window.location.hostname.indexOf('prdedit') > -1) {
+					return 'http://prdedit.bostonglobe.com/r' + path + '/index.html';
+				} else {
+					var content = 'Content/';
+					var webgraphics = '/WebGraphics/';
 
-						var left = path.indexOf(content) + content.length;
-						var right = path.indexOf(webgraphics);
+					var left = path.indexOf(content) + content.length;
+					var right = path.indexOf(webgraphics);
 
-						var section = path.substring(left, right);
-						var end = path.substring(right + webgraphics.length, path.length);
+					var section = path.substring(left, right);
+					var end = path.substring(right + webgraphics.length, path.length);
 
-						return 'https://c.o0bg.com/r/Boston/2011-2020/WebGraphics/' + section + '/BostonGlobe.com/' + end + '/index.html';
-					}		
+					return 'https://c.o0bg.com/r/Boston/2011-2020/WebGraphics/' + section + '/BostonGlobe.com/' + end + '/index.html';
 				}
-			});
+			} else {
+				alert('Incorrect path to jpt. Make sure to paste entire path from "/Boston" through ".jpt".');
+				return false;
+			}
 		};
 
-		var validatePath = function(cb) {
+		var validatePath = function() {
 			var path = pathToJPT.trim();
-			var err = false;
 			var test1 = '.jpt';
 			var test2 = '/Boston';
 			
 			// does not end with .jpt or start with /Boston
 			err = path.indexOf(test1, path.length - test1.length) === -1 || path.indexOf(test2) !== 0;
 
-			// remove .jpt
-			path = path.substring(0, path.lastIndexOf('/'));
-
-			cb(err, path);
+			if(err) {
+				return false;
+			} else {
+				return path.substring(0, path.lastIndexOf('/'));
+			}
 		};
 
-		var pymParent1 = new pym.Parent('globe-graphic-embed-1', getSource(), {});
+		init();
 	})();
 </script>
 <!-- (END) globe graphic embed -->
