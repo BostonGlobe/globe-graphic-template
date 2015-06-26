@@ -104,26 +104,8 @@ Iframes are great for the reasons mentioned above. If your graphic necessitates 
 
 While there are workarounds that involve setting up messaging between the parent and child, anything involving manipulating the scroll position is advised against.
 
-### Cache busting
-Well, um, right now the assets aren't cached. Hopefully that happens soon. When it is activated, you may need to re-deploy an asset, like an image. Once you have published the new image file, you need to change its reference in your code. An example: 
-
-- This: `<img src="assets/smokey.jpg" alt="cat" />`
-- Becomes: `<img src="assets/smokey.jpg?v=2.0" alt="cat" />`
-
-
-### Multiple embeds
-1. Create each graphic as a standalone project.
-2. In the methode.html file, create incrementing ids for each `div` id:
-	- `id='globe-graphic-embed-1'...` --> `id='globe-graphic-embed-2'` etc, etc
-3. In methode.html, remove *all* `<script>` tags and their content *except* for the last graphic.
-4. Copy the two lines between the `<script>` tags and paste them as many times as you have grahpics, updating them to correspond with the #ids. So if you have two graphics, it would look like this:
-
-```html
-<script>
-	var pymParent1 = new pym.Parent('globe-graphic-embed-1', 'src/index.html', {});
-    var pymParent2 = new pym.Parent('globe-graphic-embed-2', 'src/index.html', {});
-</script>
-```
+### Multiple embeds (under construction)
+See Russell for best practices for now.
 
 ### Get parent height
 Sometimes you want to do a thing based on the height of the browser (ie. make a map take up 2/3 of the browser). In order to get the height of the parent window, you must add these two code snippets:
@@ -138,11 +120,11 @@ Sometimes you want to do a thing based on the height of the browser (ie. make a 
 		//example: createChart(initialHeight);
 	});
 ```
-2. In the `methode.html` file, add the following below the line `var pymParent1...`:
+2. At the bottom of `methode.html` file, add the following below the line `var pymParent1...`:
 ```js 
 	pymParent1.onMessage('height-request', function(msg) { pymParent1.sendMessage('height-send', window.innerHeight); });
 ```
-3. Replace the entire `methode.html` code in `preview.html`.
+3. Add the above code after the same line in `preview.html`.
 
 ### Developer note
 [Makefile lives here](https://gist.github.com/russellgoldenberg/77a8d21ae535faa95c73)
