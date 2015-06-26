@@ -13,7 +13,7 @@
 <script>
     (function() {
 		var getSource = function() {
-			var path = pathToJPT.trim();
+			var path = window.pathToJPT.trim();
 			var test1 = '.jpt';
 			var test2 = '/Boston';
 			
@@ -36,7 +36,7 @@
 					var section = path.substring(left, right);
 					var end = path.substring(right + webgraphics.length, path.length);
 
-					return 'https://c.o0bg.com/r/Boston/2011-2020/WebGraphics/' + section + '/BostonGlobe.com/' + end + '/index.html';
+					return 'https://c.o0bg.com/rw/Boston/2011-2020/WebGraphics/' + section + '/BostonGlobe.com/' + end + '/index.html';
 				}
 			}
 		};
