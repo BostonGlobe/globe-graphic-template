@@ -44,7 +44,7 @@ The template comes equipped with **base.css**, a stylesheet containing reset, de
 
 - Copy over your all the files inside the **src** folder and sub-folders to workbench
 - Paste the contents of **methode.html** into your **jpt**
-- **Critical**: Paste in the path to the **folder** at the top of the **jpt** where it says `window.pathToFolder = ''`
+- **Critical**: Paste in the path to the **folder** at the top of the **jpt** in `window.pathToFolder = ''`
 
 ![alt tag](https://cache.boston.com/multimedia/graphics/russell/github/path.jpg?v=1)
 
