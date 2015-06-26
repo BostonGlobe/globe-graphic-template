@@ -52,9 +52,9 @@ The template comes equipped with **base.css**, a stylesheet containing reset, de
 
 ![path](https://cache.boston.com/multimedia/graphics/russell/github/path.jpg?v=2)
 
-[deploy video tutorial](https://cache.boston.com/multimedia/graphics/russell/iframe-tutorial/index.html#deploy)
-
 Now you can slot the **jpt** in any article (or igraphic)
+
+[deploy video tutorial](https://cache.boston.com/multimedia/graphics/russell/iframe-tutorial/index.html#deploy)
 
 [embed video tutorial](https://cache.boston.com/multimedia/graphics/russell/iframe-tutorial/index.html#embed)
 
