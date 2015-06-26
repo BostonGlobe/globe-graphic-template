@@ -40,13 +40,13 @@ The template comes equipped with **base.css**, a stylesheet containing reset, de
 - Create project folder and a blank **jpt** like normal in workbench
 - Create the same sub-folders that you have in the **src** folder (assets, js, css, data), excluding empty ones
 
-![alt tag](https://cache.boston.com/multimedia/graphics/russell/github/structure.jpg?v=1)
+![structure](https://cache.boston.com/multimedia/graphics/russell/github/structure.jpg?v=2)
 
 - Copy over your all the files inside the **src** folder and sub-folders to workbench
 - Paste the contents of **methode.html** into your **jpt**
-- *Critical*: paste in the path to the **folder** at the top of the **jpt** in `window.pathToFolder = ''`
+- *Critical*: paste in the path to the **jpt** at the top of the **jpt** in `window.pathToJPT = ''`
 
-![alt tag](https://cache.boston.com/multimedia/graphics/russell/github/path.jpg?v=1)
+![path](https://cache.boston.com/multimedia/graphics/russell/github/path.jpg?v=2)
 
 Now you can slot the **jpt** in any article (or igraphic)
 

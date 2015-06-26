@@ -1,5 +1,5 @@
 <script>
-	window.pathToFolder = ''; // <---- Put the full path to the folder here
+	window.pathToJPT = ''; // <---- Put the full path to the folder here
 </script>
 
 
@@ -13,8 +13,17 @@
 <script>
     (function() {
 		var getSource = function() {
-			var path = window.pathToFolder.trim();
-			if(path.indexOf('/Boston') === 0 && path.length) { 
+			var path = pathToJPT.trim();
+			var test1 = '.jpt';
+			var test2 = '/Boston';
+			
+			var invalid = path.indexOf(test1, path.length - test1.length) === -1 || path.indexOf(test2) !== 0;
+
+			if(invalid) { 
+				alert('Incorrect path to JPT. Make sure to paste entire path from "/Boston" through ".jpt".');
+				return false;
+			} else {
+				path = path.substring(0, path.lastIndexOf('/'));
 				if(window.location.hostname.indexOf('prdedit') > -1) {
 					return 'http://prdedit.bostonglobe.com/r' + path + '/index.html';
 				} else {
@@ -29,9 +38,6 @@
 
 					return 'https://c.o0bg.com/r/Boston/2011-2020/WebGraphics/' + section + '/BostonGlobe.com/' + end + '/index.html';
 				}
-			} else {
-				alert('Incorrect path to foloder. Make sure to paste entire path from "/Boston" on.');
-				return false;
 			}
 		};
 
