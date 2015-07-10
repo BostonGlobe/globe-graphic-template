@@ -49,7 +49,7 @@ The template comes equipped with **base.css**, a stylesheet containing reset, de
 - Paste the contents of **methode.jpt** into your **jpt**
 - *Critical*: paste in the path to the **jpt** at the top of the **jpt** in `window.pathToJPT = ''`
 
-![path](https://cache.boston.com/multimedia/graphics/russell/github/path.jpg?v=2)
+![path](https://cache.boston.com/multimedia/graphics/russell/github/path.gif?v=1)
 
 Now you can slot the **jpt** in any article (or igraphic)
 
