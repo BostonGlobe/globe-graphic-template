@@ -20,7 +20,7 @@ Enter the following commands (replacing "project-name" with what your project's 
 
 You are now ready to do work. Open `preview.html` in a browser to see your graphic.
 
-[setup video tutorial](https://cache.boston.com/multimedia/graphics/russell/iframe-tutorial/index.html#setup)
+<!-- [setup video tutorial](https://cache.boston.com/multimedia/graphics/russell/iframe-tutorial/index.html#setup) -->
 
 ### Basic workflow
 All your code should go in the `src` folder:
@@ -34,7 +34,7 @@ This template now uses https. If you ever find yourself needing to make an absol
 
 If want to include a js library, [read this](#how-to-include-javascript-libraries).
 
-[workflow video tutorial](https://cache.boston.com/multimedia/graphics/russell/iframe-tutorial/index.html#workflow)
+<!-- [workflow video tutorial](https://cache.boston.com/multimedia/graphics/russell/iframe-tutorial/index.html#workflow) -->
 
 ### Style guide
 The template comes equipped with **base.css**, a stylesheet containing reset, default Globe styles, typography, and layouts. [See here](https://bostonglobe.github.io/news-apps-style-guide) for documentation and best practices.
@@ -53,9 +53,9 @@ The template comes equipped with **base.css**, a stylesheet containing reset, de
 
 Now you can slot the **jpt** in any article (or igraphic)
 
-[deploy video tutorial](https://cache.boston.com/multimedia/graphics/russell/iframe-tutorial/index.html#deploy)
+<!-- [deploy video tutorial](https://cache.boston.com/multimedia/graphics/russell/iframe-tutorial/index.html#deploy)
 
-[embed video tutorial](https://cache.boston.com/multimedia/graphics/russell/iframe-tutorial/index.html#embed)
+[embed video tutorial](https://cache.boston.com/multimedia/graphics/russell/iframe-tutorial/index.html#embed) -->
 
 **Note**: if using as an igraphic, add `<p:style src='https://apps.bostonglobe.com/common/css/igraphic/igraphic-0.1.0.css'/>` to the top of the jpt.
 
