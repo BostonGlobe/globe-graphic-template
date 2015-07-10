@@ -9,7 +9,7 @@
 <![endif]-->
 
 <!-- *** DO NOT TOUCH *** -->
-<div id='globe-graphic-embed-1' style='margin: 20px 0;'></div>
+<div id='globe-graphic-embed-1' class='globe-graphic-embed' style='margin: 20px 0;'></div>
 <script src='https://apps.bostonglobe.com/common/js/pym/pym-0.4.2.min.js' type='text/javascript'></script>
 <script>
     (function() {
