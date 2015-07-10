@@ -6,7 +6,7 @@ A basic template to get you up and running *fast*. Scaffolds the html, css, and 
 - [How to deploy](#how-to-deploy)
 - [Why iframes?](#why-iframe)
 - [When not to use iframes](#when-not-to-use-iframes)
-- [Multiple embeds in a single article](#multiple-embeds)
+- [Multiple iframes in a single article](#multiple-iframes)
 
 ## Instructions
 ### Setup project
@@ -103,8 +103,8 @@ Iframes are great for the reasons mentioned above. If your graphic necessitates 
 
 While there are workarounds that involve setting up messaging between the parent and child, anything involving manipulating the scroll position is advised against.
 
-### Multiple embeds (under construction)
-In `methode.jpt`, replace all occurences (one at the top, one at the bottom) of **globe-graphic-embed-1** with incrementing numbers for each additional graphic. So if you have two graphics, the second should be **globe-graphic-embed-2**.
+### Multiple iframes (under construction)
+In `methode.jpt`, replace all occurences (one at the top, one at the bottom) of **globe-graphic-iframe-1** with incrementing numbers for each additional graphic. So if you have two graphics, the second should be **globe-graphic-iframe-2**.
 
 ### Get parent height
 Sometimes you want to do a thing based on the height of the browser (ie. make a map take up 2/3 of the browser). In order to get the height of the parent window, you must add these two code snippets:
