@@ -23,9 +23,10 @@
 				alert('Incorrect path to JPT. Make sure to paste entire path from "/Boston" through ".jpt".');
 				return false;
 			} else {
+				var version = '?v=' + Date.now();
 				path = path.substring(0, path.lastIndexOf('/'));
 				if(window.location.hostname.indexOf('prdedit') > -1) {
-					return 'http://prdedit.bostonglobe.com/r' + path + '/index.html';
+					return 'http://prdedit.bostonglobe.com/r' + path + '/index.html' + version;
 				} else {
 					var content = 'Content/';
 					var webgraphics = '/WebGraphics/';
@@ -36,7 +37,7 @@
 					var section = path.substring(left, right);
 					var end = path.substring(right + webgraphics.length, path.length);
 
-					return 'https://c.o0bg.com/rw/Boston/2011-2020/WebGraphics/' + section + '/BostonGlobe.com/' + end + '/index.html';
+					return 'https://c.o0bg.com/rw/Boston/2011-2020/WebGraphics/' + section + '/BostonGlobe.com/' + end + '/index.html' + version;
 				}
 			}
 		};
