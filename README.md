@@ -106,7 +106,7 @@ While there are workarounds that involve setting up messaging between the parent
 ### Multiple iframes
 In `methode.jpt`, replace all occurences of **globe-graphic-iframe-1** with incrementing numbers for each additional graphic. So if you have two graphics, the second should be **globe-graphic-iframe-2**. There are two places, one near the top and one near the bottom. Also, replace **pymParent1** in the same way (at the bottom).
 
-### Get parent height
+### Get parent height (not working)
 Sometimes you want to do a thing based on the height of the browser (ie. make a map take up 2/3 of the browser). In order to get the height of the parent window, you must add these two code snippets:
 
 1. In `src/main.js`, add the following directly below the instructional comments:
