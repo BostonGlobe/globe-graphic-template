@@ -57,7 +57,7 @@ Now you can slot the **jpt** in any article (or igraphic)
 
 [embed video tutorial](https://cache.boston.com/multimedia/graphics/russell/iframe-tutorial/index.html#embed) -->
 
-**Note**: if using as an igraphic, add `<p:style src='https://apps.bostonglobe.com/common/css/igraphic/igraphic-0.1.0.css'/>` to the top of the jpt.
+**Note**: Add `<p:style src='https://apps.bostonglobe.com/common/css/igraphic/igraphic-0.1.0.css'/>` to the top of the jpt if using as an igraphic.
 
 ### Live reload
 To setup a server for live reloading when a file changes and so others on the network can see what you are working on.
