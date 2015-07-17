@@ -2,7 +2,7 @@
 <!--[if lte IE 8]>    		
 <![endif]-->
 <div id='globe-graphic-iframe-1' class='globe-graphic-iframe' style='margin: 20px 0;'></div>
-<script src='https://apps.bostonglobe.com/common/js/pym/pym-0.4.2.min.js' type='text/javascript'></script>
+<script src='https://apps.bostonglobe.com/common/js/pym/pym-0.4.5.min.js' type='text/javascript'></script>
 <script>
     (function() {
 		var getSource = function() {
