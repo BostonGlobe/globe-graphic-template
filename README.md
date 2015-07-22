@@ -16,7 +16,7 @@ Enter the following commands (replacing "project-name" with what your project's 
     
     mkdir project-name
     cd project-name    
-    curl -Lk https://goo.gl/hQwqpK > Makefile; make
+    curl -Lk https://goo.gl/Th6om3 > Makefile; make setup;
 
 You are now ready to do work. Open `preview.html` in a browser to see your graphic.
 
@@ -66,9 +66,9 @@ To setup a server for live reloading when a file changes and so others on the ne
 
 Make sure to install [browser-sync](http://www.browsersync.io/#install).
 
-`cd` into your project directory and run:
+In the root of your project run `make reload`.
 
-	browser-sync start --server . --index preview.html --files "src/**/*" --no-notify
+Changes to any file in the `src` folder will trigger your browser to reload.
 
 ### How to include javascript libraries
 Here is a list of the currently available libraries:
