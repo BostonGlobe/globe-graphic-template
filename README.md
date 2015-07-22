@@ -32,7 +32,9 @@ All your code should go in the `src` folder:
 **Please note:**
 This template now uses https. If you ever find yourself needing to make an absolute path reference, remember to use 'https' not 'http'.
 
-If want to include a js library, [read this](#how-to-include-javascript-libraries).
+[How to include js libraries](#how-to-include-javascript-libraries)
+
+[How to add live reload](#live-reload)
 
 <!-- [workflow video tutorial](https://cache.boston.com/multimedia/graphics/russell/iframe-tutorial/index.html#workflow) -->
 
