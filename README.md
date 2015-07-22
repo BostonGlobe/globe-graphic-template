@@ -109,16 +109,22 @@ While there are workarounds that involve setting up messaging between the parent
 In `methode.jpt`, replace all occurences of **globe-graphic-iframe-1** with incrementing numbers for each additional graphic. So if you have two graphics, the second should be **globe-graphic-iframe-2**. There are two places, one near the top and one near the bottom. Also, replace **pymParent1** in the same way (at the bottom).
 
 ### Get parent height
-Sometimes you want to do a thing based on the height of the browser (ie. make a map take up 2/3 of the browser). In order to get the height of the parent window, you must add this to `src/main.js`:
+Sometimes you want to do a thing based on the height of the browser (ie. make a map take up 2/3 of the browser). In order to get the height of the parent window, you must add this to `src/main.js` (just below the line `init()` at the bottom):
 
 ```js
-	/*** get parent height.... ***/
-	window.pymChild.sendMessage('height-request', true);
-	window.pymChild.onMessage('height-send', function(msg) {
-		var initialHeight = +msg;
-		/*** call a function here, passing it the "initialHeight" variable ***/
-		//example: createChart(initialHeight);
-	});
+	(function setupRequest() {
+		if(window.pymChild) {
+			/*** get parent height.... ***/
+		    window.pymChild.sendMessage('height-request', true);
+		    window.pymChild.onMessage('height-send', function(msg) {
+		        var initialHeight = +msg;
+		        /*** call a function here, passing it the "initialHeight" variable ***/
+		        //example: createChart(initialHeight);
+		    });
+		} else {
+			setTimeout(setupRequest, 30);
+		}
+	})();
 ```
 
 ### Developer note
