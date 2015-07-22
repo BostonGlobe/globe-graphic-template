@@ -1,9 +1,7 @@
 .DS_Store
 .git
-test
-package.json
-gulpfile.js
 gulp-tasks
-globe-iframe-*.js
-Makefile
 iframe-tutorial
+original-js
+Makefile
+test
