@@ -46,7 +46,7 @@
 		var src = getSource();
 		
 		if(src) {
-			pymParent1 = new pym.Parent('globe-graphic-iframe-1', src, {});
+			pymParent = new pym.Parent('globe-graphic-iframe-1', src, {});
 		}
 	})();
 </script>
