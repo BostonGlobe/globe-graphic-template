@@ -47,6 +47,7 @@
 		
 		if(src) {
 			pymParent = new pym.Parent('globe-graphic-iframe-1', src, {});
+			pymParent.onMessage('height-request', function(msg) { pymParent.sendMessage('height-send', window.innerHeight); });
 		}
 	})();
 </script>
