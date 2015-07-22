@@ -36,7 +36,8 @@
 			<script src='https://apps.bostonglobe.com/common/js/pym/pym-0.4.5.min.js' type='text/javascript'></script>
 			<script>
 			    (function() {
-					var pymParent1 = new pym.Parent('globe-graphic-iframe-1', 'src/index.html', {});
+					var pymParent = new pym.Parent('globe-graphic-iframe-1', 'src/index.html', {});
+					pymParent.onMessage('height-request', function(msg) { pymParent.sendMessage('height-send', window.innerHeight); });
 				})();
 			</script>
 			<!-- (END) globe graphic iframe -->
