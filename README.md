@@ -16,7 +16,7 @@ Enter the following commands (replacing "project-name" with what your project's 
     
     mkdir project-name
     cd project-name    
-    curl -Lk https://goo.gl/Th6om3 > Makefile; make setup;
+    curl -Lk https://goo.gl/lp2jrm > Makefile; make;
 
 You are now ready to do work. Open `preview.html` in a browser to see your graphic.
 
