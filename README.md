@@ -10,7 +10,7 @@ A basic template to get you up and running *fast*. Scaffolds the html, css, and 
 
 ## Instructions
 ### Setup project
-Open Terminal and change directory (using the `cd` command) and navigate to where you want to put your new project folder. ([Bash basics](https://github.com/BostonGlobe/news-apps-docs/tree/master/bash-basics))
+In Terminal, navigate to where you want to put your new project folder. ([Command line tutorial](https://github.com/BostonGlobe/news-apps-docs/tree/master/bash-basics))
 
 Enter the following commands (replacing "project-name" with what your project's name):
     
