@@ -54,13 +54,13 @@ Now you can slot the **jpt** in any article (or igraphic)
 **Note**: Add `<p:style src='https://apps.bostonglobe.com/common/css/igraphic/igraphic-0.1.0.css'/>` to the top of the jpt if using as an igraphic.
 
 ### Live reload
-To setup a server for live reloading when a file changes and so others on the network can see what you are working on.
+Browser sync lets you setup a local server for live reloading when a file changes, and so that others in the building can see what you are working on.
 
-Make sure to install [browser-sync](http://www.browsersync.io/#install).
+Make sure to have [node](http://nodejs.org) and [browser-sync](http://www.browsersync.io/#install) installed. Check by typing `node --version` and `browser-sync --version` in Terminal. 
 
 In the root of your project run `make reload`.
 
-Changes to any file in the `src` folder will trigger your browser to reload.
+Changes to any file in the `src` folder will trigger your browser to reload. A sharable link to your machine will be in Terminal.
 
 ### How to include javascript libraries
 Here is a list of the currently available libraries:
