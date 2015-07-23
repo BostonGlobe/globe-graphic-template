@@ -10,7 +10,7 @@ A basic template to get you up and running *fast*. Scaffolds the html, css, and 
 
 ## Instructions
 ### Setup project
-Open Terminal and change directory (using the `cd` command) and navigate to where you want to put your new project folder.
+Open Terminal and change directory (using the `cd` command) and navigate to where you want to put your new project folder. ([Bash basics](https://github.com/BostonGlobe/news-apps-docs/tree/master/bash-basics))
 
 Enter the following commands (replacing "project-name" with what your project's name):
     
@@ -19,8 +19,6 @@ Enter the following commands (replacing "project-name" with what your project's 
     curl -Lk https://goo.gl/lp2jrm > Makefile; make;
 
 You are now ready to do work. Open `preview.html` in a browser to see your graphic.
-
-<!-- [setup video tutorial](https://cache.boston.com/multimedia/graphics/russell/iframe-tutorial/index.html#setup) -->
 
 ### Basic workflow
 All your code should go in the `src` folder:
@@ -35,8 +33,6 @@ This template now uses https. If you ever find yourself needing to make an absol
 [How to include js libraries](#how-to-include-javascript-libraries)
 
 [How to add live reload](#live-reload)
-
-<!-- [workflow video tutorial](https://cache.boston.com/multimedia/graphics/russell/iframe-tutorial/index.html#workflow) -->
 
 ### Style guide
 The template comes equipped with **base.css**, a stylesheet containing reset, default Globe styles, typography, and layouts. [See here](https://bostonglobe.github.io/news-apps-style-guide) for documentation and best practices.
@@ -54,10 +50,6 @@ The template comes equipped with **base.css**, a stylesheet containing reset, de
 ![path](https://cache.boston.com/multimedia/graphics/russell/github/path.gif?v=1)
 
 Now you can slot the **jpt** in any article (or igraphic)
-
-<!-- [deploy video tutorial](https://cache.boston.com/multimedia/graphics/russell/iframe-tutorial/index.html#deploy)
-
-[embed video tutorial](https://cache.boston.com/multimedia/graphics/russell/iframe-tutorial/index.html#embed) -->
 
 **Note**: Add `<p:style src='https://apps.bostonglobe.com/common/css/igraphic/igraphic-0.1.0.css'/>` to the top of the jpt if using as an igraphic.
 
@@ -80,14 +72,13 @@ Here is a list of the currently available libraries:
 - [raf](https://apps.bostonglobe.com/common/js/raf/raf.min.js): Request Animation Frame polyfill
 - [velocity](https://apps.bostonglobe.com/common/js/velocity/velocity-1.2.2.min.js): Animation
 - [waypoints](https://apps.bostonglobe.com/common/js/waypoints/noframework.waypoints-3.1.1.min.js): Scroll triggers
-- [imager](https://apps.bostonglobe.com/common/js/imager/imager-0.5.0.min.js): Responsive images
+- [imager](https://apps.bostonglobe.com/common/js/imager/imager-0.5.0.min.js): Responsive images with lazy load
 - [picturefill](https://apps.bostonglobe.com/common/js/picturefill/picturefill-2.3.0.min.js): Responsive images
 - [mapbox](https://apps.bostonglobe.com/common/js/mapbox/mapbox-2.2.1.min.js): Maps
 - [moment](https://apps.bostonglobe.com/common/js/moment/moment-2.9.0.min.js): Time and dates
-- [handlebars (runtime)](https://apps.bostonglobe.com/common/js/handlebars/handlebars.runtime-2.0.0.min.js): Client-side templating
 - [vivus](https://apps.bostonglobe.com/common/js/vivus/vivus-0.2.1.min.js): SVG line path animation
 
-To use, just add a script tag that points to these urls. If there is a library you would like added, talk to Russell.
+To use, just add a script tag in the `src/index.html` page where it says "<!-- (begin) js libraries -->". If there is a library you would like added, talk to Russell.
 
 ### Why iframe?
 I'm glad you asked...
