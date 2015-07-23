@@ -12,7 +12,7 @@ A basic template to get you up and running *fast*. Scaffolds the html, css, and 
 ### Setup project
 In Terminal, navigate to where you want to put your new project folder. ([Command line tutorial](https://github.com/BostonGlobe/news-apps-docs/tree/master/bash-basics))
 
-Enter the following commands (replacing "project-name" with what your project's name):
+Enter the following commands (replacing "project-name" with the name of your project):
     
     mkdir project-name
     cd project-name    
