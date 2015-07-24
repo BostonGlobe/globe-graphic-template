@@ -14,9 +14,8 @@
         
         <noscript><link href='https://apps.bostonglobe.com/common/font/nojs-fonts.css' rel='stylesheet'></noscript>
         
-        <!-- (begin) optional - this has stuff like css reset, button design, typescaling, etc. -->
+        <!-- see http://bostonglobe.github.io/news-apps-style-guide for how to use base.css -->
         <link rel='stylesheet' href='https://apps.bostonglobe.com/common/css/base/base-1.2.0.css'>
-        <!-- (end) -->
         
         <!-- smoosh -->
         <link rel='stylesheet' href='css/main.css'>
@@ -26,13 +25,14 @@
     </head>
     <body style='height: auto;'>
        
-        <!-- *** IMPORTANT DO NOT DELETE *** -->
+        <!-- *** DO NOT DELETE *** -->
         <div id='globe-graphic-container' style='height: 100%; overflow: hidden;'>
             
-            <!--=============================
-                (begin) graphic HTML here
-            ==============================-->
-
+            <!--
+            ==========================
+            (begin) graphic HTML here
+            ==========================
+            -->
 
 
 
@@ -43,26 +43,30 @@
 
             
 
-            
-            <!--=============================
-                (end) graphic HTML here
-            ==============================-->
+
 
             <div class='source-and-credit'>
                 <p class='source'><span>SOURCE: Source</span></p>
                 <p class='credit'><span>Reporter / Globe Staff</span></p>
             </div>
+            
+            <!--
+            ==========================
+            (end) graphic HTML here
+            ==========================
+            -->
+
         </div>
 
         <!-- (begin) js libraries -->
         <!-- <script src='https://apps.bostonglobe.com/common/js/jquery/jquery-1.11.2.min.js' type='text/javascript'></script> -->
         <!-- (end) -->
-
+        
+        <!-- *** DO NOT GO BELOW HERE *** -->
         <!-- smoosh -->
         <script src='js/main.js' type='text/javascript'></script>
         <!-- endsmoosh -->
-
-        <!-- DO NOT TOUCH BELOW HERE -->
+        
         <!-- (begin) globe iframe embed -->
         <script type='text/javascript'>
             // https://apps.bostonglobe.com/common/js/pym/pym-0.4.5.min.js
@@ -71,6 +75,6 @@
             // https://apps.bostonglobe.com/common/js/globe-iframe/globe-iframe-0.1.2.js
             !function(){for(var n=0,e=["ms","moz","webkit","o"],i=0;i<e.length&&!window.requestAnimationFrame;++i)window.requestAnimationFrame=window[e[i]+"RequestAnimationFrame"],window.cancelAnimationFrame=window[e[i]+"CancelAnimationFrame"]||window[e[i]+"CancelRequestAnimationFrame"];window.requestAnimationFrame||(window.requestAnimationFrame=function(e){var i=(new Date).getTime(),t=Math.max(0,16-(i-n)),o=window.setTimeout(function(){e(i+t)},t);return n=i+t,o}),window.cancelAnimationFrame||(window.cancelAnimationFrame=function(n){clearTimeout(n)})}(),function(){"use strict";window.pymChild=null;var n=function(){e()},e=function(){var n=document.getElementById("globe-graphic-container");if(n){var e={previous:0,current:0},i=function(){e.current=n.offsetHeight,e.current!==e.previous&&(e.previous=e.current,window.pymChild.sendHeight()),requestAnimationFrame(i)};window.pymChild=pym.Child({renderCallback:window.onPymParentResize}),i()}};n()}();
         </script>
-        <!-- (end) -->
+        <!-- (end) globe iframe embed -->
     </body>
 </html>

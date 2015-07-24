@@ -3,18 +3,27 @@
 	// global variables
 
 
-	// graphic functions
+
+	// called once on page load
 	var init = function() {
-		if (window.console && console.log) console.log('-- init globe graphic --');
-
-	};
-
-
-
-	// This fires when the parent of iframe resizes
-	window.onPymParentResize = function(width) {
 		
 	};
+
+	// called automatically on page resize
+	window.onPymParentResize = function(width) {
 	
+	};
+
+	// graphic code
+
+
+
+
+
+
+
+
+
+	// run code
 	init();
 })();
