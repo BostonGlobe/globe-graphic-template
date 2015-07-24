@@ -15,7 +15,8 @@ In Terminal, navigate to your project directory ([command line tutorial](https:/
     curl -Lk https://goo.gl/lp2jrm > Makefile; make;
 
 That's it. You are now ready to do work.
-Open `preview.html` in a browser (or run `make reload` if you have [browser sync](#live-reload)) to see your graphic.
+
+To see your graphic, open `preview.html` in a browser or run `make reload` if you have [browser sync](#live-reload) installed.
 
 ### Basic workflow
 All your code should go in the `src` folder:
