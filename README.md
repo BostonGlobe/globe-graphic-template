@@ -10,12 +10,8 @@ A basic template to get you up and running *fast*. Scaffolds the html, css, and 
 
 ## Instructions
 ### Setup project
-In Terminal, navigate to where you want to put your new project folder. ([Command line tutorial](https://github.com/BostonGlobe/news-apps-docs/tree/master/bash-basics))
-
-Enter the following commands (replacing "project-name" with the name of your project):
+In Terminal, navigate to your project directory ([command line tutorial](https://github.com/BostonGlobe/news-apps-docs/tree/master/bash-basics)). Then run:
     
-    mkdir project-name
-    cd project-name    
     curl -Lk https://goo.gl/lp2jrm > Makefile; make;
 
 You are now ready to do work. Open `preview.html` in a browser to see your graphic.
