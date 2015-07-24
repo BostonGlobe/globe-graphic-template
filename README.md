@@ -16,7 +16,7 @@ In Terminal, navigate to your project directory ([command line tutorial](https:/
 
 That's it. You are now ready to do work.
 
-To see your graphic, open `preview.html` in a browser or run `make reload` if you have [browser sync](#live-reload) installed.
+To see your graphic, open `preview.html` in a browser or run `make reload` if you have [browser sync](#live-reload).
 
 ### Basic workflow
 All your code should go in the `src` folder:
