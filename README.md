@@ -56,7 +56,7 @@ Browser sync lets you setup a local server for live reloading when a file change
 
 Make sure to have [node](http://nodejs.org) and [browser-sync](http://www.browsersync.io/#install) installed. Check by typing `node --version` and `browser-sync --version` in Terminal. 
 
-In the root of your project run `make reload`.
+In the root of your project run `make reload`. Hitting `ctrl + c` will stop the process.
 
 Changes to any file in the `src` folder will trigger your browser to reload. A sharable link to your machine will be in Terminal.
 
@@ -76,7 +76,7 @@ Here is a list of the currently available libraries:
 - [moment](https://apps.bostonglobe.com/common/js/moment/moment-2.9.0.min.js): Time and dates
 - [vivus](https://apps.bostonglobe.com/common/js/vivus/vivus-0.2.1.min.js): SVG line path animation
 
-To use, just add a script tag in the `src/index.html` page where it says "<!-- (begin) js libraries -->". If there is a library you would like added, talk to Russell.
+To use, just add a script tag in the `src/index.html` page where it says "<!-- (begin) js libraries -->". jQuery is included but commented out by default. Simply uncomment to include. If there is a library you would like added, talk to Russell.
 
 ### Why iframe?
 I'm glad you asked...
