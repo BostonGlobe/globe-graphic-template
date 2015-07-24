@@ -76,7 +76,7 @@
             !function(){for(var n=0,e=["ms","moz","webkit","o"],i=0;i<e.length&&!window.requestAnimationFrame;++i)window.requestAnimationFrame=window[e[i]+"RequestAnimationFrame"],window.cancelAnimationFrame=window[e[i]+"CancelAnimationFrame"]||window[e[i]+"CancelRequestAnimationFrame"];window.requestAnimationFrame||(window.requestAnimationFrame=function(e){var i=(new Date).getTime(),t=Math.max(0,16-(i-n)),o=window.setTimeout(function(){e(i+t)},t);return n=i+t,o}),window.cancelAnimationFrame||(window.cancelAnimationFrame=function(n){clearTimeout(n)})}(),function(){"use strict";window.pymChild=null;var n=function(){e()},e=function(){var n=document.getElementById("globe-graphic-container");if(n){var e={previous:0,current:0},i=function(){e.current=n.offsetHeight,e.current!==e.previous&&(e.previous=e.current,window.pymChild.sendHeight()),requestAnimationFrame(i)};window.pymChild=pym.Child({renderCallback:window.onPymParentResize}),i()}};n()}();
 
             // version
-            if(window.console && console.log) console.log('globe iframe graphic v1.1.0');
+            if(window.console && console.log) console.log('-- globe iframe graphic v1.1.0 --');
         </script>
         <!-- (end) globe iframe embed -->
     </body>
