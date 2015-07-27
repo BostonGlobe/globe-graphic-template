@@ -64,7 +64,7 @@ Changes to any file in the `src` folder will trigger your browser to reload. A s
 Here is a list of the currently available libraries:
 
 - [jquery](https://apps.bostonglobe.com/common/js/jquery/jquery-1.11.2.min.js): DOM operations
-- [lodash](https://apps.bostonglobe.com/common/js/lodash/lodash-3.9.3.min.js): utilities
+- [lodash](https://apps.bostonglobe.com/common/js/lodash/lodash-3.10.0.min.js): utilities
 - [d3](https://apps.bostonglobe.com/common/js/d3/d3-3.5.5.min.js): Visualization
 - [jplayer](https://apps.bostonglobe.com/common/js/jplayer/jquery.jplayer-2.9.2.min.js): HTML5 audio/video
 - [raf](https://apps.bostonglobe.com/common/js/raf/raf.min.js): Request Animation Frame polyfill
