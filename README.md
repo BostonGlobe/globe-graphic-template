@@ -21,8 +21,8 @@ To see your graphic, open `preview.html` in a browser or run `make reload` if yo
 ### Basic workflow
 All your code should go in the `src` folder:
 - **html**: `src/index.html`
-- **css**: `src/css/main.css`
-- **js**: `src/js/main.js`
+- **css**: `src/main.css`
+- **js**: `src/main.js`
 - **assets**: put your images, audio, etc. in `src/assets`
 
 **Please note:**
