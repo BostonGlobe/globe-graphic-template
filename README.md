@@ -37,11 +37,11 @@ The template comes equipped with **base.css**, a stylesheet containing reset, de
 
 ### How to deploy
 - Create project folder and a blank **jpt** like normal in workbench
-- Create the same sub-folders that you have in the **src** folder (assets, js, css, data), excluding empty ones
 
 ![structure](https://cache.boston.com/multimedia/graphics/russell/github/structure.jpg?v=2)
 
-- Copy over your all the files inside the **src** folder and sub-folders to workbench
+- Copy over the files inside the **src** folder to Methode
+- If you have assets, you must create the folder in Methode before copying over those files
 - Paste the contents of **methode.jpt** into your **jpt**
 - *Critical*: paste in the path to the **jpt** at the top of the **jpt** in `window.pathToJPT = ''`
 
