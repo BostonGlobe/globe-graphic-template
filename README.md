@@ -38,14 +38,14 @@ The template comes equipped with **base.css**, a stylesheet containing reset, de
 ### How to deploy
 - Create project folder and a blank **jpt** like normal in workbench
 
-![structure](https://cache.boston.com/multimedia/graphics/russell/github/structure.jpg?v=2)
+![structure](https://cache.boston.com/multimedia/graphics/russell/github/structure.jpg?v=3)
 
 - Copy over the files inside the **src** folder to Methode
 - If you have assets, you must create the folder in Methode before copying over those files
 - Paste the contents of **methode.jpt** into your **jpt**
 - *Critical*: paste in the path to the **jpt** at the top of the **jpt** in `window.pathToJPT = ''`
 
-![path](https://cache.boston.com/multimedia/graphics/russell/github/path.gif?v=1)
+![path](https://cache.boston.com/multimedia/graphics/russell/github/path.gif?v=3)
 
 Now you can slot the **jpt** in any article (or igraphic)
 
