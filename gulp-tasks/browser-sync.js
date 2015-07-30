@@ -11,7 +11,3 @@ gulp.task('browser-sync', function() {
         ghostMode: false
     });
 });
-
-gulp.task('browser-sync-reload', function () {
-    browserSync.reload();
-});

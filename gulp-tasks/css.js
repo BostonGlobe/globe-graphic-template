@@ -5,7 +5,7 @@ var rename = require('gulp-rename');
 var cmq = require('gulp-combine-media-queries');
 var browserSync = require('browser-sync');
 
-var src = 'src/css/dev.styl';
+var src = 'src/dev/dev.styl';
 
 gulp.task('css-dev', function () {
 	gulp.src(src)

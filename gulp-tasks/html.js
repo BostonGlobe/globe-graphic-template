@@ -1,9 +1,9 @@
 var gulp = require('gulp');
 var smoosher = require('gulp-smoosher');
-var browserSync = require('browser-sync');
 var rename = require('gulp-rename');
+var browserSync = require('browser-sync');
 
-var src = 'src/dev/index.html';
+var src = 'src/dev/dev.html';
 
 gulp.task('html-dev', function() {
 	return gulp.src(src)
