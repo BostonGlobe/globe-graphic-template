@@ -1,6 +1,6 @@
 .DS_Store
 .git
-gulp-tasks
+node_modules
 iframe-tutorial
 original-js
 Makefile
