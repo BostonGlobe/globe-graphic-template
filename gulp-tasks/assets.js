@@ -12,7 +12,7 @@ gulp.task('assets-dev', function(cb) {
 });
 
 gulp.task('assets-prod', function(cb) {
-	return gulp.src(src)
+	return gulp.src('src/assets/**/*')
 		.pipe(changed('dist/assets'))
 		.pipe(gulp.dest('dist/assets'));
 });

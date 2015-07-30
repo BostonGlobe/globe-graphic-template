@@ -13,8 +13,7 @@ gulp.task('html-dev', function() {
 });
 
 gulp.task('html-prod', function() {
-	return gulp.src(src)
-		pipe(smoosher())
-		.pipe(rename('index.html'))
+	return gulp.src('src/index.html')
+		.pipe(smoosher())
 		.pipe(gulp.dest('dist'));
 });
