@@ -11,7 +11,7 @@
 			//========================================
 			// Insert path to jpt between quotes below
 			//========================================
-			var path = '/Boston/Content/Business/WebGraphics/reusable/gas-prices/gas-prices.jpt'; 
+			var path = ''; 
 
 
 			var test1 = '.jpt';
