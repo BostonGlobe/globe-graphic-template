@@ -47,7 +47,7 @@ The template comes equipped with **base.css**, a stylesheet containing reset, de
 
 ![path](https://cache.boston.com/multimedia/graphics/russell/github/path.gif?v=3)
 
-Now you can slot the **jpt** in any article (or igraphic)
+If for some crazy reason you need to update the js or css file *after* it has been published to the web, you must cache bust the file. Simple add '?v=[number]' to the end of the filename in the `src/index/html` file. For example: `<script src='main.js?v=3' type='text/javascript'></script>`. Then the live graphic will reference the new files once re-pubbed. 
 
 **Note**: Add `<p:style src='https://apps.bostonglobe.com/common/css/igraphic/igraphic-0.1.0.css'/>` to the top of the jpt if using as an igraphic.
 
