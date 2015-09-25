@@ -71,7 +71,7 @@ Here is a list of the currently available libraries:
 - [velocity](https://apps.bostonglobe.com/common/js/velocity/velocity-1.2.2.min.js): Animation
 - [waypoints](https://apps.bostonglobe.com/common/js/waypoints/noframework.waypoints-3.1.1.min.js): Scroll triggers
 - [imager](https://apps.bostonglobe.com/common/js/imager/imager-0.5.0.min.js): Responsive images with lazy load
-- [picturefill](https://apps.bostonglobe.com/common/js/picturefill/picturefill-2.3.0.min.js): Responsive images
+- [picturefill](https://apps.bostonglobe.com/common/js/picturefill/picturefill-3.0.0.min.js): Responsive images
 - [mapbox](https://apps.bostonglobe.com/common/js/mapbox/mapbox-2.2.1.min.js): Maps
 - [moment](https://apps.bostonglobe.com/common/js/moment/moment-2.9.0.min.js): Time and dates
 - [vivus](https://apps.bostonglobe.com/common/js/vivus/vivus-0.2.1.min.js): SVG line path animation
