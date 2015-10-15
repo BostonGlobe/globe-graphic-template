@@ -2,11 +2,11 @@ setup:
 	curl -Lk https://github.com/BostonGlobe/globe-graphic-template/archive/master.zip > temp.zip
 	unzip -q temp.zip
 	mv globe-graphic-template-master/* .
-	rm -rf temp.zip globe-graphic-template-master LICENSE README.md
+	rm -rf temp.zip globe-graphic-template-master LICENSE README.md Makefile.default
 
 setup-basic:
 	rm -rf gulp-tasks src/dev package.json gulpfile.js Makefile
-	curl -Lk https://goo.gl/ABnkM1 > Makefile;
+	mv Makefile.basic Makefile
 	
 setup-dev: 
 	rm Makefile
