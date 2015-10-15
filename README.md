@@ -11,7 +11,7 @@ A basic template to get you up and running *fast*. Scaffolds the html, css, and 
 ## Instructions
 ### Setup project
 In Terminal, navigate to your project directory ([command line tutorial](https://github.com/BostonGlobe/news-apps-docs/tree/master/bash-basics)). Then run:
-    
+
     curl -Lk https://goo.gl/xlXWDl > Makefile; make basic;
 
 That's it. You are now ready to do work.
@@ -46,13 +46,13 @@ The template comes equipped with **base.css**, a stylesheet containing reset, de
 - *Critical*: paste in the path to the **jpt** at the top of the **jpt** in `window.pathToJPT = ''`
 
 ![path](https://cache.boston.com/multimedia/graphics/russell/github/path.gif?v=3)
- 
+
 **Note**: Add `<p:style src='https://apps.bostonglobe.com/common/css/igraphic/igraphic-0.1.0.css'/>` to the top of the jpt if using as an igraphic.
 
 ### Live reload
 Browser sync lets you setup a local server for live reloading when a file changes, and so that others in the building can see what you are working on.
 
-Make sure to have [node](http://nodejs.org) and [browser-sync](http://www.browsersync.io/#install) installed. Check by typing `node --version` and `browser-sync --version` in Terminal. 
+Make sure to have [node](http://nodejs.org) and [browser-sync](http://www.browsersync.io/#install) installed. Check by typing `node --version` and `browser-sync --version` in Terminal.
 
 In the root of your project run `make reload`. Hitting `ctrl + c` will stop the process.
 
@@ -80,7 +80,7 @@ To use, just add a script tag in the `src/index.html` page where it says "<!-- (
 I'm glad you asked...
 - **No Globe conflicts**: The iframe gives the graphic a safety bubble. No worrying about the scope of variables, or how Globe stylesheets or scripts might affect your graphic. This also future-proofs your graphic. If (and when) the Globe introduces new namespacing, or changes a js lib you were relying on, you don't have to worry.
 - **No inter-graphic conflicts**: If there are multiple graphics in a single story, you don't have to worry about namespacing conflicts here either, even if you re-use your own code or a generator of some sort.
-- **No cross-origin issues**: Since all content is on the same domain and relatively referenced, there will never be strange cross-origin issues (like on audio files...). 
+- **No cross-origin issues**: Since all content is on the same domain and relatively referenced, there will never be strange cross-origin issues (like on audio files...).
 - **Simpler development**: No need to simulate the Globe environment. Things will look and behave 100% the same locally and in production.
 - **Long term viability**: Since you are writing code oustide of the Globe ecosystem, you don't have to do anything hacky or magical that might be Methode specific. You create a standalone web project. It will work when we start using another CMS.
 - **Embeddable**: The small snippet of code in `methode.jpt` can be integrated into almost any other CMS, which means other news organization or blogs can run our graphics (if we so desire).
