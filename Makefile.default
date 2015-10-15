@@ -1,0 +1,22 @@
+setup: 
+	curl -Lk https://github.com/BostonGlobe/globe-graphic-template/archive/master.zip > temp.zip
+	unzip -q temp.zip
+	mv globe-graphic-template-master/* .
+	rm -rf temp.zip globe-graphic-template-master LICENSE README.md
+
+setup-basic:
+	rm -rf gulp-tasks src/dev package.json gulpfile.js Makefile
+	curl -Lk https://goo.gl/ABnkM1 > Makefile;
+	
+setup-dev: 
+	rm Makefile
+	npm install
+	@echo .DS_Store\\nnode_modules > .gitignore
+	@echo \# Graphic > README.md
+
+setup-msg:
+	@echo "\n-- HARD CODE, HARD NEWS! --\n"
+
+basic: setup setup-basic setup-msg
+
+dev: setup setup-dev setup-msg
