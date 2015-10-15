@@ -8,18 +8,18 @@
         <meta http-equiv='Cache-Control' content='no-cache, no-store, must-revalidate' />
         <meta http-equiv='Pragma' content='no-cache' />
         <meta http-equiv='Expires' content='0' />
-        
+
         <!-- smoosh -->
         <script type='text/javascript'>
             function loadCSS(e,n,o,t){"use strict";var i=window.document.createElement("link"),f=n||window.document.getElementsByTagName("script")[0],a=window.document.styleSheets;return i.rel="stylesheet",i.href=e,i.media="only x",t&&(i.onload=t),f.parentNode.insertBefore(i,f),i.onloadcssdefined=function(e){for(var n,o=0;o<a.length;o++)a[o].href&&a[o].href===i.href&&(n=!0);n?e():setTimeout(function(){i.onloadcssdefined(e)})},i.onloadcssdefined(function(){i.media=o||"all"}),i}!function(e){var n="https://apps.bostonglobe.com/common/font/",o=e.document;if("querySelector"in o){var t=function(e){if(!("FontFace"in e))return!1;var n=new e.FontFace("t",'url( "data:application/font-woff2," ) format( "woff2" )');return n.load()["catch"](function(){}),"loading"===n.status}(e),i=navigator.userAgent,f=n+"woff.css";t?f=n+"woff2.css":i.indexOf("Android")>-1&&i.indexOf("like Gecko")>-1&&-1===i.indexOf("Chrome")&&(f=n+"ttf.css"),loadCSS(f)}}(this);
         </script>
         <!-- endsmoosh -->
-        
+
         <noscript><link href='https://apps.bostonglobe.com/common/font/nojs-fonts.css' rel='stylesheet'></noscript>
-        
+
         <!-- see http://bostonglobe.github.io/news-apps-style-guide for how to use base.css -->
         <link rel='stylesheet' href='https://apps.bostonglobe.com/common/css/base/base-1.2.0.css'>
-        
+
         <!-- smoosh -->
         <!-- <link rel='stylesheet' href='main.css'> -->
         <!-- endsmoosh -->
@@ -27,10 +27,10 @@
         <link rel='shortcut icon' href='https://www.bostonglobe.com/rw/SysConfig/WebPortal/BostonGlobe/Framework/images/favicon.ico' />
     </head>
     <body style='height: auto;'>
-       
+
         <!-- *** DO NOT DELETE *** -->
         <div id='globe-graphic-container' style='height: 100%; overflow: hidden;'>
-            
+
             <!--
             ==========================
             (begin) graphic HTML here
@@ -44,7 +44,7 @@
 
 
 
-            
+
 
 
 
@@ -52,7 +52,7 @@
                 <p class='source'><span>SOURCE: Source</span></p>
                 <p class='credit'><span>Reporter / Globe Staff</span></p>
             </div>
-            
+
             <!--
             ==========================
             (end) graphic HTML here
@@ -64,9 +64,9 @@
         <!-- (begin) js libraries -->
         <!-- <script src='https://apps.bostonglobe.com/common/js/jquery/jquery-1.11.2.min.js' type='text/javascript'></script> -->
         <!-- (end) -->
-        
 
-        
+
+
 
 
         <!-- *** DO NOT GO BELOW HERE *** -->
@@ -74,7 +74,7 @@
         <!-- smoosh -->
         <!-- <script data-src='main.js' type='text/javascript'></script> -->
         <!-- endsmoosh -->
-        
+
         <script type='text/javascript'>
             // auto cache bust
             var d = new Date();
@@ -88,7 +88,7 @@
             link.media = 'screen,print';
             link.href = 'main.css?v=' + timestamp;
             script.src = 'main.js?v=' + timestamp;
-            
+
             head.appendChild(link);
             head.appendChild(script);
         </script>

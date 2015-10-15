@@ -11,14 +11,14 @@
 			//========================================
 			// Insert path to jpt between quotes below
 			//========================================
-			var path = ''; 
+			var path = '';
 
 
 			var test1 = '.jpt';
 			var test2 = '/Boston';
 			var invalid = path.indexOf(test1, path.length - test1.length) === -1 || path.indexOf(test2) !== 0;
 
-			if(invalid) { 
+			if(invalid) {
 				alert('Incorrect path to JPT. Make sure to paste entire path from "/Boston" through ".jpt".');
 				return false;
 			} else {
@@ -40,7 +40,7 @@
 
 		var pymParent;
 		var src = getSource();
-		
+
 		if(src) {
 			pymParent = new pym.Parent('${storyID}-1', src, {});
 			pymParent.onMessage('height-request', function(msg) { pymParent.sendMessage('height-send', window.innerHeight); });
