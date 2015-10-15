@@ -29,6 +29,10 @@ All your code should go in the `src` folder:
 **Please note:**
 This template now uses https. If you ever find yourself needing to make an absolute path reference, remember to use 'https' not 'http'.
 
+[How to include js libraries](#how-to-include-javascript-libraries)
+
+[How to add live reload](#live-reload)
+
 ### ai2html workflow
 To integrate ai2html output into this generator:
 - Move your `.ai` file to the `src` folder and call it `online.ai`.
@@ -36,10 +40,6 @@ To integrate ai2html output into this generator:
 Every time you run the **ai2html** script:
 - In your project directory, run the following terminal command:
     make ai2html
-
-[How to include js libraries](#how-to-include-javascript-libraries)
-
-[How to add live reload](#live-reload)
 
 ### Style guide
 The template comes equipped with **base.css**, a stylesheet containing reset, default Globe styles, typography, and layouts. [See here](https://bostonglobe.github.io/news-apps-style-guide) for documentation and best practices.
