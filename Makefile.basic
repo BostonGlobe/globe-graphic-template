@@ -1,0 +1,8 @@
+reload: 
+	browser-sync start --server . --index preview.html --files "src/**/*" --no-notify --no-ghost-mode
+
+line_chart: 
+	curl -Lk https://github.com/russellgoldenberg/globe-graphic-charts/archive/master.zip > temp.zip
+	unzip -q temp.zip
+	mv globe-graphic-charts-master/line_chart/* src
+	rm -rf temp.zip globe-graphic-charts-master
