@@ -3,6 +3,7 @@ A basic template to get you up and running *fast*. Scaffolds the html, css, and 
 
 - [Quick start](#instructions)
 - [Basic workflow](#basic-workflow)
+- [ai2html workflow](#ai2html-workflow)
 - [How to deploy](#how-to-deploy)
 - [Why iframes?](#why-iframe)
 - [When not to use iframes](#when-not-to-use-iframes)
@@ -27,6 +28,14 @@ All your code should go in the `src` folder:
 
 **Please note:**
 This template now uses https. If you ever find yourself needing to make an absolute path reference, remember to use 'https' not 'http'.
+
+### ai2html workflow
+To integrate ai2html output into this generator:
+- Move your `.ai` file to the `src` folder and call it `online.ai`.
+
+Every time you run the **ai2html** script:
+- In your project directory, run the following terminal command:
+    make ai2html
 
 [How to include js libraries](#how-to-include-javascript-libraries)
 
