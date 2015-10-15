@@ -39,7 +39,8 @@ To integrate ai2html output into this generator:
 
 Every time you run the **ai2html** script:
 - In your project directory, run the following terminal command:
-    make ai2html
+
+    `make ai2html`
 
 ### Style guide
 The template comes equipped with **base.css**, a stylesheet containing reset, default Globe styles, typography, and layouts. [See here](https://bostonglobe.github.io/news-apps-style-guide) for documentation and best practices.
