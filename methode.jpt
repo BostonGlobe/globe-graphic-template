@@ -1,6 +1,7 @@
 <p:out var="basepath" value="${currentObject.basePath}"/>
 <p:out var="storyID" value="globe-iframe-graphic-${fn:replace(basepath, '/', '-')}"/>
 
+<!-- (BEGIN) globe graphic iframe -->
 <div id='${storyID}-1' class='globe-graphic-iframe' style='margin: 20px 0;'></div>
 <script src='https://apps.bostonglobe.com/common/js/pym/pym-0.4.5.min.js' type='text/javascript'></script>
 <script>

@@ -122,9 +122,6 @@ Sometimes you want to do a thing based on the height of the browser (ie. make a 
 	})();
 ```
 
-### Developer note
-[Makefile lives here](https://gist.github.com/russellgoldenberg/77a8d21ae535faa95c73)
-
 ## License & Credits
 
 Released under the MIT open source license. See `LICENSE` for details.
