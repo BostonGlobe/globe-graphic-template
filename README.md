@@ -34,10 +34,12 @@ This template now uses https. If you ever find yourself needing to make an absol
 [How to add live reload](#live-reload)
 
 ### ai2html workflow
-To integrate ai2html output into this generator, first make sure to follow instructions in [Setup project](#Setup-project)
+To integrate ai2html output into this generator, first make sure to follow instructions in [Setup project](#setup-project). Then:
 - Move your `.ai` file to the `src` folder and call it `online.ai`.
+- In Illustrator, run the ai2html script.
+- It will create an ai2html-settings text block. Modify the `image_output_path` setting. Change it from blank to `assets/`.
 
-Every time you run the **ai2html** script:
+Now, every time you run the **ai2html** script:
 - In your project directory, run the following terminal command: `make ai2html`
 
 ### Style guide
