@@ -34,7 +34,7 @@ This template now uses https. If you ever find yourself needing to make an absol
 [How to add live reload](#live-reload)
 
 ### ai2html workflow
-To integrate ai2html output into this generator:
+To integrate ai2html output into this generator, first make sure to follow instructions in [Setup project](#Setup-project)
 - Move your `.ai` file to the `src` folder and call it `online.ai`.
 
 Every time you run the **ai2html** script:
