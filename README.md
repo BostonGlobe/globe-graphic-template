@@ -5,7 +5,7 @@ A basic template to get you up and running *fast*. Scaffolds the html, css, and 
 - [Basic workflow](#basic-workflow)
 - [ai2html workflow](#ai2html-workflow)
 - [How to deploy](#how-to-deploy)
-- [Where is my published graphic?](#where-is-the-graphic)
+- [Where is my published graphic?](#where-is-my-published-graphic)
 - [Why iframes?](#why-iframe)
 - [When not to use iframes](#when-not-to-use-iframes)
 - [Multiple iframes in a single article](#multiple-iframes)
@@ -62,7 +62,7 @@ The template comes equipped with **base.css**, a stylesheet containing reset, de
 
 **Note**: Add `<p:style src='https://apps.bostonglobe.com/common/css/igraphic/igraphic-0.1.0.css'/>` to the top of the jpt if using as an igraphic.
 
-### Where is the graphic
+### Where is my published graphic?
 
 Once you've published all the files, you can access the index.html - the actual graphic - by modifying this url appropriately:
 - `https://c.o0bg.com/rw/Boston/2011-2020/WebGraphics/<SECTION>/BostonGlobe.com/<YEAR>/<MONTH>/<SLUG>/index.html`
