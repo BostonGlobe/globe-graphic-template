@@ -5,6 +5,7 @@ A basic template to get you up and running *fast*. Scaffolds the html, css, and 
 - [Basic workflow](#basic-workflow)
 - [ai2html workflow](#ai2html-workflow)
 - [How to deploy](#how-to-deploy)
+- [Where is my published graphic?](#where-is-the-graphic)
 - [Why iframes?](#why-iframe)
 - [When not to use iframes](#when-not-to-use-iframes)
 - [Multiple iframes in a single article](#multiple-iframes)
@@ -57,13 +58,15 @@ The template comes equipped with **base.css**, a stylesheet containing reset, de
 - Paste the contents of **methode.jpt** into your **jpt**
 - *Critical*: paste in the path to the **jpt** at the top of the **jpt** in `window.pathToJPT = ''`
 
-Once you've published all the files, you can access the index.html - the actual graphic - by modifying this url appropriately:
-- `https://c.o0bg.com/rw/Boston/2011-2020/WebGraphics/<SECTION>/BostonGlobe.com/<YEAR>/<MONTH>/<SLUG>/index.html`
-- Example: `https://c.o0bg.com/rw/Boston/2011-2020/WebGraphics/Metro/BostonGlobe.com/2015/09/hut/index.html`
-
 ![path](https://cache.boston.com/multimedia/graphics/russell/github/path.gif?v=3)
 
 **Note**: Add `<p:style src='https://apps.bostonglobe.com/common/css/igraphic/igraphic-0.1.0.css'/>` to the top of the jpt if using as an igraphic.
+
+### Where is the graphic
+
+Once you've published all the files, you can access the index.html - the actual graphic - by modifying this url appropriately:
+- `https://c.o0bg.com/rw/Boston/2011-2020/WebGraphics/<SECTION>/BostonGlobe.com/<YEAR>/<MONTH>/<SLUG>/index.html`
+- Example: `https://c.o0bg.com/rw/Boston/2011-2020/WebGraphics/Metro/BostonGlobe.com/2015/09/hut/index.html`
 
 ### Live reload
 Browser sync lets you setup a local server for live reloading when a file changes, and so that others in the building can see what you are working on.
