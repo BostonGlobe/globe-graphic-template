@@ -42,6 +42,8 @@ To integrate ai2html output into this generator, first make sure to follow instr
 Now, every time you run the **ai2html** script:
 - In your project directory, run the following terminal command: `make ai2html`
 
+To deploy, follow the instructions in the [How to deploy](#how-to-deploy) section.
+
 ### Style guide
 The template comes equipped with **base.css**, a stylesheet containing reset, default Globe styles, typography, and layouts. [See here](https://bostonglobe.github.io/news-apps-style-guide) for documentation and best practices.
 
@@ -54,6 +56,10 @@ The template comes equipped with **base.css**, a stylesheet containing reset, de
 - If you have assets, you must create the folder in Methode before copying over those files
 - Paste the contents of **methode.jpt** into your **jpt**
 - *Critical*: paste in the path to the **jpt** at the top of the **jpt** in `window.pathToJPT = ''`
+
+Once you've published all the files, you can access the index.html - the actual graphic - by modifying this url appropriately:
+- `https://c.o0bg.com/rw/Boston/2011-2020/WebGraphics/<SECTION>/BostonGlobe.com/<YEAR>/<MONTH>/<SLUG>/index.html`
+- Example: `https://c.o0bg.com/rw/Boston/2011-2020/WebGraphics/Metro/BostonGlobe.com/2015/09/hut/index.html`
 
 ![path](https://cache.boston.com/multimedia/graphics/russell/github/path.gif?v=3)
 
