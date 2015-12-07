@@ -89,6 +89,7 @@ Here is a list of the currently available libraries:
 - [waypoints](https://apps.bostonglobe.com/common/js/waypoints/noframework.waypoints-3.1.1.min.js): Scroll triggers
 - [imager](https://apps.bostonglobe.com/common/js/imager/imager-0.5.0.min.js): Responsive images with lazy load
 - [picturefill](https://apps.bostonglobe.com/common/js/picturefill/picturefill-3.0.0.min.js): Responsive images
+- [lazysizes](https://apps.bostonglobe.com/common/js/lazysizes/lazysizes-1.1.3.min.js) Lazy loading
 - [mapbox](https://apps.bostonglobe.com/common/js/mapbox/mapbox-2.2.1.min.js): Maps
 - [moment](https://apps.bostonglobe.com/common/js/moment/moment-2.9.0.min.js): Time and dates
 - [vivus](https://apps.bostonglobe.com/common/js/vivus/vivus-0.2.1.min.js): SVG line path animation
