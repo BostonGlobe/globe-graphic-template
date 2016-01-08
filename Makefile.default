@@ -8,7 +8,7 @@ setup-basic:
 	rm -rf gulp-tasks src/dev package.json gulpfile.js Makefile
 	mv Makefile.basic Makefile
 	
-setup-dev: 
+setup-tasks: 
 	rm Makefile
 	npm install
 	@echo .DS_Store\\nnode_modules > .gitignore
@@ -19,4 +19,4 @@ setup-msg:
 
 basic: setup setup-basic setup-msg
 
-dev: setup setup-dev setup-msg
+tasks: setup setup-tasks setup-msg
