@@ -11,7 +11,10 @@
 
         <!-- smoosh -->
         <script type='text/javascript'>
-            function loadCSS(e,n,o,t){"use strict";var i=window.document.createElement("link"),f=n||window.document.getElementsByTagName("script")[0],a=window.document.styleSheets;return i.rel="stylesheet",i.href=e,i.media="only x",t&&(i.onload=t),f.parentNode.insertBefore(i,f),i.onloadcssdefined=function(e){for(var n,o=0;o<a.length;o++)a[o].href&&a[o].href===i.href&&(n=!0);n?e():setTimeout(function(){i.onloadcssdefined(e)})},i.onloadcssdefined(function(){i.media=o||"all"}),i}!function(e){var n="https://apps.bostonglobe.com/common/font/",o=e.document;if("querySelector"in o){var t=function(e){if(!("FontFace"in e))return!1;var n=new e.FontFace("t",'url( "data:application/font-woff2," ) format( "woff2" )');return n.load()["catch"](function(){}),"loading"===n.status}(e),i=navigator.userAgent,f=n+"woff.css";t?f=n+"woff2.css":i.indexOf("Android")>-1&&i.indexOf("like Gecko")>-1&&-1===i.indexOf("Chrome")&&(f=n+"ttf.css"),loadCSS(f)}}(this);
+            // https://github.com/BostonGlobe/slush-globeapp/blob/master/templates/src/html/partials/base/base-critical.hbs
+            !function(e){var t=function(t,n){"use strict";var o=e.document.getElementsByTagName("script")[0],r=e.document.createElement("script");return r.src=t,r.async=!0,o.parentNode.insertBefore(r,o),n&&"function"==typeof n&&(r.onload=n),r};"undefined"!=typeof module?module.exports=t:e.loadJS=t}("undefined"!=typeof global?global:this),function(e){"use strict";var t=function(t,n,o){var r,l=e.document,i=l.createElement("link");if(n)r=n;else{var a=(l.body||l.getElementsByTagName("head")[0]).childNodes;r=a[a.length-1]}var d=l.styleSheets;i.rel="stylesheet",i.href=t,i.media="only x",r.parentNode.insertBefore(i,n?r:r.nextSibling);var f=function(e){for(var t=i.href,n=d.length;n--;)if(d[n].href===t)return e();setTimeout(function(){f(e)})};return i.onloadcssdefined=f,f(function(){i.media=o||"all"}),i};"undefined"!=typeof module?module.exports=t:e.loadCSS=t}("undefined"!=typeof global?global:this);
+
+            !function(e){var t="https://apps.bostonglobe.com/common/font/",n=e.document;if("querySelector"in n){var o=function(e){if(!("FontFace"in e))return!1;var t=new e.FontFace("t",'url( "data:application/font-woff2," ) format( "woff2" )');return t.load().catch(function(){}),"loading"===t.status}(e),r=navigator.userAgent,i=t+"woff.css";o?i=t+"woff2.css":r.indexOf("Android")>-1&&r.indexOf("like Gecko")>-1&&-1===r.indexOf("Chrome")&&(i=t+"ttf.css"),loadCSS(i)}}(this);
         </script>
         <!-- endsmoosh -->
 
@@ -82,15 +85,10 @@
             // auto cache bust
             var d = new Date();
             var timestamp = d.getTime();
-            var stylesheet = 'main.css?v=' + timestamp;
-            var script = document.createElement('script');
-            var head = document.getElementsByTagName('head')[0];
-
-            loadCSS(stylesheet);
-
-            script.src = 'main.js?v=' + timestamp;
-            script.async = true;
-            head.appendChild(script);
+            var css = 'main.css?v=' + timestamp;
+            var js = 'main.js?v=' + timestamp;
+            loadCSS(css);
+            loadJS(jss);
         </script>
 
         <!-- (begin) globe iframe embed -->
