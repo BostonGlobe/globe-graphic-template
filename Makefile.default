@@ -10,7 +10,6 @@ setup-basic:
 	
 setup-tasks: 
 	rm Makefile
-	mv Makefile.basic Makefile
 	npm install
 	@echo .DS_Store\\nnode_modules > .gitignore
 	@echo \# Graphic > README.md
