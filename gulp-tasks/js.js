@@ -8,7 +8,9 @@ var src = 'src/dev/dev.js';
 
 gulp.task('js-dev', function() {
 	return gulp.src(src)
-		.pipe(babel())
+		.pipe(babel({
+			presets: ['es2015']
+		}))
 		.pipe(rename('main.js'))
 		.pipe(gulp.dest('src'))
 		.pipe(browserSync.reload({ stream: true }));

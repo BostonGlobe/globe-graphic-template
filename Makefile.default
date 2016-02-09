@@ -5,7 +5,7 @@ setup:
 	rm -rf temp.zip globe-graphic-template-master LICENSE README.md Makefile.default
 
 setup-basic:
-	rm -rf gulp-tasks src/dev package.json gulpfile.js Makefile
+	rm -rf gulp-tasks src/dev package.json gulpfile.js .babelrc Makefile
 	mv Makefile.basic Makefile
 	
 setup-tasks: 
