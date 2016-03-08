@@ -13,7 +13,7 @@ setup-tasks:
 	rm src/main.*
 	mv src/dev/js src/dev/css src
 	rm -rf src/dev
-	# npm install
+	npm install
 	@echo \# Graphic > README.md
 
 setup-msg:
