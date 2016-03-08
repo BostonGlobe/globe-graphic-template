@@ -12,16 +12,13 @@ module.exports = function(error) {
 
 	gutil.beep()
 
-	let report = ''
-	let chalk = gutil.colors.white.bgRed
+	const chalk = gutil.colors.white.bgRed
 
-	report += chalk('TASK:') + ' [' + error.plugin + ']\n'
-	report += chalk('PROB:') + ' ' + error.message + '\n'
-
-	if (error.lineNumber) { report += chalk('LINE:') + ' ' + error.lineNumber + '\n' }
-
-	if (error.fileName)   { report += chalk('FILE:') + ' ' + error.fileName + '\n' }
-
+	const report = `
+		${chalk('TASK:')} [${error.plugin}]
+		${chalk('PROB:')} [${error.message}]
+	`.trim()
+	
 	console.error(report)
 
 	this.emit('end')

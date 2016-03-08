@@ -10,7 +10,11 @@ setup-basic:
 	
 setup-tasks: 
 	rm Makefile
-	npm install
+	rm src/main.*
+	mv dev/js src
+	mv dev/css src
+	rm -rf dev
+	# npm install
 	@echo \# Graphic > README.md
 
 setup-msg:
