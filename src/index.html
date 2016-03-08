@@ -9,16 +9,12 @@
         <meta http-equiv='Pragma' content='no-cache' />
         <meta http-equiv='Expires' content='0' />
 
-        <!-- smoosh -->
         <script type='text/javascript'>
             // https://github.com/BostonGlobe/slush-globeapp/blob/master/templates/src/html/partials/base/base-critical.hbs
             !function(e){var t=function(t,n){"use strict";var o=e.document.getElementsByTagName("script")[0],r=e.document.createElement("script");return r.src=t,r.async=!0,o.parentNode.insertBefore(r,o),n&&"function"==typeof n&&(r.onload=n),r};"undefined"!=typeof module?module.exports=t:e.loadJS=t}("undefined"!=typeof global?global:this),function(e){"use strict";var t=function(t,n,o){var r,l=e.document,i=l.createElement("link");if(n)r=n;else{var a=(l.body||l.getElementsByTagName("head")[0]).childNodes;r=a[a.length-1]}var d=l.styleSheets;i.rel="stylesheet",i.href=t,i.media="only x",r.parentNode.insertBefore(i,n?r:r.nextSibling);var f=function(e){for(var t=i.href,n=d.length;n--;)if(d[n].href===t)return e();setTimeout(function(){f(e)})};return i.onloadcssdefined=f,f(function(){i.media=o||"all"}),i};"undefined"!=typeof module?module.exports=t:e.loadCSS=t}("undefined"!=typeof global?global:this);
 
             !function(e){var t="https://apps.bostonglobe.com/common/font/",n=e.document;if("querySelector"in n){var o=function(e){if(!("FontFace"in e))return!1;var t=new e.FontFace("t",'url( "data:application/font-woff2," ) format( "woff2" )');return t.load().catch(function(){}),"loading"===t.status}(e),r=navigator.userAgent,i=t+"woff.css";o?i=t+"woff2.css":r.indexOf("Android")>-1&&r.indexOf("like Gecko")>-1&&-1===r.indexOf("Chrome")&&(i=t+"ttf.css"),loadCSS(i)}}(this);
         </script>
-        <!-- endsmoosh -->
-
-        <noscript><link href='https://apps.bostonglobe.com/common/font/nojs-fonts.css' rel='stylesheet'></noscript>
 
         <!-- see http://bostonglobe.github.io/news-apps-style-guide for how to use base.css -->
         <link rel='stylesheet' href='https://apps.bostonglobe.com/common/css/base/base-1.2.0.css'>
@@ -102,7 +98,7 @@
         <!-- smoosh -->
         <!-- <script data-src='main.js' type='text/javascript'></script> -->
         <!-- endsmoosh -->
-
+        
         <script type='text/javascript'>
             // auto cache bust
             var d = new Date();

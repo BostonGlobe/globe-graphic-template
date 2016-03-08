@@ -1,19 +1,18 @@
-var gulp = require('gulp');
-var smoosher = require('gulp-smoosher');
-var rename = require('gulp-rename');
-var browserSync = require('browser-sync');
+const gulp = require('gulp')
+const rename = require('gulp-rename')
+const browserSync = require('browser-sync')
 
-var src = 'src/dev/dev.html';
+const src = 'src/index.html'
 
 gulp.task('html-dev', function() {
 	return gulp.src(src)
 		.pipe(rename('index.html'))
-		.pipe(gulp.dest('src'))
-		.pipe(browserSync.reload({ stream: true }));
-});
+		.pipe(gulp.dest('dev'))
+		.pipe(browserSync.reload({ stream: true }))
+})
 
 gulp.task('html-prod', function() {
 	return gulp.src('src/index.html')
 		.pipe(smoosher())
-		.pipe(gulp.dest('dist'));
-});
+		.pipe(gulp.dest('.tmp'))
+})

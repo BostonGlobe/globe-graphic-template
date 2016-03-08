@@ -2,16 +2,16 @@ setup:
 	curl -Lk https://github.com/BostonGlobe/globe-graphic-template/archive/master.zip > temp.zip
 	unzip -q temp.zip
 	mv globe-graphic-template-master/* .
+	mv globe-graphic-template-master/.* .
 	rm -rf temp.zip globe-graphic-template-master LICENSE README.md Makefile.default
 
 setup-basic:
-	rm -rf gulp-tasks src/dev package.json gulpfile.js .babelrc Makefile
+	rm -rf gulp-tasks src/dev package.json gulpfile.js .eslintrc report-error.js Makefile
 	mv Makefile.basic Makefile
 	
 setup-tasks: 
 	rm Makefile
 	npm install
-	@echo .DS_Store\\nnode_modules > .gitignore
 	@echo \# Graphic > README.md
 
 setup-msg:
