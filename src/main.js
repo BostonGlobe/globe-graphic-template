@@ -9,8 +9,8 @@
 
 	};
 
-	// called automatically on page resize
-	window.onPymParentResize = function(width) {
+	// called automatically on article page resize
+	window.onResize = function(width) {
 
 	};
 
