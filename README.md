@@ -28,7 +28,7 @@ All your code should go in the `src` folder:
 - **assets**: put your images, audio, etc. in `src/assets`
 
 **Please note:**
-This template now uses https. If you ever find yourself needing to make an absolute path reference, remember to use 'https' not 'http'.
+If you ever find yourself needing to make an absolute path reference, remember to use '//' not 'http://'.
 
 [How to include js libraries](#how-to-include-javascript-libraries)
 
