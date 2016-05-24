@@ -18,7 +18,7 @@ In Terminal, navigate to your project directory ([command line tutorial](https:/
 
 That's it. You are now ready to do work.
 
-To see your graphic, open `preview.html` in a browser or run `make reload` if you have [browsersync](#live-reload).
+To see your graphic, open `index.html` in a browser or run `make server` if you have [light-server](#live-reload).
 
 ### Basic workflow
 All your code should go in the `src` folder:
@@ -33,6 +33,11 @@ This template now uses https. If you ever find yourself needing to make an absol
 [How to include js libraries](#how-to-include-javascript-libraries)
 
 [How to add live reload](#live-reload)
+Requirements:
+* [node](http://nodejs.org)
+* [light-server](https://www.npmjs.com/package/light-server)
+
+Run `make server`
 
 ### ai2html workflow
 To integrate ai2html output into this generator, first make sure to follow instructions in [Setup project](#setup-project). Then:
