@@ -33,11 +33,6 @@ If you ever find yourself needing to make an absolute path reference, remember t
 [How to include js libraries](#how-to-include-javascript-libraries)
 
 [How to add live reload](#live-reload)
-Requirements:
-* [node](http://nodejs.org)
-* [light-server](https://www.npmjs.com/package/light-server)
-
-Run `make server`
 
 ### ai2html workflow
 To integrate ai2html output into this generator, first make sure to follow instructions in [Setup project](#setup-project). Then:
@@ -74,13 +69,13 @@ Once you've published all the files, you can access the index.html - the actual 
 - Example: `https://c.o0bg.com/rw/Boston/2011-2020/WebGraphics/Metro/BostonGlobe.com/2015/09/hut/index.html`
 
 ### Live reload
-Browser sync lets you setup a local server for live reloading when a file changes, and so that others in the building can see what you are working on.
+Light-server lets you setup a local server for live reloading when a file changes, and so that others in the building can see what you are working on.
 
-Make sure to have [node](http://nodejs.org) and [browser-sync](http://www.browsersync.io/#install) installed. Check by typing `node --version` and `browser-sync --version` in Terminal.
+Make sure to have [node](http://nodejs.org) and [light-server](https://www.npmjs.com/package/light-server) installed. Check by typing `node --version` and `light-server --version` in Terminal.
 
-In the root of your project run `make reload`. Hitting `ctrl + c` will stop the process.
+In the root of your project run `make server`. Hitting `ctrl + c` will stop the process.
 
-Changes to any file in the `src` folder will trigger your browser to reload. A sharable link to your machine will be in Terminal.
+Changes to any file in the `src` folder will trigger your browser to reload.
 
 ### How to include javascript libraries
 Here is a list of the currently available libraries:
