@@ -1,0 +1,25 @@
+{
+  "name": "globe-graphic-template",
+  "version": "2.0.0",
+  "scripts": {
+    "start": "npm-run-all --silent --parallel webpack stylus server open",
+    "webpack": "webpack -w --config webpack.config.js",
+    "stylus": "stylus -w src/dev/entry.styl -o src/main.css",
+    "server": "light-server -q -s . -p 3000 -w 'src/main.js, src/index.html # # reload' -w 'src/main.css # # reloadcss'",
+    "open": "open http://localhost:3000"
+  },
+  "author": "Russell Goldenberg",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "^6.9.0",
+    "babel-loader": "^6.2.4",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-stage-1": "^6.5.0",
+    "dsv-loader": "^1.0.3",
+    "json-loader": "^0.5.4",
+    "light-server": "^1.1.6",
+    "npm-run-all": "^2.1.1",
+    "stylus": "^0.54.5",
+    "webpack": "^1.13.1"
+  }
+}

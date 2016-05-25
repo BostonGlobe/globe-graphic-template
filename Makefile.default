@@ -1,8 +1,26 @@
-all: 
+setup: 
 	curl -Lk https://github.com/BostonGlobe/globe-graphic-template/archive/master.zip > temp.zip
 	unzip -q temp.zip
 	mv globe-graphic-template-master/* .
-	rm -rf temp.zip globe-graphic-template-master LICENSE README.md Makefile.default
-	rm Makefile
+	rm -rf temp.zip globe-graphic-template-master 
+	rm Makefile LICENSE README.md Makefile.default
 	mv Makefile.basic Makefile
+
+setup-basic: 
+	rm -rf src/dev
+	rm .babelrc package.json webpack.config.js node_modules.zip
+
+setup-advanced: 
+	rm Makefile
+	@echo .DS_Store\\nnode_modules > .gitignore
+	@echo \# Graphic > README.md
+	unzip -q node_modules.zip
+	rm node_modules.zip
+
+setup-msg:
 	@echo "\n-- HARD CODE, HARD NEWS! --\n"
+
+basic: setup setup-basic setup-msg
+	
+advanced: setup setup-advanced setup-msg
+
