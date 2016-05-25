@@ -3,5 +3,5 @@ window.onResize = (width) => {
 }
 
 window.enterView = (msg) => {
-	console.log(msg)
+	console.log('enter-view')
 }
