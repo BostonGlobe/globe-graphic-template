@@ -1,9 +1,7 @@
-const init = () => {
-
-}
-
 window.onResize = (width) => {
-
+	console.log(width)
 }
 
-init()
+window.enterView = (msg) => {
+	console.log(msg)
+}

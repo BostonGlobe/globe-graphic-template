@@ -5,7 +5,8 @@
 
 <!-- (BEGIN) globe graphic iframe -->
 <div id='${storyID}-1' class='globe-graphic-iframe' style='margin: 20px 0;'></div>
-<script src='//apps.bostonglobe.com/common/js/pym/pym-poll.min.js' type='text/javascript'></script>
+<script src='//apps.bostonglobe.com/common/js/enter-view/enter-view-0.1.0.min.js'></script>
+<script src='//apps.bostonglobe.com/common/js/pym/pym-poll.min.js'></script>
 <script>
     (function() {
 		var getSource = function() {
@@ -47,6 +48,16 @@
 		if(src) {
 			pymParent = new pym.Parent('${storyID}-1', src, {});
 			pymParent.onMessage('height-request', function(msg) { pymParent.sendMessage('height-send', window.innerHeight); });
+
+			pymParent.onMessage('ready', function() {
+				enterView({
+					selector: '#${storyID}-1',
+					offset: '25%',
+					trigger: function() {
+						pymParent.sendMessage('enter-view', true);
+					}
+				});	
+			});
 		}
 	})();
 </script>
