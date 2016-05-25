@@ -1,6 +1,6 @@
 {
   "name": "globe-graphic-template",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "scripts": {
     "start": "npm-run-all --silent --parallel webpack stylus server open",
     "webpack": "webpack -w --config webpack.config.js",
