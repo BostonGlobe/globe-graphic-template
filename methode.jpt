@@ -1,5 +1,7 @@
 <p:out var="basepath" value="${currentObject.basePath}"/>
-<p:out var="storyID" value="globe-iframe-graphic-${fn:replace(basepath, '/', '-')}"/>
+<p:out var="basepathSlash" value="${fn:replace(basepath, '/', '-')}"/>
+<p:out var="basepathDot" value="${fn:replace(basepathSlash, '.', '')}"/>
+<p:out var="storyID" value="globe-iframe-graphic-${basepathDot}"/>
 
 <!-- (BEGIN) globe graphic iframe -->
 <div id='${storyID}-1' class='globe-graphic-iframe' style='margin: 20px 0;'></div>
@@ -8,12 +10,12 @@
     (function() {
 		var getSource = function() {
 
-
 			//========================================
 			// Insert path to jpt between quotes below
 			//========================================
 			var path = '';
 
+			
 
 			var test1 = '.jpt';
 			var test2 = '/Boston';
