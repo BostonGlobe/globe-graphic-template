@@ -15,8 +15,7 @@ setup-advanced:
 	rm Makefile
 	@echo .DS_Store\\nnode_modules > .gitignore
 	@echo \# Graphic > README.md
-	unzip -q node_modules.zip
-	rm node_modules.zip
+	npm i
 
 setup-msg:
 	@echo "\n-- HARD CODE, HARD NEWS! --\n"
