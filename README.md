@@ -12,9 +12,9 @@ A basic template to get you up and running *fast*. Scaffolds the html, css, and 
 
 ## Instructions
 ### Setup project
-In Terminal, navigate to your project directory ([command line tutorial](https://github.com/BostonGlobe/news-apps-docs/tree/master/bash-basics)). Then run:
+In Terminal, navigate to your project directory ([command line tutorial](https://github.com/BostonGlobe/news-apps-docs/tree/master/bash-basics)). Then run ([see advanced version](#setup-advanced)):
 
-    curl -Lk https://goo.gl/xlXWDl > Makefile; make;
+    curl -Lk https://goo.gl/xlXWDl > Makefile; make basic;
 
 That's it. You are now ready to do work.
 
@@ -67,6 +67,11 @@ The template comes equipped with **base.css**, a stylesheet containing reset, de
 Once you've published all the files, you can access the index.html - the actual graphic - by modifying this url appropriately:
 - `https://c.o0bg.com/rw/Boston/2011-2020/WebGraphics/<SECTION>/BostonGlobe.com/<YEAR>/<MONTH>/<SLUG>/index.html`
 - Example: `https://c.o0bg.com/rw/Boston/2011-2020/WebGraphics/Metro/BostonGlobe.com/2015/09/hut/index.html`
+
+### Setup advanced
+This requires node, and uses webpack with babel transform and stylus.
+ 
+	curl -Lk https://goo.gl/xlXWDl > Makefile; make advanced;
 
 ### Live reload
 Light-server lets you setup a local server for live reloading when a file changes, and so that others in the building can see what you are working on.
