@@ -12,7 +12,7 @@ setup-basic:
 	rm .babelrc package.json webpack.config.js node_modules.zip
 
 setup-advanced: 
-	rm Makefile
+	# rm Makefile
 	@echo .DS_Store\\nnode_modules > .gitignore
 	@echo \# Graphic > README.md
 	npm i
