@@ -60,6 +60,8 @@ The template comes equipped with **base.css**, a stylesheet containing reset, de
 
 ![path](https://cache.boston.com/multimedia/graphics/russell/github/path.gif?v=3)
 
+**Important** If you ever make changes to the CSS and file and have to republish, make sure to update the version in the `src/index.html` file so it will cache bust the previous one. (Simply look for `main.css?version` in the file and update the number.)
+
 **Note**: Add `<p:style src='https://apps.bostonglobe.com/common/css/igraphic/igraphic-0.1.0.css'/>` to the top of the jpt if using as an igraphic.
 
 ### Where is my published graphic?
