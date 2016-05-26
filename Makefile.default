@@ -9,7 +9,7 @@ setup:
 
 setup-basic: 
 	rm -rf src/dev
-	rm .babelrc package.json webpack.config.js node_modules.zip
+	rm .babelrc package.json webpack.config.js
 
 setup-advanced: 
 	# rm Makefile
