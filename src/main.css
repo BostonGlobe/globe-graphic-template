@@ -1,19 +1,35 @@
+/* See the documentation for how to load in regular weight versions */
+@font-face {
+	font-family: 'Benton';
+	src: url('//apps.bostonglobe.com/common/font/benton-bold.woff2') format('woff2'), url('//apps.bostonglobe.com/common/font/benton-bold.woff') format('woff');
+    font-weight: 600;
+}
+
+@font-face {
+	font-family: 'Miller';
+	src: url('//apps.bostonglobe.com/common/font/miller-bold.woff2') format('woff2'), url('//apps.bostonglobe.com/common/font/miller-bold.woff') format('woff');
+    font-weight: 600;
+}
+
 /* =========================== */
 /* Globe font stack examples
 /* =========================== */
 
-/* Serif headline */
-/* font-family: 'Miller', Georgia, Times New Roman, Times, serif;* /
+/* Serif (Miller) */
+/* font-family: 'Miller', Georgia, Times New Roman, Times, serif; */
+/* font-weight: 600; */
 
-/* Sans-serif headline */
+/* Sans-serif (Benton) */
 /* font-family: 'Benton', Helvetica, Arial, sans-serif; */
+/* font-weight: 600; */
 
-/* Serif body */
+/* Serif */
 /* font-family: 'Georgia', Times New Roman, Times, serif; */
 
-/* Sans-serif body */
+/* Sans-serif */
 /* font-family: 'Helvetica', Arial, sans-serif; */
 
 /* =========================== */
 /* Graphic styles
 /* =========================== */
+

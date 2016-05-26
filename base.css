@@ -1,0 +1,61 @@
+* { -moz-box-sizing: border-box; box-sizing: border-box; }
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; }
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+html, body { height: 100%; }
+a img { border: none; }
+blockquote { quotes: none; }
+blockquote:before, blockquote:after { content: ''; content: none; }
+table { border-collapse: collapse; border-spacing: 0; }
+caption, th, td { text-align: left; font-weight: normal; vertical-align: middle; }
+
+body {
+	font-family: 'Georgia', Times New Roman, Times, serif;
+	line-height: 1.6;
+}
+
+a {
+	transition: color 100ms;
+	color: #59889d;
+	text-decoration: none;
+}
+
+a:hover, a:active, a:focus {
+    color: #334f5b;
+    text-decoration: none;
+}
+
+.source-and-credit {
+    clear: both;
+    width: 100%;
+    overflow: hidden;
+    margin-top: 1em;
+}
+
+.source-and-credit p {
+    line-height: 1.2;
+    padding: 0;
+    margin: 0;
+    font-size: 11px;
+    text-align: left;
+    float: none;
+}
+
+.source-and-credit .source span {
+    font-weight: bold;
+}
+
+.source-and-credit .credit span {
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+@media (min-width: 600px) {
+    .source-and-credit .source {
+        float: left;
+    }
+    .source-and-credit .credit {
+    	text-align: right;
+        float: right;
+    }
+}

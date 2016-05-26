@@ -10,15 +10,17 @@
         <meta http-equiv='Expires' content='0' />
 
         <script type='text/javascript'>
-            // https://github.com/BostonGlobe/slush-globeapp/blob/master/templates/src/html/partials/base/base-critical.hbs
-            !function(e){var t=function(t,n){"use strict";var o=e.document.getElementsByTagName("script")[0],r=e.document.createElement("script");return r.src=t,r.async=!0,o.parentNode.insertBefore(r,o),n&&"function"==typeof n&&(r.onload=n),r};"undefined"!=typeof module?module.exports=t:e.loadJS=t}("undefined"!=typeof global?global:this),function(e){"use strict";var t=function(t,n,o){var r,l=e.document,i=l.createElement("link");if(n)r=n;else{var a=(l.body||l.getElementsByTagName("head")[0]).childNodes;r=a[a.length-1]}var d=l.styleSheets;i.rel="stylesheet",i.href=t,i.media="only x",r.parentNode.insertBefore(i,n?r:r.nextSibling);var f=function(e){for(var t=i.href,n=d.length;n--;)if(d[n].href===t)return e();setTimeout(function(){f(e)})};return i.onloadcssdefined=f,f(function(){i.media=o||"all"}),i};"undefined"!=typeof module?module.exports=t:e.loadCSS=t}("undefined"!=typeof global?global:this);
-
-            !function(e){var t="//apps.bostonglobe.com/common/font/",n=e.document;if("querySelector"in n){var o=function(e){if(!("FontFace"in e))return!1;var t=new e.FontFace("t",'url( "data:application/font-woff2," ) format( "woff2" )');return t.load().catch(function(){}),"loading"===t.status}(e),r=navigator.userAgent,i=t+"woff.css";o?i=t+"woff2.css":r.indexOf("Android")>-1&&r.indexOf("like Gecko")>-1&&-1===r.indexOf("Chrome")&&(i=t+"ttf.css"),loadCSS(i)}}(this);
+            // https://github.com/filamentgroup/loadJS
+            !function(e){var t=function(t,n){"use strict";var o=e.document.getElementsByTagName("script")[0],r=e.document.createElement("script");return r.src=t,r.async=!0,o.parentNode.insertBefore(r,o),n&&"function"==typeof n&&(r.onload=n),r};"undefined"!=typeof module?module.exports=t:e.loadJS=t}("undefined"!=typeof global?global:this);
         </script>
 
-        <!-- see http://bostonglobe.github.io/news-apps-style-guide for how to use base.css -->
-        <link rel='stylesheet' href='//apps.bostonglobe.com/common/css/base/base-1.2.0.css'>
-
+        <style>
+            *{-moz-box-sizing:border-box;box-sizing:border-box}a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body,html{height:100%}a img{border:none}blockquote{quotes:none}blockquote:after,blockquote:before{content:'';content:none}table{border-collapse:collapse;border-spacing:0}caption,td,th{text-align:left;font-weight:400;vertical-align:middle}body{font-family:Georgia,Times New Roman,Times,serif;line-height:1.6}a{transition:color .1s;color:#59889d;text-decoration:none}a:active,a:focus,a:hover{color:#334f5b;text-decoration:none}.source-and-credit{clear:both;width:100%;overflow:hidden;margin-top:1em}.source-and-credit p{line-height:1.2;padding:0;margin:0;font-size:11px;text-align:left;float:none}.source-and-credit .source span{font-weight:700}.source-and-credit .credit span{color:#999;text-transform:uppercase;letter-spacing:.05em}@media (min-width:600px){.source-and-credit .source{float:left}.source-and-credit .credit{text-align:right;float:right}}
+        </style>
+        
+        <!-- UPDATE VERSION # IF YOU NEED TO REPUBLISH -->
+        <link rel='stylesheet' href='main.css?version=1' />
+        
         <link rel='shortcut icon' href='//www.bostonglobe.com/rw/SysConfig/WebPortal/BostonGlobe/Framework/images/favicon.ico' />
     </head>
     <body style='height: auto;'>
@@ -30,7 +32,7 @@
 
             <!--
             ==========================
-            (begin) graphic HTML here
+            BEGIN: GRAPHIC CODE HERE
             ==========================
             -->
 
@@ -52,33 +54,24 @@
                 <p class='source'><span>SOURCE: Source</span></p>
                 <p class='credit'><span>Reporter / Globe Staff</span></p>
             </div>
-
             <!--
             ==========================
-            (end) graphic HTML here
+            END OF GRAPHIC CODE
             ==========================
             -->
 
-        
-
         </div>
 
-        <!-- (begin) js libraries here -->
+        <!-- (begin) put js libraries here -->
         
         <!-- (end) -->
 
-
-        <!-- *** DO NOT GO BELOW HERE *** -->
+        <!--
+        ============================
+        *** DO NOT GO BELOW HERE *** 
+        ============================
+        -->
        
-        <script type='text/javascript'>
-            // auto cache bust and async load css
-            (function() {
-                var d = new Date();
-                var timestamp = d.getTime();
-                var css = 'main.css?v=' + timestamp;
-                loadCSS(css);
-            })()
-        </script>
 
         <!-- (begin) globe iframe embed -->
         <script src='//apps.bostonglobe.com/common/js/pym/pym-poll.min.js'></script>

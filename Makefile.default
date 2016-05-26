@@ -4,7 +4,7 @@ setup:
 	mv globe-graphic-template-master/* .
 	mv globe-graphic-template-master/.babelrc .
 	rm -rf temp.zip globe-graphic-template-master 
-	rm Makefile LICENSE README.md Makefile.default
+	rm Makefile LICENSE README.md Makefile.default base.css
 	mv Makefile.basic Makefile
 
 setup-basic: 
