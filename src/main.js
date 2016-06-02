@@ -14,6 +14,12 @@
 
 	};
 
+	// called when the graphic enters the viewport
+	window.enterView = function() {
+
+	};
+
+
 	// graphic code
 
 
