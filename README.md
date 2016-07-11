@@ -2,6 +2,7 @@
 A basic template to get you up and running *fast*. Scaffolds the html, css, and js necessary for a responsive iframe graphic, hassle-free.
 
 - [Quick start](#instructions)
+- [Quik start: advanced](#setup-advanced))
 - [Basic workflow](#basic-workflow)
 - [ai2html workflow](#ai2html-workflow)
 - [How to deploy](#how-to-deploy)
@@ -12,11 +13,11 @@ A basic template to get you up and running *fast*. Scaffolds the html, css, and 
 
 ## Instructions
 ### Setup project
-In Terminal, navigate to your project directory ([command line tutorial](https://github.com/BostonGlobe/news-apps-docs/tree/master/bash-basics)). Then run ([see advanced version](#setup-advanced)):
+In Terminal, navigate to your project directory ([command line tutorial](https://github.com/BostonGlobe/news-apps-docs/tree/master/bash-basics)). Then run:
 
     curl -Lk https://goo.gl/xlXWDl > Makefile; make basic;
 
-That's it. You are now ready to do work.
+That's it. You are now ready to do work. ([see advanced version setup](#setup-advanced))
 
 To see your graphic, open `index.html` in a browser or run `make server` if you have [light-server](#live-reload).
 
