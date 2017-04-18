@@ -54,7 +54,7 @@ The template comes equipped with **base.css**, a stylesheet containing reset, de
 
 ![structure](https://cache.boston.com/multimedia/graphics/russell/github/structure.jpg?v=3)
 
-- Copy over the files inside the **src** folder to Methode
+- Copy over the files inside the **src** folder to Methode. You can drag and drop from desktop to Workbench.
 - If you have assets, you must create the folder in Methode before copying over those files
 - Paste the contents of **methode.jpt** into your **jpt**
 - *Critical*: paste in the path to the **jpt** at the top of the **jpt** in `window.pathToJPT = ''`
