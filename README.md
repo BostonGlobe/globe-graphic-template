@@ -76,6 +76,8 @@ This requires node, and uses webpack with babel transform and stylus.
  
 	curl -Lk https://goo.gl/xlXWDl > Makefile; make advanced;
 
+If using advanced setup, run `npm start` to compile and preview
+
 ### Live reload
 Light-server lets you setup a local server for live reloading when a file changes, and so that others in the building can see what you are working on.
 
