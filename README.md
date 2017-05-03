@@ -2,7 +2,7 @@
 A basic template to get you up and running *fast*. Scaffolds the html, css, and js necessary for a responsive iframe graphic, hassle-free.
 
 - [Quick start](#instructions)
-- [Quik start: advanced](#setup-advanced))
+- [Quick start: advanced](#setup-advanced)
 - [Basic workflow](#basic-workflow)
 - [ai2html workflow](#ai2html-workflow)
 - [How to deploy](#how-to-deploy)
