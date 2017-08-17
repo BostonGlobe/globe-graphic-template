@@ -50,7 +50,7 @@ To deploy, follow the instructions in the [How to deploy](#how-to-deploy) sectio
 The template comes equipped with **base.css**, a stylesheet containing reset, default Globe styles, typography, and layouts. [See here](https://bostonglobe.github.io/news-apps-style-guide) for documentation and best practices.
 
 ### How to deploy
-- Create project folder and a blank **jpt** like normal in workbench
+- Create project folder and a blank **jpt** like normal in workbench. Make sure to choose type **web** from the dropdown in the second field before creating.
 
 ![structure](https://cache.boston.com/multimedia/graphics/russell/github/structure.jpg?v=3)
 
@@ -87,6 +87,11 @@ In the root of your project run `make server`. Hitting `ctrl + c` will stop the 
 
 Changes to any file in the `src` folder will trigger your browser to reload.
 
+### Multiple iframes
+In `methode.jpt`, replace all occurences of **${storyID}-1** with incrementing numbers for each additional graphic. So if you have two graphics, the second should be **${storyID}-2**. There are two places, one near the top and one near the bottom.
+
+In general, it is unwise to reuse a jpt in multiple articles. Changing this number in a jpt will cause it to disappear from previously published articles.
+
 ### How to include javascript libraries
 Here is a list of the currently available libraries:
 
@@ -121,9 +126,6 @@ Iframes are great for the reasons mentioned above. If your graphic necessitates 
 - If a user action jumps the scroll bar
 
 While there are workarounds that involve setting up messaging between the parent and child, anything involving manipulating the scroll position is advised against.
-
-### Multiple iframes
-In `methode.jpt`, replace all occurences of **${storyID}-1** with incrementing numbers for each additional graphic. So if you have two graphics, the second should be **${storyID}-2**. There are two places, one near the top and one near the bottom.
 
 ### Get parent height
 Sometimes you want to do a thing based on the height of the browser (ie. make a map take up 2/3 of the browser). In order to get the height of the parent window, you must add this to `src/main.js` (just below the line `init()` at the bottom):
