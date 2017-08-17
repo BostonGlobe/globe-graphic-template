@@ -71,6 +71,11 @@ Once you've published all the files, you can access the index.html - the actual 
 - `https://c.o0bg.com/rw/Boston/2011-2020/WebGraphics/<SECTION>/BostonGlobe.com/<YEAR>/<MONTH>/<SLUG>/index.html`
 - Example: `https://c.o0bg.com/rw/Boston/2011-2020/WebGraphics/Metro/BostonGlobe.com/2015/09/hut/index.html`
 
+### Multiple iframes
+In `methode.jpt`, replace all occurences of **${storyID}-1** with incrementing numbers for each additional graphic. So if you have two graphics, the second should be **${storyID}-2**. There are two places, one near the top and one near the bottom.
+
+In general, it is unwise to reuse a jpt in multiple articles. Changing this number in a jpt will cause it to disappear from previously published articles.
+
 ### Setup advanced
 This requires node, and uses webpack with babel transform and stylus.
  
@@ -86,11 +91,6 @@ Make sure to have [node](http://nodejs.org) and [light-server](https://www.npmjs
 In the root of your project run `make server`. Hitting `ctrl + c` will stop the process.
 
 Changes to any file in the `src` folder will trigger your browser to reload.
-
-### Multiple iframes
-In `methode.jpt`, replace all occurences of **${storyID}-1** with incrementing numbers for each additional graphic. So if you have two graphics, the second should be **${storyID}-2**. There are two places, one near the top and one near the bottom.
-
-In general, it is unwise to reuse a jpt in multiple articles. Changing this number in a jpt will cause it to disappear from previously published articles.
 
 ### How to include javascript libraries
 Here is a list of the currently available libraries:
