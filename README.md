@@ -7,9 +7,10 @@ A basic template to get you up and running *fast*. Scaffolds the html, css, and 
 - [ai2html workflow](#ai2html-workflow)
 - [How to deploy](#how-to-deploy)
 - [Where is my published graphic?](#where-is-my-published-graphic)
+- [Multiple iframes in a single article](#multiple-iframes-in-a-single-article)
 - [Why iframes?](#why-iframe)
 - [When not to use iframes](#when-not-to-use-iframes)
-- [Multiple iframes in a single article](#multiple-iframes)
+
 
 ## Instructions
 ### Setup project
@@ -71,7 +72,7 @@ Once you've published all the files, you can access the index.html - the actual 
 - `https://c.o0bg.com/rw/Boston/2011-2020/WebGraphics/<SECTION>/BostonGlobe.com/<YEAR>/<MONTH>/<SLUG>/index.html`
 - Example: `https://c.o0bg.com/rw/Boston/2011-2020/WebGraphics/Metro/BostonGlobe.com/2015/09/hut/index.html`
 
-### Multiple iframes
+### Multiple iframes in a single article
 In `methode.jpt`, replace all occurences of **${storyID}-1** with incrementing numbers for each additional graphic. So if you have two graphics, the second should be **${storyID}-2**. There are two places, one near the top and one near the bottom.
 
 In general, it is unwise to reuse a jpt in multiple articles. Changing this number in a jpt will cause it to disappear from previously published articles.
