@@ -51,7 +51,7 @@ To deploy, follow the instructions in the [How to deploy](#how-to-deploy) sectio
 The template comes equipped with **base.css**, a stylesheet containing reset, default Globe styles, typography, and layouts. [See here](https://bostonglobe.github.io/news-apps-style-guide) for documentation and best practices.
 
 ### How to deploy
-- Create project folder and a blank **jpt** like normal in workbench. Make sure to choose type **web** from the dropdown in the second field before creating.
+- Create project folder and a blank **jpt** like normal in workbench. **Make sure to choose type web from the dropdown in the second field before creating.**
 
 ![structure](https://cache.boston.com/multimedia/graphics/russell/github/structure.jpg?v=3)
 
