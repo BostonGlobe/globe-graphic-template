@@ -66,6 +66,10 @@ The template comes equipped with **base.css**, a stylesheet containing reset, de
 
 **Note**: Add `<p:style src='https://apps.bostonglobe.com/common/css/igraphic/igraphic-0.1.0.css'/>` to the top of the jpt if using as an igraphic.
 
+### Portalpub files
+
+Click on each of the files in the folder and right-click actions --> portalpubBG initially, and each time you change any of the files.
+
 ### Where is my published graphic?
 
 Once you've published all the files, you can access the index.html - the actual graphic - by modifying this url appropriately:
