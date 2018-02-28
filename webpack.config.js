@@ -5,10 +5,23 @@ module.exports = {
 		filename: 'main.js',
 	},
 	module: {
-		loaders: [
-			{ test: /\.csv?$/, loader: 'dsv-loader' },
-			{ test: /\.json$/, loader: 'json-loader' },
-			{ test: /\.js$/, loader: 'babel-loader', exclude: /node_modules/ },
-		],
-	},
+    rules: [
+      {
+        test: /\.csv?$/,
+        use: ['dsv-loader']
+      },
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: [
+              ['env', {'modules': true }] // Default to CommonJS because we need to support IE11
+            ]
+          }
+        }
+      }]
+	  }
+	}
 }
