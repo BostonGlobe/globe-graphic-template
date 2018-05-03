@@ -6,11 +6,29 @@
     "webpack": "webpack -w --config webpack.config.js",
     "stylus": "stylus -w src/dev/entry.styl -o src/main.css",
     "server": "light-server -q -s . -p 3000 -w 'src/main.js, src/index.html # # reload' -w 'src/main.css # # reloadcss'",
+    "clean": "rimraf build && mkdir build",
+    "prebuild": "npm run clean -s",
+    "build:js": "uglifyjs src/main.js -c -m -o ./build/main.js",
+    "build:css": "autoprefixer < src/main.css | uglifycss src/main.css > ./build/main.css",
+    "build:assets": "shx cp -R src/assets/* ./build/assets/",
+    "build": "npm run build:js && npm run build:css && npm run build:assets",
     "open": "open http://localhost:3000"
   },
+  "browserlist": [
+    "Android 7",
+    "ChromeAndroid 65",
+    "Chrome 65",
+    "Edge 16",
+    "Explorer 11",
+    "FirefoxAndroid 58",
+    "Firefox58",
+    "iOS 11"
+    "Safari 11"
+  ],
   "author": "Russell Goldenberg",
   "license": "MIT",
   "devDependencies": {
+    "autoprefixer": "8.4.1",
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.4",
     "babel-preset-env": "^1.6.1",
@@ -19,7 +37,11 @@
     "json-loader": "^0.5.7",
     "light-server": "^2.5.0",
     "npm-run-all": "^4.1.2",
+    "rimraf": "2.6.2",
+    "shx": "0.2.2",
     "stylus": "^0.54.5",
+    "uglifycss": "0.0.29",
+    "uglify-js":"3.3.23",
     "webpack": "^3.11.0"
   }
 }
