@@ -17,7 +17,7 @@ module.exports = {
           loader: 'babel-loader',
           options: {
             presets: [
-              ['env', {'modules': true }] // Default to CommonJS because we need to support IE11
+              ['env']
             ]
           }
         }
