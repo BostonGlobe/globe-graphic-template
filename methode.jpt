@@ -37,7 +37,7 @@
 					var right = path.indexOf(webgraphics);
 					var section = path.substring(left, right);
 					var end = path.substring(right + webgraphics.length, path.length);
-					return '//c.o0bg.com/rw/Boston/2011-2020/WebGraphics/' + section + '/BostonGlobe.com/' + end + '/index.html' + version;
+					return '//www.bostonglobe.com/rw/Boston/2011-2020/WebGraphics/' + section + '/BostonGlobe.com/' + end + '/index.html' + version;
 				}
 			}
 		};
