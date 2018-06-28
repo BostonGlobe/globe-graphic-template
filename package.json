@@ -8,13 +8,14 @@
     "server": "light-server -q -s . -p 3000 -w 'src/main.js, src/index.html # # reload' -w 'src/main.css # # reloadcss'",
     "clean": "rimraf build && mkdir build",
     "prebuild": "npm run clean -s",
+    "build:html": "cp src/index.html ./build/",
     "build:js": "uglifyjs src/main.js -c -m -o ./build/main.js",
     "build:css": "autoprefixer < src/main.css | uglifycss src/main.css > ./build/main.css",
     "build:assets": "shx cp -R src/assets/* ./build/assets/",
-    "build": "npm run build:js && npm run build:css && npm run build:assets",
+    "build": "npm run build:js && npm run build:js && npm run build:css && npm run build:assets",
     "open": "open http://localhost:3000"
   },
-  "browserlist": [
+  "browserslist": [
     "Android 7",
     "ChromeAndroid 65",
     "Chrome 65",
