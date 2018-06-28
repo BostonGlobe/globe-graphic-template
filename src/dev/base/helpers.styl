@@ -1,0 +1,217 @@
+//=======================
+// ADD BREAKPOINT
+//=======================
+mq(breakpoint)
+	if breakpoint in $mq_vars
+		condition = unquote($mq_vars[breakpoint])
+		condition = 'only screen and %s' % condition
+		@media condition
+			{block}
+	else
+		error('Not a defined media query')
+
+//===============================
+// Z-INDEX
+//===============================
+set-index(layer)
+	if layer in $z-index
+		return $z-index[layer]
+	else
+		error('Not a layer in z-index')
+
+//=======================
+// CLEARFIX
+//=======================
+clearfix()
+	&:after
+		content ''
+		display table
+		clear both
+
+
+
+//=======================
+// VERTICAL RHYTHM
+//=======================
+rhythm(scale)
+	if scale in $type-scale
+		$map = $type-scale[scale]
+		$em-size = unit(($map / 16), 'em')
+		font-size: $em-size
+		margin-bottom: ($root-lh / $em-size)
+		
+		if $em-size < 1.5em
+			line-height: unit((($root-lh * 1) / $em-size), '')
+
+		if $em-size > 2em
+			line-height: unit((($root-lh * 1.5) / $em-size), '')
+			
+		if $em-size > 3em
+			line-height: unit((($root-lh * 2) / $em-size), '')
+	else
+		error('Not a defined scale')
+    
+//=======================
+// FONT STACKS
+//=======================
+font(family = $serif, weight = 400, style = normal)
+	font-family family
+	font-weight weight
+	font-style style
+
+//=======================
+// LIST STYLES
+//=======================
+// Default is none
+list-style(type = none)
+	list-style-type type
+	margin 0
+	padding 0
+	
+//=======================
+// GRIDS
+//=======================
+flex-grid(num, child, gutter = false, direction = row)
+	display flex
+	flex-direction direction
+	flex-wrap wrap
+	> .{child}
+		width (100% / num)
+		if num == equal
+			flex 1
+	if gutter
+		justify-content space-between
+		> .{child}
+			flex-basis (100% / num) - gutter
+
+//=======================
+// IMAGE DIMENSIONS
+//=======================
+// Outputs width and height of image
+dimensions(img)
+	width image-size($assets-path + img)[0]
+	height image-size($assets-path + img)[1]
+
+// Returns width of image
+get-width(img)
+	return image-size(img)[0]
+
+// Returns height of image
+get-height(img)
+	return image-size(img)[1]
+
+//=======================
+// PSEUDO CONTENT
+//=======================
+// Using image
+img-content(img)
+	content ''
+	display inline-block
+	width image-size($assets-path + img)[0]
+	height image-size($assets-path + img)[1]
+	background url($assets-path + img) no-repeat 50%
+
+//=======================
+// HIDE
+//=======================
+hidden(type = false)
+	if type == accessible
+		width 1px 
+		height 1px 
+		overflow hidden
+		position absolute
+	else if type == invisible
+		visibility hidden
+	else
+		display none
+
+
+//===============================
+// VERTICAL CENTERING
+// Centers items vertically
+// If you want horizontal centering on flex
+// add `justify-content center`
+//===============================
+// Put this on the parent element
+center(type, child = false)
+	if type == flex
+		// No child, set to false in function
+		display flex
+		flex-direction column
+		justify-content center
+		// aligns horizontally as well
+		align-items center
+	else if type == translate
+		transform-style preserve-3d
+		> .{child}
+			position relative
+			top 50%
+			transform translateY(-50%)
+	else if type == absolute
+		position relative
+		> .{child}
+			position absolute
+			top 50%
+			width 100%
+			
+//===============================
+// RANDOM
+// returns a random number between
+// min and max
+//===============================
+random(min,max)
+	return floor(math(0, 'random')*(max - min + 1) + min)
+
+//===============================
+// QUICKSORT
+// returns a numeric list in
+// ascending order. I'm not really
+// sure this will ever get used and
+// I kind of hate myself for spending
+// 7 hours on it but let's just let it
+// hang out here anyways
+//===============================
+
+// Filter is a helper for quicksort
+filter-list(function, list)
+	filtered-list = ()
+	for element in list
+		if (function(element))
+			push(filtered-list, element)
+	return filtered-list
+
+quicksort(list)
+	if (length(list) == 0)
+		return ()
+	pivot = list[0]
+	sorted = ()
+	remaining = ()
+	i = 0
+	for element in list
+		if i != 0
+			push(remaining, element)
+		i = i + 1
+	smaller-sorted = quicksort(filter-list(@(num){return num <= pivot}, remaining))
+	bigger-sorted = quicksort(filter-list(@(num){return num > pivot}, remaining))
+	push(sorted, smaller-sorted, pivot, bigger-sorted)
+	return sorted
+
+//===============================
+// REPLACE NUMBER
+// A companion to the replace BIF
+// that replaces non-string values
+//===============================
+replace-num(pattern, replacement, value)
+	return unquote(replace('' + pattern, '' + replacement, '' + value))
+
+//===============================
+// LIST GETTERS
+//===============================
+// Get value of item in list based on index
+nth(list, index)
+	return list[index]
+	
+// Replace value of item in list based on index
+set-nth(list, index, value)
+	$input = list[index]
+	return replace-num($input, value, $input)
