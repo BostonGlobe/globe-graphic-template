@@ -1,25 +1,65 @@
-$miller = 'Miller', Georgia, Times New Roman, Times, serif
-$benton = 'Benton', Helvetica, Arial, sans-serif
-$serif = 'Georgia', Times New Roman, Times, serif
-$sans-serif = 'Helvetica', Arial, sans-serif
-
 //=======================
 // Base
 //=======================
-// Add whichever you need or just copy the code from these files. Helps to have these in case you need. Especially the breakpoints and helper variables
+// Add whichever you need or, preferably, just copy the code from those files. Especially the breakpoints and helper variables
 // @require 'base/reset'
-// @require 'base/variables'
+@require 'base/variables'
 // @require 'base/helpers'
 // @require 'base/colors'
 // @require 'base/layout'
 // @require 'base/unicode'
-// @require 'base/fonts'
+@require 'base/fonts'
 
 //=======================
 // Fonts
 //=======================
 // See base/fonts for full listing
 // If you need set-font, make sure to include the base/fonts file
-// Note: all projects require Benton Bold and Miller-Regular so don't change em
-// set-font('benton-bold')
-// set-font('miller-regular')
+// Note all projects require Benton Bold and Miller-Regular so don't change em
+
+// Just set these classes in the HTML
+set-font('benton-bold') /* Graphic headlines */
+set-font('benton-regular') /* Graphic subheads */
+set-font('bentonsanscond-regular') /* Graphic byline and source */
+
+.source-and-credit
+  clear both
+  width 100%
+  overflow hidden
+  margin-top 1em
+
+  p
+    line-height 1.6
+    padding 0
+    margin 0
+    font-size 12px
+    text-align left
+    float none
+
+  .source span
+    font-weight normal
+    +mq('bp-2')
+      float left
+
+  .credit span
+    text-transform uppercase
+    +mq('bp-2')
+      text-align right
+      float right
+
+.graphic
+  &__text
+    margin .5rem 0
+
+    &--hed
+      font-weight bold
+      +mq('bp-2')
+        font-size 1.1rem
+
+    &--subhed
+      font-size .9rem
+      +mq('bp-2')
+        font-size 1rem
+        margin-bottom 1rem
+
+
