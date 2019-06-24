@@ -3,6 +3,8 @@ setup:
 	unzip -q temp.zip
 	mv globe-graphic-template-master/* .
 	mv globe-graphic-template-master/.babelrc .
+	mv globe-graphic-template-master/.editorconfig .
+	mv globe-graphic-template-master/.eslintrc .
 	rm -rf temp.zip globe-graphic-template-master 
 	rm Makefile LICENSE README.md Makefile.default base.css
 	mv Makefile.basic Makefile
