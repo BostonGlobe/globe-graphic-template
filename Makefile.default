@@ -1,5 +1,5 @@
 setup: 
-	curl -Lk https://github.com/BostonGlobe/globe-graphic-template/archive/webpack3.zip > temp.zip
+	curl -Lk https://github.com/BostonGlobe/globe-graphic-template/archive/master.zip > temp.zip
 	unzip -q temp.zip
 	mv globe-graphic-template-master/* .
 	mv globe-graphic-template-master/.babelrc .
