@@ -1,7 +1,7 @@
 module.exports = {
 	entry: './src/dev/entry.js',
 	output: {
-		path: './src',
+		path: path.resolve(__dirname, 'src'),
 		filename: 'main.js',
 	},
 	module: {
