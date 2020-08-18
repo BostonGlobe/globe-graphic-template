@@ -29,7 +29,7 @@ To use, just add a script tag in the `src/index.html` page where it says "<!-- (
 
 - `make build` should create a `build/` directory with all js and css files, assets, and html. Note that these are not minified or checked for browser compatibility
 
-- `make upload` will upload the built files to the directory you specified in `upload.sh`.
+- `sh upload.sh` will upload the built files to the directory you specified in `upload.sh`.
 
 # Putting the graphic into a story
 In order to use the graphic as an iframe, we need to make it public. 

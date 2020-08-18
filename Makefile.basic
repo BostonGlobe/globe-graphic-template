@@ -10,10 +10,6 @@ build:
 	cp src/index.html build/
 	cp src/main.* build/
 
-upload:
-	sh upload.sh
-
-
 ai2html:
 	sed -i '' '/<!-- begin ai2html here DO NOT MODIFY THIS LINE -->/,/<!-- end ai2html here DO NOT MODIFY THIS LINE -->/{//!d;}' ./src/index.html;
 	sed -i '' '/<!-- begin ai2html here DO NOT MODIFY THIS LINE -->/ r src/ai2html-output/online.html' ./src/index.html;
