@@ -5,13 +5,13 @@ server:
 	light-server -q -s . -p 8888 -w 'src/main.js, src/index.html # # reload' -w 'src/main.css # # reloadcss'
 
 build:
-  rm -rf build && mkdir -p build
-  cp -r src/assets/ ./build/assets/
-  cp src/index.html build/
-  cp src/main.* build/
+	rm -rf build && mkdir -p build
+	cp -r src/assets/ ./build/assets/
+	cp src/index.html build/
+	cp src/main.* build/
 
 upload:
-  sh upload.sh
+	sh upload.sh
 
 
 ai2html:
