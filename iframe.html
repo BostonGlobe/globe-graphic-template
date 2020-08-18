@@ -1,0 +1,28 @@
+<!-- (BEGIN) globe graphic iframe -->
+<div id='target-div-1' class='globe-graphic-iframe' style='margin: 20px 0;'></div>
+<script src='https://apps.bostonglobe.com/common/js/enter-view/enter-view-0.1.0.min.js'></script>
+<script src='https://apps.bostonglobe.com/common/js/pym/pym-1.3.2.min.js'></script>
+<script>
+    (function() {
+      var pymParent;
+      var src = 'https://apps.bostonglobe.com/path/to/graphic/here/index.html';
+
+      if(src) {
+        pymParent = new pym.Parent('target-div-1', src, {});
+        pymParent.onMessage('height-request', function(msg) {
+          pymParent.sendMessage('height-send', window.innerHeight);
+        });
+
+        pymParent.onMessage('ready', function() {
+          enterView({
+            selector: '#target-div-1',
+            offset: '25%',
+            trigger: function() {
+              pymParent.sendMessage('enter-view', true);
+            }
+          });
+        });
+      }
+    })();
+</script>
+<!-- (END) globe graphic iframe -->

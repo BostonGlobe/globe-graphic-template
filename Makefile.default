@@ -16,7 +16,7 @@ setup-basic:
 setup-advanced: 
 	# rm Makefile
 	@echo .DS_Store\\nnode_modules > .gitignore
-	@echo \# Graphic > README.md
+	mv README.advanced.md README.md
 	npm i
 
 setup-msg:

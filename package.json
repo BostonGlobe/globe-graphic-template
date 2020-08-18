@@ -1,19 +1,20 @@
 {
   "name": "globe-graphic-template",
-  "version": "2.0.3",
+  "version": "2.0.4",
   "scripts": {
     "start": "npm-run-all --silent --parallel webpack stylus server open",
     "webpack": "webpack -w --config webpack.config.js",
     "stylus": "stylus -w src/dev/css/*.styl -o src/main.css",
-    "server": "light-server -q -s . -p 3000 -w 'src/main.js, src/index.html # # reload' -w 'src/main.css # # reloadcss'",
+    "server": "light-server -q -s . -p 8888 -w 'src/main.js, src/index.html # # reload' -w 'src/main.css # # reloadcss'",
     "clean": "rimraf build && mkdir build",
     "prebuild": "npm run clean -s",
     "build:html": "cp src/index.html ./build/",
     "build:js": "uglifyjs src/main.js -c -m -o ./build/main.js",
     "build:css": "autoprefixer < src/main.css | uglifycss src/main.css > ./build/main.css",
-    "build:assets": "shx cp -R src/assets/* ./build/assets/",
-    "build": "npm run build:js && npm run build:js && npm run build:css && npm run build:assets",
-    "open": "open http://localhost:3000"
+    "build:assets": "shx cp -R src/assets/ ./build/assets/",
+    "build": "npm run build:html && npm run build:js && npm run build:css && npm run build:assets",
+    "upload": "npm run build && ./upload.sh",
+    "open": "open http://localhost:8888"
   },
   "browserslist": [
     "cover 99.5% in US",
