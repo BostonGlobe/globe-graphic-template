@@ -12,6 +12,9 @@ setup:
 setup-basic: 
 	rm -rf src/dev
 	rm .babelrc package.json webpack.config.js
+	rm README.advanced.md
+	mv README.basic.md README.md
+	rm .eslintrc
 
 setup-advanced: 
 	# rm Makefile
